@@ -25,9 +25,8 @@
       justify-content: space-between;
       align-items: center;
     }
-    nav .logo {
-      font-size: 1.5rem;
-      color: #ffffff;
+    nav .logo img {
+      height: 50px; /* You can adjust this height */
     }
     nav ul {
       list-style: none;
@@ -100,7 +99,9 @@
 </head>
 <body>
   <nav>
-    <div class="logo">Competitive CoD Series</div>
+    <div class="logo">
+      <img src="logo.png" alt="Competitive CoD Series Logo" style="height: 50px;">
+    </div>
     <ul>
       <li><a href="#">Home</a></li>
       <li><a href="#">Teams</a></li>
@@ -120,29 +121,7 @@
 
   <section id="teams">
     <h2>Teams</h2>
-    <div class="team">
-      <h3>Team 1</h3>
-      <ul>
-        <li>Starter 1</li>
-        <li>Starter 2</li>
-        <li>Starter 3</li>
-        <li>Starter 4</li>
-        <li>Substitute 1</li>
-        <li>Substitute 2</li>
-      </ul>
-    </div>
-    <div class="team">
-      <h3>Team 2</h3>
-      <ul>
-        <li>Starter 1</li>
-        <li>Starter 2</li>
-        <li>Starter 3</li>
-        <li>Starter 4</li>
-        <li>Substitute 1</li>
-        <li>Substitute 2</li>
-      </ul>
-    </div>
-    <!-- Repeat the above block for 12 teams -->
+    <!-- Teams list goes here -->
   </section>
 
   <section id="media">
@@ -156,3 +135,4 @@
   </footer>
 </body>
 </html>
+
