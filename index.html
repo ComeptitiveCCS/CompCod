@@ -18,15 +18,25 @@
       background-attachment: fixed;
       opacity: 0.95;
     }
+
+    /* Navigation bar styles */
     nav {
       background: rgba(18, 28, 74, 0.95);
       padding: 1rem 2rem;
       display: flex;
       justify-content: space-between;
       align-items: center;
+      position: relative;
     }
+    
+    /* Logo in the navbar */
     nav .logo img {
-      height: 50px; /* You can adjust this height */
+      height: 50px;
+    }
+    
+    nav .logo {
+      font-size: 1.5rem;
+      color: #ffffff;
     }
     nav ul {
       list-style: none;
@@ -41,10 +51,13 @@
     nav ul li a:hover {
       color: #5da9ff;
     }
+
+    /* Hero section styles */
     .hero {
       padding: 6rem 2rem;
       text-align: center;
-      background: rgba(26, 36, 92, 0.85);
+      background: rgba(26, 36, 92, 0.85) url('assets/logo.png') no-repeat center;
+      background-size: 200px; /* Adjust size of logo */
       backdrop-filter: blur(4px);
     }
     .hero h1 {
@@ -55,6 +68,8 @@
       font-size: 1.2rem;
       margin-bottom: 2rem;
     }
+
+    /* Call to action buttons */
     .cta-buttons a {
       text-decoration: none;
       margin: 0 1rem;
@@ -67,13 +82,23 @@
     .cta-buttons a:hover {
       background: #3d8fe6;
     }
-    footer {
+
+    /* Teams section styles */
+    #teams {
+      padding: 4rem 2rem;
+      background: rgba(26, 36, 92, 0.85);
+      backdrop-filter: blur(4px);
       text-align: center;
-      padding: 2rem;
-      background: rgba(18, 28, 74, 0.95);
-      font-size: 0.9rem;
-      color: #ccc;
     }
+    #teams h2 {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+    }
+    #teams .team {
+      margin-bottom: 2rem;
+    }
+
+    /* Media section styles */
     #media {
       padding: 4rem 2rem;
       text-align: center;
@@ -95,13 +120,22 @@
     #media a:hover {
       background: #3d8fe6;
     }
+
+    /* Footer styles */
+    footer {
+      text-align: center;
+      padding: 2rem;
+      background: rgba(18, 28, 74, 0.95);
+      font-size: 0.9rem;
+      color: #ccc;
+    }
   </style>
 </head>
 <body>
   <nav>
     <div class="logo">
-      <img src="assets/logo.png" alt="Competitive CoD Series Logo" style="height: 50px;">
- </div>
+      <img src="assets/logo.png" alt="Competitive CoD Series Logo">
+    </div>
     <ul>
       <li><a href="#">Home</a></li>
       <li><a href="#">Teams</a></li>
@@ -121,18 +155,31 @@
 
   <section id="teams">
     <h2>Teams</h2>
-    <!-- Teams list goes here -->
+    <div class="team">
+      <h3>Team 1</h3>
+      <ul>
+        <li>Starter 1</li>
+        <li>Starter 2</li>
+        <li>Starter 3</li>
+        <li>Starter 4</li>
+        <li>Substitute 1</li>
+        <li>Substitute 2</li>
+      </ul>
+    </div>
+    <div class="team">
+      <h3>Team 2</h3>
+      <ul>
+        <li>Starter 1</li>
+        <li>Starter 2</li>
+        <li>Starter 3</li>
+        <li>Starter 4</li>
+        <li>Substitute 1</li>
+        <li>Substitute 2</li>
+      </ul>
+    </div>
+    <!-- Repeat the above block for 12 teams -->
   </section>
 
   <section id="media">
     <h2>Follow Our Twitter</h2>
-    <p>Stay up-to-date with the latest news, updates, and highlights from Competitive CoD Series on our official Twitter page:</p>
-    <a href="https://x.com/CompetitiveCCS" target="_blank">Follow us on Twitter</a>
-  </section>
-
-  <footer>
-    &copy; 2025 Competitive CoD Series | All Rights Reserved
-  </footer>
-</body>
-</html>
-
+    <p>Stay up-to-date with the latest news, updates, and highlights from Competitive CoD Series on our official Twitter page:</
