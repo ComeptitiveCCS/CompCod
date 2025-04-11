@@ -60,6 +60,7 @@
       border-radius: 10px;
       padding: 2rem;
       margin-bottom: 2rem;
+      text-align: left;
     }
 
     .team h3 {
@@ -71,39 +72,43 @@
 
     .team-players {
       display: none;
-      justify-content: flex-start;
-      gap: 1.5rem;
       flex-wrap: wrap;
+      gap: 1.5rem;
       margin-top: 1rem;
+      justify-content: flex-start;
     }
 
     .player-card {
-      width: 250px;  /* Smaller card size */
-      height: 400px; /* Adjusted height */
-      background-color: black; /* Card background color */
+      width: 250px;
+      height: 400px;
+      background-color: black;
       border-radius: 12px;
       overflow: hidden;
       display: flex;
       flex-direction: column;
-      justify-content: flex-end;
       align-items: center;
       box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+      margin-left: 10px;
+      padding-top: 10px;
       position: relative;
-      margin-left: 10px; /* Added space from the left edge */
     }
 
     .small-logo {
-      width: 70px;  /* Small size for the logo */
+      width: 60px;
       height: auto;
-      margin-bottom: 15px;
-      object-fit: contain;
+      margin-bottom: 5px;
+    }
+
+    .player-name {
+      color: white;
+      margin: 5px 0;
+      font-size: 1.1rem;
     }
 
     .headshot {
       width: 100%;
-      height: 60%;  /* Adjusted height for headshot */
+      height: 60%;
       object-fit: cover;
-      border-bottom: 3px solid #000;
     }
 
     .player-info {
@@ -112,16 +117,11 @@
       color: white;
       text-align: center;
       width: 100%;
-    }
-
-    .player-info h4 {
-      margin: 0;
-      font-size: 1.2rem;
+      font-size: 1rem;
     }
 
     .player-info p {
-      margin: 0;
-      font-size: 1rem;
+      margin: 2px 0;
     }
 
     footer {
@@ -161,18 +161,18 @@
     <div class="team">
       <h3 onclick="togglePlayers('qcb-players')">Queen City Bullets</h3>
       <div id="qcb-players" class="team-players">
-        <!-- Bullets Logo (Secondary Logo) Inside Player Card Above Name -->
-        <img src="bulletslogo2.png" alt="Queen City Bullets Logo" class="small-logo" />
-
-        <!-- Player Card with Headshot -->
+        <!-- Player Card -->
         <div class="player-card">
-          <!-- Player Name at the Top -->
-          <h4 style="color: white; margin-top: 10px;">Kai "CreeK" Godwin</h4>
+          <!-- Inserted bulletslogo2.png ABOVE the name -->
+          <img src="bulletslogo2.png" alt="Team Logo" class="small-logo" />
+          
+          <!-- Player Name -->
+          <div class="player-name">Kai "CreeK" Godwin</div>
 
-          <!-- Headshot Picture -->
+          <!-- Headshot -->
           <img src="creek.png" alt="Kai CreeK Godwin" class="headshot" />
 
-          <!-- Player Info at the Bottom -->
+          <!-- Info at bottom -->
           <div class="player-info">
             <p>23</p>
             <p>AR</p>
