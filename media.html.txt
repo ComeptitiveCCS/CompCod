@@ -1,0 +1,122 @@
+media.html
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Media - Competitive CoD Series</title>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600&display=swap" rel="stylesheet">
+  <style>
+    html, body {
+      margin: 0;
+      padding: 0;
+      width: 100%;
+      height: 100%;
+      background-color: #000000;
+      color: #ffffff;
+      font-family: 'Orbitron', sans-serif;
+    }
+
+    nav {
+      background: #ffffff;
+      padding: 1rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    nav .logo {
+      display: flex;
+      align-items: center;
+      font-size: 1.5rem;
+      color: #000000;
+    }
+
+    nav .logo img {
+      height: 40px;
+      width: auto;
+      margin-left: 10px;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 2rem;
+    }
+
+    nav ul li a {
+      color: #000000;
+      text-decoration: none;
+      transition: color 0.3s;
+    }
+
+    nav ul li a:hover {
+      color: #5da9ff;
+    }
+
+    #media {
+      padding: 4rem 2rem 2rem;
+      text-align: center;
+      background: #000000;
+      color: #ffffff;
+    }
+
+    #media h2 {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+    }
+
+    #media p {
+      margin-bottom: 1rem;
+    }
+
+    #media a {
+      display: inline-block;
+      text-decoration: none;
+      background: #5da9ff;
+      color: #0a0f2c;
+      padding: 0.75rem 1.5rem;
+      border-radius: 8px;
+      transition: background 0.3s;
+      margin-top: 1rem;
+    }
+
+    #media a:hover {
+      background: #3d8fe6;
+    }
+
+    footer {
+      background: #ffffff;
+      text-align: center;
+      padding: 1rem;
+      font-size: 0.8rem;
+      color: #000000;
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <div class="logo">
+      Competitive CoD Series
+      <img src="logo.png" alt="CCS Logo" />
+    </div>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="teams.html">Teams</a></li>
+      <li><a href="#">Standings</a></li>
+      <li><a href="#media">Media</a></li>
+    </ul>
+  </nav>
+
+  <section id="media">
+    <h2>Follow Our Twitter</h2>
+    <p>Stay up-to-date with the latest news, updates, and highlights from Competitive CoD Series:</p>
+    <a href="https://x.com/CompetitiveCCS" target="_blank">Follow us on Twitter</a>
+  </section>
+
+  <footer>
+    &copy; 2025 Competitive CoD Series | All Rights Reserved
+  </footer>
+</body>
+</html>
