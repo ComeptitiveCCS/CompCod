@@ -80,7 +80,7 @@
     .player-card {
       width: 300px;
       height: 500px;
-      background-color: white;
+      background-color: black; /* Changed background color to black */
       border-radius: 12px;
       overflow: hidden;
       display: flex;
@@ -91,11 +91,11 @@
       position: relative;
     }
 
-    .full-logo {
-      width: 100%;
+    .small-logo {
+      width: 40px;  /* Very small size for the logo */
       height: auto;
+      margin-bottom: 15px;
       object-fit: contain;
-      margin-bottom: 15px; /* Space between logo and player card */
     }
 
     .headshot {
@@ -160,17 +160,19 @@
     <div class="team">
       <h3 onclick="togglePlayers('qcb-players')">Queen City Bullets</h3>
       <div id="qcb-players" class="team-players">
-        <!-- Bullets Logo Above Player Card -->
-        <img src="bulletslogo.png" alt="Queen City Bullets Logo" class="full-logo" />
+        <!-- Bullets Logo (Small) Above Player Card -->
+        <img src="bulletslogo.png" alt="Queen City Bullets Logo" class="small-logo" />
 
         <!-- Player Card with Headshot -->
         <div class="player-card">
+          <!-- Player Name at the Top -->
+          <h4 style="color: white; margin-top: 10px;">Kai "CreeK" Godwin</h4>
+
           <!-- Headshot Picture -->
           <img src="creek.png" alt="Kai CreeK Godwin" class="headshot" />
 
-          <!-- Player Info -->
+          <!-- Player Info at the Bottom -->
           <div class="player-info">
-            <h4>Kai "CreeK" Godwin</h4>
             <p>Age: 23</p>
             <p>Role: AR</p>
             <p>Location: Charlotte, NC</p>
