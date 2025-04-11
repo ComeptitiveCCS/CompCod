@@ -75,10 +75,11 @@
     }
     .player-card {
       background: #1a244a;
-      padding: 1.5rem;
+      padding: 2rem 1.5rem;
       border-radius: 10px;
       text-align: center;
       width: 300px; /* Wider player card */
+      height: 450px; /* Made player card taller */
       color: #ffffff;
       position: relative;
       overflow: hidden;
@@ -103,7 +104,8 @@
     .player-card .info {
       position: relative;
       z-index: 2; /* Ensure text appears above the image */
-      padding: 1rem;
+      padding-top: 20px; /* Add space for name */
+      padding-bottom: 20px;
     }
     .player-card h4 {
       font-size: 1.5rem;
@@ -160,14 +162,14 @@
       </div>
       <div id="team-players" class="team-players">
         <div class="player-card">
-          <img class="headshot" src="creek.png" alt="Kai CreeK Godwin Headshot" />
-          <img class="logo" src="bulletslogo.png" alt="Team Logo" />
           <div class="info">
             <h4>Kai "CreeK" Godwin</h4>
             <p>AR</p>
             <p>Charlotte, NC</p>
             <p>Age 23</p>
           </div>
+          <img class="headshot" src="creek.png" alt="Kai CreeK Godwin Headshot" />
+          <img class="logo" src="bulletslogo.png" alt="Team Logo" />
         </div>
       </div>
     </div>
