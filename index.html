@@ -11,38 +11,36 @@
       padding: 0;
       width: 100%;
       height: 100%;
-      background-color: #000000; /* Black background */
+      background-color: #000000; /* Fully black background */
       color: #ffffff;
       font-family: 'Orbitron', sans-serif;
     }
 
     nav {
-      background: #ffffff;
+      background: #ffffff; /* White header */
       padding: 1rem 2rem;
       display: flex;
       justify-content: space-between;
       align-items: center;
     }
 
-    nav .logo-title {
+    nav .logo {
       display: flex;
       align-items: center;
-      gap: 0.5rem;
       font-size: 1.5rem;
       color: #000000;
     }
 
-    nav .logo-title img {
-      height: 32px;
+    nav .logo img {
+      height: 40px;
       width: auto;
+      margin-left: 10px;
     }
 
     nav ul {
       list-style: none;
       display: flex;
       gap: 2rem;
-      margin: 0;
-      padding: 0;
     }
 
     nav ul li a {
@@ -56,55 +54,49 @@
     }
 
     .hero {
-      padding: 8rem 2rem 4rem 2rem;
-      text-align: center;
-      background-color: #000000;
       position: relative;
+      text-align: center;
+      padding: 4rem 2rem 2rem;
       min-height: 90vh;
     }
 
-    .scroll-logo {
-      width: 500px;
+    .hero img {
+      width: 300px;
       max-width: 90%;
-      animation: scrollFade 2s ease-in-out forwards;
-    }
-
-    @keyframes scrollFade {
-      0% {
-        opacity: 0;
-        transform: translateY(100px);
-      }
-      100% {
-        opacity: 1;
-        transform: translateY(0);
-      }
+      height: auto;
+      display: block;
+      margin: 0 auto;
+      position: relative;
+      z-index: 1;
     }
 
     .hero h1 {
       font-size: 3rem;
-      margin: 2rem 0 1rem;
+      margin-top: -2rem;
+      margin-bottom: 0.5rem;
       color: #ffffff;
       text-transform: uppercase;
       letter-spacing: 2px;
       animation: pulseGlow 3s ease-in-out infinite;
     }
 
-    @keyframes pulseGlow {
-      0% {
-        text-shadow: 0 0 5px #5da9ff, 0 0 10px #5da9ff, 0 0 15px #5da9ff;
-      }
-      50% {
-        text-shadow: 0 0 15px #5da9ff, 0 0 30px #5da9ff, 0 0 45px #5da9ff;
-      }
-      100% {
-        text-shadow: 0 0 5px #5da9ff, 0 0 10px #5da9ff, 0 0 15px #5da9ff;
-      }
-    }
-
     .hero p {
       font-size: 1.2rem;
-      margin-bottom: 2rem;
+      margin-top: 0;
+      margin-bottom: 1.5rem;
       color: #ffffff;
+    }
+
+    @keyframes pulseGlow {
+      0% {
+        text-shadow: 0 0 5px #5da9ff, 0 0 10px #5da9ff;
+      }
+      50% {
+        text-shadow: 0 0 15px #5da9ff, 0 0 30px #5da9ff;
+      }
+      100% {
+        text-shadow: 0 0 5px #5da9ff, 0 0 10px #5da9ff;
+      }
     }
 
     .cta-buttons a {
@@ -122,29 +114,29 @@
     }
 
     #media {
-      padding: 4rem 2rem;
+      padding: 4rem 2rem 2rem;
       text-align: center;
       background: #000000;
+      color: #ffffff;
     }
 
     #media h2 {
       font-size: 2rem;
       margin-bottom: 1rem;
-      color: #ffffff;
     }
 
     #media p {
-      color: #ffffff;
+      margin-bottom: 1rem;
     }
 
     #media a {
+      display: inline-block;
       text-decoration: none;
       background: #5da9ff;
       color: #0a0f2c;
       padding: 0.75rem 1.5rem;
       border-radius: 8px;
       transition: background 0.3s;
-      display: inline-block;
       margin-top: 1rem;
     }
 
@@ -153,19 +145,19 @@
     }
 
     footer {
+      background: #ffffff; /* White footer */
       text-align: center;
       padding: 1rem;
-      background: #ffffff;
+      font-size: 0.8rem;
       color: #000000;
-      font-size: 0.85rem;
     }
   </style>
 </head>
 <body>
   <nav>
-    <div class="logo-title">
+    <div class="logo">
       Competitive CoD Series
-      <img src="logo.png" alt="Logo" />
+      <img src="logo.png" alt="CCS Logo" />
     </div>
     <ul>
       <li><a href="index.html">Home</a></li>
@@ -176,7 +168,7 @@
   </nav>
 
   <section class="hero">
-    <img src="logo.png" alt="Main Logo" class="scroll-logo" />
+    <img src="logo.png" alt="Main Logo" />
     <h1>Welcome to the Competitive CoD Series</h1>
     <p>Where the best teams battle for glory. Qualifiers, tournaments, highlights — all in one place.</p>
     <div class="cta-buttons">
@@ -187,10 +179,8 @@
 
   <section id="media">
     <h2>Follow Our Twitter</h2>
-    <p>Stay up-to-date with the latest news, updates, and highlights from Competitive CoD Series on our official Twitter page:</p>
-    <div>
-      <a href="https://x.com/CompetitiveCCS" target="_blank">Follow us on Twitter</a>
-    </div>
+    <p>Stay up-to-date with the latest news, updates, and highlights from Competitive CoD Series:</p>
+    <a href="https://x.com/CompetitiveCCS" target="_blank">Follow us on Twitter</a>
   </section>
 
   <footer>
@@ -198,6 +188,5 @@
   </footer>
 </body>
 </html>
-
 
 
