@@ -73,9 +73,8 @@
     }
 
     .team h3 img {
-      height: 30px;
-      vertical-align: middle;
-      margin-right: 10px;
+      height: 60px;
+      margin-right: 12px;
     }
 
     .team-players {
@@ -97,29 +96,34 @@
       align-items: center;
       padding: 1rem;
       margin-left: 1rem;
+      position: relative;
     }
 
-    .player-card img.headshot {
-      width: 100%;
-      height: auto;
-      flex-grow: 1;
-      object-fit: cover;
+    .team-logo-small {
+      height: 65px;
+      margin-bottom: 0.25rem;
     }
 
     .player-name {
       font-size: 1.2rem;
-      margin-bottom: 0.5rem;
+      margin-bottom: 0.3rem;
+      z-index: 2;
     }
 
     .player-info {
       text-align: center;
       margin-top: auto;
-      margin-bottom: 0.5rem;
+      margin-bottom: 2.2rem;
+      z-index: 2;
+      position: relative;
     }
 
-    .team-logo-small {
-      height: 30px;
-      margin-bottom: 0.5rem;
+    .player-card img.headshot {
+      width: 100%;
+      height: auto;
+      object-fit: cover;
+      position: absolute;
+      bottom: 0;
     }
 
     footer {
