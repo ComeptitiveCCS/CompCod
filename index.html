@@ -137,6 +137,14 @@
       border-radius: 8px;
       cursor: pointer;
       transition: transform 0.3s ease;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      color: white;
+      font-size: 1.5rem;
+      font-weight: bold;
+      text-shadow: 0 0 10px rgba(0, 0, 0, 0.7);
     }
 
     .about-ccs:hover {
@@ -193,7 +201,7 @@
       <li><a href="index.html">Home</a></li>
       <li><a href="teams.html">Teams</a></li>
       <li><a href="standings.html">Standings</a></li>
-      <li><a href="media.html">Media</a></li> <!-- Corrected Media link -->
+      <li><a href="media.html">Media</a></li>
     </ul>
   </nav>
 
@@ -205,8 +213,10 @@
       <a href="https://discord.gg/dgYKvHVu6U" target="_blank">Join Discord</a>
       <a href="https://www.twitch.tv/" target="_blank">Watch Live</a>
     </div>
-    <!-- About section -->
-    <div class="about-ccs" onclick="window.location.href='about.html';"></div>
+    <!-- About section with text inside -->
+    <div class="about-ccs" onclick="window.location.href='about.html';">
+      About CCS
+    </div>
   </section>
 
   <footer>
