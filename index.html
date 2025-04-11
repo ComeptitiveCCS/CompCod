@@ -6,17 +6,16 @@
   <title>Competitive CoD Series</title>
   <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600&display=swap" rel="stylesheet">
   <style>
-    body {
+    html, body {
       margin: 0;
+      padding: 0;
+      width: 100%;
+      height: 100%;
+      background-color: #ffffff;
+      color: #000000;
       font-family: 'Orbitron', sans-serif;
-      color: #ffffff;
-      background-image: url('https://competitiveccs.github.io/repository/assets/logo.png'); /* Replace with your actual GitHub path */
-      background-size: cover;
-      background-position: center;
-      background-repeat: no-repeat;
-      background-attachment: fixed;
-      opacity: 0.95;
     }
+
     nav {
       background: rgba(18, 28, 74, 0.95);
       padding: 1rem 2rem;
@@ -24,37 +23,85 @@
       justify-content: space-between;
       align-items: center;
     }
+
     nav .logo {
       font-size: 1.5rem;
       color: #ffffff;
     }
+
     nav ul {
       list-style: none;
       display: flex;
       gap: 2rem;
     }
+
     nav ul li a {
       color: #ffffff;
       text-decoration: none;
       transition: color 0.3s;
     }
+
     nav ul li a:hover {
       color: #5da9ff;
     }
+
     .hero {
       padding: 6rem 2rem;
       text-align: center;
       background: rgba(26, 36, 92, 0.85);
       backdrop-filter: blur(4px);
+      position: relative;
+      background-image: url('logo.png');
+      background-repeat: no-repeat;
+      background-position: center center;
+      background-size: 300px auto;
+      color: #ffffff;
     }
+
+    .hero::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background-color: rgba(10, 15, 44, 0.6);
+      z-index: 1;
+    }
+
+    .hero h1,
+    .hero p,
+    .cta-buttons {
+      position: relative;
+      z-index: 2;
+    }
+
     .hero h1 {
       font-size: 3rem;
       margin-bottom: 1rem;
+      color: #ffffff;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      display: inline-block;
+      position: relative;
+      animation: pulseGlow 3s ease-in-out infinite;
     }
+
+    @keyframes pulseGlow {
+      0% {
+        text-shadow: 0 0 5px #5da9ff, 0 0 10px #5da9ff, 0 0 15px #5da9ff;
+      }
+      50% {
+        text-shadow: 0 0 15px #5da9ff, 0 0 30px #5da9ff, 0 0 45px #5da9ff;
+      }
+      100% {
+        text-shadow: 0 0 5px #5da9ff, 0 0 10px #5da9ff, 0 0 15px #5da9ff;
+      }
+    }
+
     .hero p {
       font-size: 1.2rem;
       margin-bottom: 2rem;
+      color: #ffffff;
     }
+
     .cta-buttons a {
       text-decoration: none;
       margin: 0 1rem;
@@ -64,9 +111,11 @@
       border-radius: 8px;
       transition: background 0.3s;
     }
+
     .cta-buttons a:hover {
       background: #3d8fe6;
     }
+
     footer {
       text-align: center;
       padding: 2rem;
@@ -74,16 +123,20 @@
       font-size: 0.9rem;
       color: #ccc;
     }
+
     #media {
       padding: 4rem 2rem;
       text-align: center;
       background: rgba(26, 36, 92, 0.85);
       backdrop-filter: blur(4px);
     }
+
     #media h2 {
       font-size: 2rem;
       margin-bottom: 1rem;
+      color: #ffffff;
     }
+
     #media a {
       text-decoration: none;
       background: #5da9ff;
@@ -92,6 +145,7 @@
       border-radius: 8px;
       transition: background 0.3s;
     }
+
     #media a:hover {
       background: #3d8fe6;
     }
@@ -101,8 +155,8 @@
   <nav>
     <div class="logo">Competitive CoD Series</div>
     <ul>
-      <li><a href="#">Home</a></li>
-      <li><a href="#">Teams</a></li>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="teams.html">Teams</a></li>
       <li><a href="#">Standings</a></li>
       <li><a href="#media">Media</a></li>
     </ul>
@@ -115,33 +169,6 @@
       <a href="https://discord.gg/dgYKvHVu6U" target="_blank">Join Discord</a>
       <a href="https://www.twitch.tv/" target="_blank">Watch Live</a>
     </div>
-  </section>
-
-  <section id="teams">
-    <h2>Teams</h2>
-    <div class="team">
-      <h3>Team 1</h3>
-      <ul>
-        <li>Starter 1</li>
-        <li>Starter 2</li>
-        <li>Starter 3</li>
-        <li>Starter 4</li>
-        <li>Substitute 1</li>
-        <li>Substitute 2</li>
-      </ul>
-    </div>
-    <div class="team">
-      <h3>Team 2</h3>
-      <ul>
-        <li>Starter 1</li>
-        <li>Starter 2</li>
-        <li>Starter 3</li>
-        <li>Starter 4</li>
-        <li>Substitute 1</li>
-        <li>Substitute 2</li>
-      </ul>
-    </div>
-    <!-- Repeat the above block for 12 teams -->
   </section>
 
   <section id="media">
