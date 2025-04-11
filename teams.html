@@ -1,5 +1,3 @@
-teams.html
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -54,6 +52,7 @@ teams.html
       border-radius: 10px;
       padding: 2rem;
       margin-bottom: 2rem;
+      text-align: center;
     }
     .team-header {
       display: flex;
@@ -61,17 +60,14 @@ teams.html
       justify-content: center;
       gap: 1rem;
       cursor: pointer;
-    }
-    .team-header img {
-      height: 40px;
-    }
-    .team h3 {
       font-size: 1.8rem;
-      margin: 0;
       color: #5da9ff;
     }
+    .team-header img {
+      height: 80px; /* Increased size */
+    }
     .team-players {
-      display: flex;
+      display: none;
       justify-content: center;
       gap: 1.5rem;
       flex-wrap: wrap;
@@ -86,8 +82,8 @@ teams.html
       color: #ffffff;
     }
     .player-card img.logo {
-      width: 50px;
-      height: 50px;
+      width: 80px; /* Increased size */
+      height: 80px;
       margin-top: 1rem;
     }
     .player-card h4 {
@@ -105,7 +101,23 @@ teams.html
       font-size: 0.9rem;
       color: #ccc;
     }
+    /* Added white background specifically for Queen City Bullets */
+    .queen-city-bullets {
+      background-color: #ffffff;
+      padding: 2rem;
+      border-radius: 10px;
+    }
   </style>
+  <script>
+    function togglePlayers() {
+      const teamPlayers = document.getElementById("team-players");
+      if (teamPlayers.style.display === "none" || teamPlayers.style.display === "") {
+        teamPlayers.style.display = "flex";
+      } else {
+        teamPlayers.style.display = "none";
+      }
+    }
+  </script>
 </head>
 <body>
   <nav>
@@ -122,12 +134,12 @@ teams.html
     <h2>Teams</h2>
 
     <!-- Queen City Bullets -->
-    <div class="team">
-      <div class="team-header">
+    <div class="team queen-city-bullets">
+      <div class="team-header" onclick="togglePlayers()">
         <img src="bulletslogo.png" alt="Team Logo" />
         <h3>Queen City Bullets</h3>
       </div>
-      <div class="team-players">
+      <div id="team-players" class="team-players">
         <div class="player-card">
           <h4>Kai "CreeK" Godwin</h4>
           <p>AR</p>
