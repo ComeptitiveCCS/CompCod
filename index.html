@@ -11,7 +11,7 @@
       padding: 0;
       width: 100%;
       height: 100%;
-      background-color: #ffffff;
+      background-color: #ffffff; /* White background */
       color: #000000;
       font-family: 'Orbitron', sans-serif;
     }
@@ -22,6 +22,16 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
+    }
+
+    nav .logo-container {
+      display: flex;
+      align-items: center;
+    }
+
+    nav .logo-container img {
+      height: 30px; /* Adjust size for logo */
+      margin-left: 10px;
     }
 
     nav .logo {
@@ -48,39 +58,21 @@
     .hero {
       padding: 6rem 2rem;
       text-align: center;
-      background: rgba(26, 36, 92, 0.85);
-      backdrop-filter: blur(4px);
-      position: relative;
+      background-color: #ffffff;
       background-image: url('logo.png');
       background-repeat: no-repeat;
       background-position: center center;
-      background-size: 300px auto;
-      color: #ffffff;
-    }
-
-    .hero::before {
-      content: "";
-      position: absolute;
-      inset: 0;
-      background-color: rgba(10, 15, 44, 0.6);
-      z-index: 1;
-    }
-
-    .hero h1,
-    .hero p,
-    .cta-buttons {
+      background-size: 500px auto;
       position: relative;
-      z-index: 2;
+      color: #000000;
     }
 
     .hero h1 {
       font-size: 3rem;
       margin-bottom: 1rem;
-      color: #ffffff;
+      color: #121c4a;
       text-transform: uppercase;
       letter-spacing: 2px;
-      display: inline-block;
-      position: relative;
       animation: pulseGlow 3s ease-in-out infinite;
     }
 
@@ -99,7 +91,7 @@
     .hero p {
       font-size: 1.2rem;
       margin-bottom: 2rem;
-      color: #ffffff;
+      color: #000000;
     }
 
     .cta-buttons a {
@@ -153,7 +145,10 @@
 </head>
 <body>
   <nav>
-    <div class="logo">Competitive CoD Series</div>
+    <div class="logo-container">
+      <div class="logo">Competitive CoD Series</div>
+      <img src="logo.png" alt="CCS Logo">
+    </div>
     <ul>
       <li><a href="index.html">Home</a></li>
       <li><a href="teams.html">Teams</a></li>
