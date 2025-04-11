@@ -2,22 +2,18 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Competitive CoD Series</title>
   <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600&display=swap" rel="stylesheet">
   <style>
-    * {
+    html, body {
       margin: 0;
       padding: 0;
-      box-sizing: border-box;
-    }
-
-    body, html {
       width: 100%;
       height: 100%;
-      background-color: #000000; /* true black */
-      font-family: 'Orbitron', sans-serif;
+      background-color: #000000; /* Black background */
       color: #ffffff;
+      font-family: 'Orbitron', sans-serif;
     }
 
     nav {
@@ -28,28 +24,31 @@
       align-items: center;
     }
 
-    nav .logo {
-      font-size: 1.5rem;
-      color: #000;
+    nav .logo-title {
       display: flex;
       align-items: center;
+      gap: 0.5rem;
+      font-size: 1.5rem;
+      color: #000000;
     }
 
-    nav .logo img {
-      margin-left: 10px;
-      width: 60px; /* increased logo size */
+    nav .logo-title img {
+      height: 32px;
+      width: auto;
     }
 
     nav ul {
       list-style: none;
       display: flex;
       gap: 2rem;
+      margin: 0;
+      padding: 0;
     }
 
     nav ul li a {
-      color: #000;
+      color: #000000;
       text-decoration: none;
-      font-weight: bold;
+      transition: color 0.3s;
     }
 
     nav ul li a:hover {
@@ -57,33 +56,55 @@
     }
 
     .hero {
-      position: relative;
-      height: 100vh;
-      background-color: #000000; /* true black */
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
+      padding: 8rem 2rem 4rem 2rem;
       text-align: center;
-      padding: 2rem;
+      background-color: #000000;
+      position: relative;
+      min-height: 90vh;
+    }
+
+    .scroll-logo {
+      width: 500px;
+      max-width: 90%;
+      animation: scrollFade 2s ease-in-out forwards;
+    }
+
+    @keyframes scrollFade {
+      0% {
+        opacity: 0;
+        transform: translateY(100px);
+      }
+      100% {
+        opacity: 1;
+        transform: translateY(0);
+      }
     }
 
     .hero h1 {
       font-size: 3rem;
-      margin-bottom: 1rem;
+      margin: 2rem 0 1rem;
+      color: #ffffff;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      animation: pulseGlow 3s ease-in-out infinite;
+    }
+
+    @keyframes pulseGlow {
+      0% {
+        text-shadow: 0 0 5px #5da9ff, 0 0 10px #5da9ff, 0 0 15px #5da9ff;
+      }
+      50% {
+        text-shadow: 0 0 15px #5da9ff, 0 0 30px #5da9ff, 0 0 45px #5da9ff;
+      }
+      100% {
+        text-shadow: 0 0 5px #5da9ff, 0 0 10px #5da9ff, 0 0 15px #5da9ff;
+      }
     }
 
     .hero p {
       font-size: 1.2rem;
       margin-bottom: 2rem;
-      max-width: 600px;
-    }
-
-    .hero img {
-      width: 400px; /* Bigger logo */
-      max-width: 90%;
-      margin-bottom: 2rem;
-      transition: transform 0.3s ease;
+      color: #ffffff;
     }
 
     .cta-buttons a {
@@ -93,24 +114,27 @@
       color: #0a0f2c;
       padding: 0.75rem 1.5rem;
       border-radius: 8px;
-      font-weight: bold;
-      transition: background 0.3s, transform 0.3s;
+      transition: background 0.3s;
     }
 
     .cta-buttons a:hover {
       background: #3d8fe6;
-      transform: scale(1.05);
     }
 
     #media {
-      text-align: center;
       padding: 4rem 2rem;
-      background: #0a0a0a;
+      text-align: center;
+      background: #000000;
     }
 
     #media h2 {
       font-size: 2rem;
       margin-bottom: 1rem;
+      color: #ffffff;
+    }
+
+    #media p {
+      color: #ffffff;
     }
 
     #media a {
@@ -119,8 +143,9 @@
       color: #0a0f2c;
       padding: 0.75rem 1.5rem;
       border-radius: 8px;
-      font-weight: bold;
       transition: background 0.3s;
+      display: inline-block;
+      margin-top: 1rem;
     }
 
     #media a:hover {
@@ -128,24 +153,22 @@
     }
 
     footer {
-      background-color: #ffffff;
-      color: #000000;
       text-align: center;
       padding: 1rem;
-      font-size: 0.9rem;
+      background: #ffffff;
+      color: #000000;
+      font-size: 0.85rem;
     }
-
   </style>
 </head>
 <body>
-
   <nav>
-    <div class="logo">
+    <div class="logo-title">
       Competitive CoD Series
-      <img src="logo.png" alt="CCS Logo">
+      <img src="logo.png" alt="Logo" />
     </div>
     <ul>
-      <li><a href="#">Home</a></li>
+      <li><a href="index.html">Home</a></li>
       <li><a href="teams.html">Teams</a></li>
       <li><a href="#">Standings</a></li>
       <li><a href="#media">Media</a></li>
@@ -153,7 +176,7 @@
   </nav>
 
   <section class="hero">
-    <img src="logo.png" alt="Main Logo" />
+    <img src="logo.png" alt="Main Logo" class="scroll-logo" />
     <h1>Welcome to the Competitive CoD Series</h1>
     <p>Where the best teams battle for glory. Qualifiers, tournaments, highlights — all in one place.</p>
     <div class="cta-buttons">
@@ -164,15 +187,17 @@
 
   <section id="media">
     <h2>Follow Our Twitter</h2>
-    <p>Stay up-to-date with the latest news, updates, and highlights from Competitive CoD Series.</p>
-    <a href="https://x.com/CompetitiveCCS" target="_blank">Follow us on Twitter</a>
+    <p>Stay up-to-date with the latest news, updates, and highlights from Competitive CoD Series on our official Twitter page:</p>
+    <div>
+      <a href="https://x.com/CompetitiveCCS" target="_blank">Follow us on Twitter</a>
+    </div>
   </section>
 
   <footer>
     &copy; 2025 Competitive CoD Series | All Rights Reserved
   </footer>
-
 </body>
 </html>
+
 
 
