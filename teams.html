@@ -48,15 +48,16 @@
       color: #fff;
     }
     .team {
-      background: #ffffff;
+      background: white;
       border-radius: 10px;
       padding: 2rem;
       margin-bottom: 2rem;
+      color: black;
     }
     .team h3 {
       font-size: 1.8rem;
       margin-bottom: 1rem;
-      color: #000000;
+      color: black;
       cursor: pointer;
     }
     .team-players {
@@ -68,45 +69,43 @@
     }
     .player-card {
       position: relative;
-      background: #1a3c7c;
-      padding: 2rem 1rem;
+      background: #1a3c78;
+      padding: 1rem;
       border-radius: 10px;
       text-align: center;
-      width: 300px;
-      height: 500px;
+      width: 250px;
+      height: 450px;
       color: #ffffff;
       overflow: hidden;
     }
-    .player-card .bg-logo {
+    .player-card h4 {
+      font-size: 1.4rem;
+      margin: 0.5rem 0;
+      position: relative;
+      z-index: 2;
+    }
+    .player-card .player-info {
+      position: absolute;
+      bottom: 1rem;
+      width: 100%;
+      z-index: 2;
+    }
+    .player-card img.headshot {
+      width: 100%;
+      height: auto;
+      object-fit: cover;
+      position: relative;
+      z-index: 2;
+    }
+    .player-card img.logo-bg {
       position: absolute;
       top: 0;
       left: 0;
       width: 100%;
       height: 100%;
-      object-fit: contain;
+      object-fit: cover;
       opacity: 0.15;
       z-index: 1;
-    }
-    .player-card img.headshot {
-      position: relative;
-      z-index: 2;
-      width: 90%;
-      height: auto;
-      border-radius: 10px;
-      margin: 0 auto;
-    }
-    .player-card h4 {
-      position: relative;
-      z-index: 3;
-      font-size: 1.5rem;
-      margin: 0.5rem 0 1rem;
-    }
-    .player-info {
-      position: relative;
-      z-index: 3;
-      font-size: 1rem;
-      margin-top: auto;
-      padding-top: 1rem;
     }
     footer {
       text-align: center;
@@ -143,15 +142,12 @@
 
     <!-- Queen City Bullets Team -->
     <div class="team">
-      <h3 onclick="togglePlayers('qcb-players')">
-        <img src="bulletslogo.png" alt="Team Logo" style="height: 40px; vertical-align: middle; margin-right: 10px;" />
-        Queen City Bullets
-      </h3>
+      <h3 onclick="togglePlayers('qcb-players')">Queen City Bullets <img src="bulletslogo.png" alt="Bullets Logo" style="height: 40px; vertical-align: middle; margin-left: 10px;" /></h3>
       <div id="qcb-players" class="team-players">
         <div class="player-card">
-          <img src="bulletslogo.png" alt="Logo BG" class="bg-logo">
           <h4>Kai "CreeK" Godwin</h4>
-          <img src="creek.png" alt="Headshot" class="headshot" />
+          <img class="logo-bg" src="bulletslogo.png" alt="Logo Background">
+          <img class="headshot" src="creek.png" alt="Headshot">
           <div class="player-info">
             <p>AR</p>
             <p>Charlotte, NC</p>
