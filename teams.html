@@ -48,16 +48,15 @@
       color: #fff;
     }
     .team {
-      background: white;
+      background: #ffffff;
       border-radius: 10px;
       padding: 2rem;
       margin-bottom: 2rem;
-      color: black;
     }
     .team h3 {
       font-size: 1.8rem;
       margin-bottom: 1rem;
-      color: black;
+      color: #000;
       cursor: pointer;
     }
     .team-players {
@@ -69,50 +68,50 @@
     }
     .player-card {
       position: relative;
-      background: #1a3c78;
-      padding: 1rem;
+      background-color: #1a4ba4;
       border-radius: 10px;
-      text-align: center;
       width: 250px;
-      height: 450px;
-      color: #ffffff;
+      height: 400px;
       overflow: hidden;
+      color: #ffffff;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
     }
-    .player-card h4 {
-      font-size: 1.4rem;
-      margin: 0.5rem 0;
+    .player-card::before {
+      content: '';
+      background: url('bulletslogo.png') no-repeat center center;
+      background-size: cover;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 0;
+    }
+    .player-info {
       position: relative;
       z-index: 2;
+      padding: 1rem;
+      background: rgba(0, 0, 0, 0.5);
+      border-bottom-left-radius: 10px;
+      border-bottom-right-radius: 10px;
     }
-    .player-card .player-info {
-      position: absolute;
-      bottom: 1rem;
-      width: 100%;
-      z-index: 2;
+    .player-info h4 {
+      font-size: 1.5rem;
+      margin-bottom: 1rem;
+    }
+    .player-info p {
+      margin: 0.2rem 0;
     }
     .player-card img.headshot {
       width: 100%;
       height: auto;
       object-fit: cover;
       position: relative;
-      z-index: 2;
-    }
-    .player-card img.logo-bg {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      opacity: 0.15;
       z-index: 1;
-    }
-    footer {
-      text-align: center;
-      padding: 2rem;
-      background: rgba(18, 28, 74, 0.95);
-      font-size: 0.9rem;
-      color: #ccc;
+      margin-top: auto;
     }
   </style>
   <script>
@@ -140,14 +139,13 @@
   <section id="teams">
     <h2>Teams</h2>
 
-    <!-- Queen City Bullets Team -->
+    <!-- Queen City Bullets -->
     <div class="team">
-      <h3 onclick="togglePlayers('qcb-players')">Queen City Bullets <img src="bulletslogo.png" alt="Bullets Logo" style="height: 40px; vertical-align: middle; margin-left: 10px;" /></h3>
+      <h3 onclick="togglePlayers('qcb-players')">Queen City Bullets <img src="bulletslogo.png" alt="Bullets Logo" style="height: 40px; vertical-align: middle; margin-left: 10px;"></h3>
       <div id="qcb-players" class="team-players">
         <div class="player-card">
-          <h4>Kai "CreeK" Godwin</h4>
-          <img class="logo-bg" src="bulletslogo.png" alt="Logo Background">
-          <img class="headshot" src="creek.png" alt="Headshot">
+          <h4 style="position: relative; z-index: 2; margin-top: 1rem;">Kai "CreeK" Godwin</h4>
+          <img class="headshot" src="creek.png" alt="Kai Godwin Headshot">
           <div class="player-info">
             <p>AR</p>
             <p>Charlotte, NC</p>
@@ -156,6 +154,7 @@
         </div>
       </div>
     </div>
+
   </section>
 
   <footer>
@@ -163,3 +162,5 @@
   </footer>
 </body>
 </html>
+
+
