@@ -60,6 +60,7 @@
       min-height: 90vh;
     }
 
+    /* Floating effect for the main logo */
     .hero img {
       width: 300px;
       max-width: 90%;
@@ -67,7 +68,20 @@
       display: block;
       margin: 0 auto;
       position: relative;
-      z-index: 1;
+      animation: float 6s ease-in-out infinite;
+    }
+
+    /* Floating effect */
+    @keyframes float {
+      0% {
+        transform: translateY(0);
+      }
+      50% {
+        transform: translateY(-15px);
+      }
+      100% {
+        transform: translateY(0);
+      }
     }
 
     .hero h1 {
