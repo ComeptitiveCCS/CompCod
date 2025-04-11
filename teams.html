@@ -61,61 +61,69 @@
       gap: 1rem;
       cursor: pointer;
       font-size: 1.8rem;
-      color: #000000; /* Changed to black */
+      color: #000000;
     }
     .team-header img {
-      height: 80px; /* Increased size */
+      height: 80px;
     }
     .team-players {
       display: none;
-      justify-content: flex-start; /* Align players to the left */
-      gap: 2rem; /* Space between player cards */
+      justify-content: flex-start;
+      gap: 2rem;
       flex-wrap: wrap;
       margin-top: 1rem;
     }
     .player-card {
-      background: #1a244a;
-      padding: 2rem 1.5rem;
+      background: transparent;
+      padding: 0;
       border-radius: 10px;
-      text-align: center;
-      width: 300px; /* Wider player card */
-      height: 450px; /* Made player card taller */
+      width: 300px;
+      height: 500px;
       color: #ffffff;
       position: relative;
       overflow: hidden;
     }
-    .player-card img.headshot {
+    .player-card .background-logo {
+      position: absolute;
+      top: 0;
+      left: 0;
       width: 100%;
       height: 100%;
-      object-fit: cover; /* Ensure full headshot fits within the card */
-      border-radius: 10px;
-      position: absolute;
-      top: 0;
-      left: 0;
-    }
-    .player-card .logo {
-      width: 100%; /* Full-width logo */
-      position: absolute;
-      top: 0;
-      left: 0;
-      opacity: 0.2; /* Behind the headshot */
+      opacity: 0.1;
       z-index: 1;
+      object-fit: cover;
+    }
+    .player-card .headshot {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: 2;
+    }
+    .player-card .name {
+      position: absolute;
+      top: 10px;
+      width: 100%;
+      text-align: center;
+      z-index: 3;
+      font-size: 1.5rem;
+      font-weight: bold;
+      text-shadow: 1px 1px 3px #000;
     }
     .player-card .info {
       position: absolute;
-      bottom: 20px; /* Position info at the bottom */
+      bottom: 20px;
       left: 50%;
       transform: translateX(-50%);
-      z-index: 2; /* Ensure text appears above the image */
+      z-index: 3;
       text-align: center;
+      text-shadow: 1px 1px 2px #000;
     }
-    .player-card h4 {
-      font-size: 1.5rem;
-      margin: 0.5rem 0;
-    }
-    .player-card p {
+    .player-card .info p {
+      margin: 4px 0;
       font-size: 1rem;
-      margin: 0;
     }
     footer {
       text-align: center;
@@ -124,7 +132,6 @@
       font-size: 0.9rem;
       color: #ccc;
     }
-    /* Added white background specifically for Queen City Bullets */
     .queen-city-bullets {
       background-color: #ffffff;
       padding: 2rem;
@@ -164,14 +171,14 @@
       </div>
       <div id="team-players" class="team-players">
         <div class="player-card">
+          <img class="background-logo" src="bulletslogo.png" alt="Team Logo Background" />
+          <img class="headshot" src="creek.png" alt="Kai CreeK Godwin Headshot" />
+          <div class="name">Kai "CreeK" Godwin</div>
           <div class="info">
-            <h4>Kai "CreeK" Godwin</h4>
             <p>AR</p>
             <p>Charlotte, NC</p>
             <p>Age 23</p>
           </div>
-          <img class="headshot" src="creek.png" alt="Kai CreeK Godwin Headshot" />
-          <img class="logo" src="bulletslogo.png" alt="Team Logo" />
         </div>
       </div>
     </div>
