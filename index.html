@@ -11,7 +11,7 @@
       padding: 0;
       width: 100%;
       height: 100%;
-      background-color: #ffffff; /* White background */
+      background-color: white; /* White background */
       color: #000000;
       font-family: 'Orbitron', sans-serif;
     }
@@ -23,34 +23,20 @@
       justify-content: space-between;
       align-items: center;
     }
-
-    nav .logo-container {
-      display: flex;
-      align-items: center;
-    }
-
-    nav .logo-container img {
-      height: 120px; /* Larger logo */
-      margin-left: 10px;
-    }
-
     nav .logo {
-      font-size: 2rem; /* Adjusted for better size */
+      font-size: 1.5rem;
       color: #ffffff;
     }
-
     nav ul {
       list-style: none;
       display: flex;
       gap: 2rem;
     }
-
     nav ul li a {
       color: #ffffff;
       text-decoration: none;
       transition: color 0.3s;
     }
-
     nav ul li a:hover {
       color: #5da9ff;
     }
@@ -58,40 +44,34 @@
     .hero {
       padding: 6rem 2rem;
       text-align: center;
-      background-color: #ffffff; /* White background */
-      background-image: url('logo.png');
+      background: rgba(26, 36, 92, 0.85);
+      backdrop-filter: blur(4px);
+      position: relative;
+      background-image: url('logo.png'); /* Replace with your actual logo path */
       background-repeat: no-repeat;
       background-position: center center;
-      background-size: 600px auto; /* Bigger logo */
-      position: relative;
-      color: #000000;
+      background-size: 400px auto;
+      height: 100vh;
+      overflow: hidden;
+    }
+
+    .hero img {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 300px; /* Adjust the size of the logo */
+      transition: transform 0.2s ease-out;
     }
 
     .hero h1 {
       font-size: 3rem;
       margin-bottom: 1rem;
-      color: #121c4a;
+      color: #ffffff;
       text-transform: uppercase;
       letter-spacing: 2px;
-      animation: pulseGlow 3s ease-in-out infinite;
-    }
-
-    @keyframes pulseGlow {
-      0% {
-        text-shadow: 0 0 5px #5da9ff, 0 0 10px #5da9ff, 0 0 15px #5da9ff;
-      }
-      50% {
-        text-shadow: 0 0 15px #5da9ff, 0 0 30px #5da9ff, 0 0 45px #5da9ff;
-      }
-      100% {
-        text-shadow: 0 0 5px #5da9ff, 0 0 10px #5da9ff, 0 0 15px #5da9ff;
-      }
-    }
-
-    .hero p {
-      font-size: 1.2rem;
-      margin-bottom: 2rem;
-      color: #000000;
+      display: inline-block;
+      position: relative;
     }
 
     .cta-buttons a {
@@ -101,54 +81,40 @@
       color: #0a0f2c;
       padding: 0.75rem 1.5rem;
       border-radius: 8px;
-      transition: background 0.3s;
+      transition: background 0.3s, transform 0.3s;
     }
-
     .cta-buttons a:hover {
       background: #3d8fe6;
+      transform: scale(1.1); /* Slight zoom effect */
     }
 
     footer {
       text-align: center;
-      padding: 2rem;
-      background-color: #ffffff; /* White background */
-      font-size: 0.9rem;
-      color: #000000; /* Text color set to black */
+      padding: 1rem 2rem; /* Smaller padding */
+      background: rgba(18, 28, 74, 0.95);
+      font-size: 0.8rem; /* Smaller font size */
+      color: #ccc;
+      background-color: white; /* Set footer background to white */
     }
 
-    #media {
-      padding: 4rem 2rem;
-      text-align: center;
-      background-color: #ffffff; /* White background */
-      color: #000000; /* Text color set to black */
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+      }
+      to {
+        opacity: 1;
+      }
     }
 
-    #media h2 {
-      font-size: 2rem;
-      margin-bottom: 1rem;
-      color: #000000;
+    .hero {
+      animation: fadeIn 2s forwards;
     }
 
-    #media a {
-      text-decoration: none;
-      background: #5da9ff;
-      color: #0a0f2c;
-      padding: 0.75rem 1.5rem;
-      border-radius: 8px;
-      transition: background 0.3s;
-    }
-
-    #media a:hover {
-      background: #3d8fe6;
-    }
   </style>
 </head>
 <body>
   <nav>
-    <div class="logo-container">
-      <div class="logo">Competitive CoD Series</div>
-      <img src="logo.png" alt="Logo" />
-    </div>
+    <div class="logo">Competitive CoD Series <img src="logo.png" alt="Logo" width="40px" /></div>
     <ul>
       <li><a href="index.html">Home</a></li>
       <li><a href="teams.html">Teams</a></li>
@@ -160,6 +126,7 @@
   <section class="hero">
     <h1>Welcome to the Competitive CoD Series</h1>
     <p>Where the best teams battle for glory. Qualifiers, tournaments, highlights — all in one place.</p>
+    <img src="logo.png" alt="Logo" /> <!-- Main logo -->
     <div class="cta-buttons">
       <a href="https://discord.gg/dgYKvHVu6U" target="_blank">Join Discord</a>
       <a href="https://www.twitch.tv/" target="_blank">Watch Live</a>
@@ -175,6 +142,15 @@
   <footer>
     &copy; 2025 Competitive CoD Series | All Rights Reserved
   </footer>
+
+  <script>
+    window.addEventListener('scroll', function() {
+      const logo = document.querySelector('.hero img');
+      const scrollPosition = window.scrollY;
+      logo.style.transform = `translate(-50%, -50%) translateY(${scrollPosition * 0.2}px)`;
+    });
+  </script>
 </body>
 </html>
+
 
