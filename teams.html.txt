@@ -1,0 +1,146 @@
+teams.html
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Teams | Competitive CoD Series</title>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Orbitron', sans-serif;
+      background-color: #0a0f2c;
+      color: #ffffff;
+    }
+    nav {
+      background: rgba(18, 28, 74, 0.95);
+      padding: 1rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    nav .logo {
+      font-size: 1.5rem;
+      color: #ffffff;
+    }
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 2rem;
+    }
+    nav ul li a {
+      color: #ffffff;
+      text-decoration: none;
+      transition: color 0.3s;
+    }
+    nav ul li a:hover {
+      color: #5da9ff;
+    }
+    #teams {
+      padding: 4rem 2rem;
+      text-align: center;
+      background: rgba(26, 36, 92, 0.85);
+      backdrop-filter: blur(4px);
+    }
+    #teams h2 {
+      font-size: 2.5rem;
+      margin-bottom: 2rem;
+      color: #fff;
+    }
+    .team {
+      background: rgba(0, 0, 0, 0.6);
+      border-radius: 10px;
+      padding: 2rem;
+      margin-bottom: 2rem;
+    }
+    .team-header {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 1rem;
+      cursor: pointer;
+    }
+    .team-header img {
+      height: 40px;
+    }
+    .team h3 {
+      font-size: 1.8rem;
+      margin: 0;
+      color: #5da9ff;
+    }
+    .team-players {
+      display: flex;
+      justify-content: center;
+      gap: 1.5rem;
+      flex-wrap: wrap;
+      margin-top: 1rem;
+    }
+    .player-card {
+      background: #1a244a;
+      padding: 1.5rem;
+      border-radius: 10px;
+      text-align: center;
+      width: 200px;
+      color: #ffffff;
+    }
+    .player-card img.logo {
+      width: 50px;
+      height: 50px;
+      margin-top: 1rem;
+    }
+    .player-card h4 {
+      font-size: 1.2rem;
+      margin: 0.5rem 0;
+    }
+    .player-card p {
+      font-size: 1rem;
+      margin: 0;
+    }
+    footer {
+      text-align: center;
+      padding: 2rem;
+      background: rgba(18, 28, 74, 0.95);
+      font-size: 0.9rem;
+      color: #ccc;
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <div class="logo">Competitive CoD Series</div>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="teams.html">Teams</a></li>
+      <li><a href="#">Standings</a></li>
+      <li><a href="#media">Media</a></li>
+    </ul>
+  </nav>
+
+  <section id="teams">
+    <h2>Teams</h2>
+
+    <!-- Queen City Bullets -->
+    <div class="team">
+      <div class="team-header">
+        <img src="bulletslogo.png" alt="Team Logo" />
+        <h3>Queen City Bullets</h3>
+      </div>
+      <div class="team-players">
+        <div class="player-card">
+          <h4>Kai "CreeK" Godwin</h4>
+          <p>AR</p>
+          <p>Charlotte, NC</p>
+          <p>Age 23</p>
+          <img class="logo" src="bulletslogo.png" alt="Team Logo" />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    &copy; 2025 Competitive CoD Series | All Rights Reserved
+  </footer>
+</body>
+</html>
