@@ -17,15 +17,22 @@
     }
 
     nav {
-      background: rgba(18, 28, 74, 0.95);
+      background: white; /* Header background color */
       padding: 1rem 2rem;
       display: flex;
       justify-content: space-between;
       align-items: center;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Optional shadow */
     }
     nav .logo {
       font-size: 1.5rem;
-      color: #ffffff;
+      color: #000000;
+      display: flex;
+      align-items: center;
+    }
+    nav .logo img {
+      margin-left: 10px;
+      width: 40px; /* Adjust logo size in the top left */
     }
     nav ul {
       list-style: none;
@@ -33,7 +40,7 @@
       gap: 2rem;
     }
     nav ul li a {
-      color: #ffffff;
+      color: #000000;
       text-decoration: none;
       transition: color 0.3s;
     }
@@ -47,10 +54,6 @@
       background: rgba(26, 36, 92, 0.85);
       backdrop-filter: blur(4px);
       position: relative;
-      background-image: url('logo.png'); /* Replace with your actual logo path */
-      background-repeat: no-repeat;
-      background-position: center center;
-      background-size: 400px auto;
       height: 100vh;
       overflow: hidden;
     }
@@ -91,10 +94,9 @@
     footer {
       text-align: center;
       padding: 1rem 2rem; /* Smaller padding */
-      background: rgba(18, 28, 74, 0.95);
+      background: white; /* Footer background color */
       font-size: 0.8rem; /* Smaller font size */
-      color: #ccc;
-      background-color: white; /* Set footer background to white */
+      color: #000000;
     }
 
     @keyframes fadeIn {
