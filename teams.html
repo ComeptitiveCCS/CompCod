@@ -125,7 +125,14 @@
       height: auto;
       object-fit: cover;
       position: absolute;
-      bottom: -10px; /* Adjusted to move headshot slightly down */
+      bottom: -20px; /* Moved headshot down further */
+    }
+
+    .team-qcb {
+      border: 2px solid red;
+      padding: 0.5rem 1rem;
+      border-radius: 10px;
+      background-color: rgba(255, 0, 0, 0.05);
     }
 
     footer {
@@ -163,7 +170,7 @@
 
     <!-- Queen City Bullets -->
     <div class="team">
-      <h3 onclick="togglePlayers('qcb-players')">
+      <h3 class="team-qcb" onclick="togglePlayers('qcb-players')">
         <img src="bulletslogo.png" alt="Bullets Logo">
         Queen City Bullets
       </h3>
