@@ -70,35 +70,48 @@
       display: flex;
       justify-content: center;
       align-items: center;
-      border: 3px solid red;
       border-radius: 12px;
       padding: 0.5rem;
     }
 
-    .team-psg {
-      border-color: #00ffcc;
+    /* Prestige Worldwide - Green Icon with Blue Glow */
+    .team-psg h3 {
+      border: 3px solid green;
+      color: green;
     }
 
-    .team h3 img {
-      height: 60px;
-      margin-right: 12px;
-    }
-
-    .clickable-icon {
-      width: 30px;
-      height: 30px;
-      background-color: #00ff00;  /* Green color */
-      border-radius: 50%;
-      display: inline-block;
-      margin-left: 10px;
-      border: 3px solid #0000ff;  /* Blue border */
-      box-shadow: 0 0 10px #0000ff;  /* Blue glow */
+    .team-logo-psg {
+      width: 100px;
+      height: auto;
+      border-radius: 12px;
+      border: 5px solid #000000; /* Black border around the logo */
+      box-shadow: 0 0 15px blue; /* Blue glow effect */
       cursor: pointer;
       transition: transform 0.3s ease-in-out;
     }
 
-    .clickable-icon:hover {
-      transform: scale(1.2);  /* Makes the icon slightly larger on hover */
+    .team-logo-psg:hover {
+      transform: scale(1.1); /* Slightly increase size on hover */
+    }
+
+    /* Queen City Bullets - Red Icon with Black Glow */
+    .team-qcb h3 {
+      border: 3px solid red;
+      color: red;
+    }
+
+    .team-logo-qcb {
+      width: 100px;
+      height: auto;
+      border-radius: 12px;
+      border: 5px solid #000000; /* Black border around the logo */
+      box-shadow: 0 0 15px #000000; /* Black glow effect */
+      cursor: pointer;
+      transition: transform 0.3s ease-in-out;
+    }
+
+    .team-logo-qcb:hover {
+      transform: scale(1.1); /* Slightly increase size on hover */
     }
 
     .team-players {
@@ -110,7 +123,7 @@
       overflow-x: auto;
     }
 
-    .player-card, .player-card-psg {
+    .player-card, .player-card-psg, .player-card-qcb {
       width: 220px;
       height: 400px;
       background-color: black;
@@ -125,7 +138,11 @@
     }
 
     .player-card-psg {
-      box-shadow: 0 0 15px #00ffcc;
+      box-shadow: 0 0 15px green;
+    }
+
+    .player-card-qcb {
+      box-shadow: 0 0 15px red;
     }
 
     .team-logo-small {
@@ -133,18 +150,18 @@
       margin-bottom: 0.25rem;
     }
 
-    .player-name, .player-name-psg {
+    .player-name, .player-name-psg, .player-name-qcb {
       font-size: 1.2rem;
       margin-bottom: 0.3rem;
       z-index: 2;
       text-shadow: 0 0 8px red;
     }
 
-    .player-name-psg {
-      text-shadow: 0 0 8px #00ffcc;
+    .player-name-qcb {
+      text-shadow: 0 0 8px red;
     }
 
-    .player-info, .player-info-psg {
+    .player-info, .player-info-psg, .player-info-qcb {
       text-align: center;
       margin-top: auto;
       margin-bottom: 1rem;
@@ -152,12 +169,13 @@
       position: relative;
     }
 
-    .player-info-psg {
+    .player-info-qcb {
       margin-bottom: 1rem;
     }
 
     .player-card img.headshot,
-    .player-card-psg img.headshot {
+    .player-card-psg img.headshot,
+    .player-card-qcb img.headshot {
       width: 100%;
       height: auto;
       object-fit: cover;
@@ -198,32 +216,10 @@
   <section id="teams">
     <h2>Teams</h2>
 
-    <!-- Queen City Bullets -->
-    <div class="team">
-      <h3 onclick="togglePlayers('qcb-players')">
-        <img src="bulletslogo.png" alt="Bullets Logo">
-        Queen City Bullets
-      </h3>
-      <div id="qcb-players" class="team-players">
-        <div class="player-card">
-          <img src="bulletslogo2.png" alt="Small Logo" class="team-logo-small">
-          <div class="player-name">Kai "CreeK" Godwin</div>
-          <img src="usalogo.png" alt="USA Flag" style="width: 45px; margin-bottom: 0.5rem;">
-          <img src="creek.png" alt="Kai Godwin Headshot" class="headshot">
-          <div class="player-info">
-            <div>AR Role</div>
-            <div>Charlotte, NC</div>
-            <div>Age 23</div>
-          </div>
-        </div>
-      </div>
-    </div>
-
     <!-- Prestige Worldwide -->
     <div class="team">
       <h3 class="team-psg" onclick="togglePlayers('pw-players')">
-        <img src="psglogo.png" alt="Prestige Worldwide Logo">
-        <span class="clickable-icon"></span> <!-- Green icon with blue glow -->
+        <img src="psglogo.png" alt="Prestige Worldwide Logo" class="team-logo-psg" onclick="togglePlayers('pw-players')" />
         Prestige Worldwide
       </h3>
       <div id="pw-players" class="team-players">
@@ -289,6 +285,27 @@
         </div>
       </div>
     </div>
+
+    <!-- Queen City Bullets -->
+    <div class="team">
+      <h3 class="team-qcb" onclick="togglePlayers('qcb-players')">
+        <img src="bulletslogo.png" alt="Queen City Bullets Logo" class="team-logo-qcb" onclick="togglePlayers('qcb-players')" />
+        Queen City Bullets
+      </h3>
+      <div id="qcb-players" class="team-players">
+        <div class="player-card-qcb">
+          <img src="bulletslogo2.png" alt="Small Logo" class="team-logo-small">
+          <div class="player-name-qcb">Kai "CreeK" Godwin</div>
+          <img src="usalogo.png" alt="USA Flag" style="width: 45px; margin-bottom: 0.5rem;">
+          <img src="creek.png" alt="Kai Godwin Headshot" class="headshot">
+          <div class="player-info-qcb">
+            <div>AR Role</div>
+            <div>Charlotte, NC</div>
+            <div>Age 23</div>
+          </div>
+        </div>
+      </div>
+    </div>
   </section>
 
   <footer>
@@ -296,7 +313,5 @@
   </footer>
 </body>
 </html>
-
-
 
 
