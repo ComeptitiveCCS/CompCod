@@ -97,7 +97,7 @@
       padding: 1rem;
       margin-left: 1rem;
       position: relative;
-      box-shadow: 0 0 15px 5px rgba(255, 0, 0, 0.8); /* Red glowing border */
+      box-shadow: 0 0 15px 5px rgba(255, 0, 0, 0.8); /* Red glowing border for Queen City */
     }
 
     .team-logo-small {
@@ -109,7 +109,7 @@
       font-size: 1.2rem;
       margin-bottom: 0.3rem;
       z-index: 2;
-      text-shadow: 0 0 8px red, 0 0 12px red;
+      text-shadow: 0 0 8px red, 0 0 12px red; /* Red glow for player name */
     }
 
     .player-card img.headshot {
@@ -126,14 +126,54 @@
       margin-bottom: 0.5rem; /* moved lower */
       z-index: 2;
       position: relative;
-      text-shadow: 0 0 8px red, 0 0 12px red;
+      text-shadow: 0 0 8px red, 0 0 12px red; /* Red glow for player info */
     }
 
-    .team-qcb {
-      border: 2px solid red;
+    /* New styles for Prestige Worldwide */
+    .team-psg {
+      border: 2px solid blue; /* Blue border */
       padding: 0.5rem 1rem;
       border-radius: 10px;
-      background-color: rgba(255, 0, 0, 0.05);
+      background-color: rgba(0, 0, 255, 0.1); /* Light blue background */
+    }
+
+    .player-card-psg {
+      width: 220px;
+      height: 400px;
+      background-color: black; /* Same background as Queen City */
+      border-radius: 12px;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 1rem;
+      margin-left: 1rem;
+      position: relative;
+      box-shadow: 0 0 15px 5px rgba(0, 255, 0, 0.8); /* Green glowing border */
+    }
+
+    .player-name-psg {
+      font-size: 1.2rem;
+      margin-bottom: 0.3rem;
+      z-index: 2;
+      text-shadow: 0 0 8px green, 0 0 12px green; /* Green glow for player name */
+    }
+
+    .player-card-psg img.headshot {
+      width: 100%;
+      height: auto;
+      object-fit: cover;
+      position: absolute;
+      bottom: -30px; /* pushed down more */
+    }
+
+    .player-info-psg {
+      text-align: center;
+      margin-top: auto;
+      margin-bottom: 0.5rem; /* moved lower */
+      z-index: 2;
+      position: relative;
+      text-shadow: 0 0 8px green, 0 0 12px green; /* Green glow for player info */
     }
 
     footer {
@@ -189,13 +229,43 @@
         </div>
       </div>
     </div>
-  </section>
 
-  <footer>
-    &copy; 2025 Competitive CoD Series | All Rights Reserved
-  </footer>
-</body>
-</html>
+    <!-- Prestige Worldwide -->
+    <div class="team">
+      <h3 class="team-psg" onclick="togglePlayers('pw-players')">
+        <img src="psglogo.png" alt="Prestige Worldwide Logo">
+        Prestige Worldwide
+      </h3>
+      <div id="pw-players" class="team-players">
+        <!-- Tec -->
+        <div class="player-card-psg">
+          <img src="psglogo.png" alt="Small Logo" class="team-logo-small">
+          <div class="player-name-psg">Robbie "Tec" Hufnagel</div>
+          <img src="canadalogo.png" alt="Canada Flag" style="width: 40px; margin-bottom: 0.5rem;">
+          <img src="defaultlogo.png" alt="Default Headshot" class="headshot">
+          <div class="player-info-psg">
+            <div>AR Role</div>
+            <div>Canada</div>
+            <div>Age 24</div>
+          </div>
+        </div>
+        <!-- AA -->
+        <div class="player-card-psg">
+          <img src="psglogo.png" alt="Small Logo" class="team-logo-small">
+          <div class="player-name-psg">Anton "AA" Amundrud</div>
+          <img src="canadalogo.png" alt="Canada Flag" style="width: 40px; margin-bottom: 0.5rem;">
+          <img src="defaultlogo.png" alt="Default Headshot" class="headshot">
+          <div class="player-info-psg">
+            <div>AR Role</div>
+            <div>Canada</div>
+            <div>Age 23</div>
+          </div>
+        </div>
+        <!-- Hunnybunsun -->
+        <div class="player-card-psg">
+          <img src="psglogo.png" alt="Small Logo" class="team-logo-small">
+          <div class="player-name-psg">Jordin "hunnybunsun" Rusnack</div>
+          <img src="canadalogo.png" alt="Canada Flag" style="width: 40px; margin-bottom: 0.5rem
 
 
 
