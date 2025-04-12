@@ -78,6 +78,9 @@
     .team-psg h3 {
       border: 3px solid green;
       color: green;
+      box-shadow: 0 0 15px blue; /* Blue glow */
+      cursor: pointer;
+      transition: transform 0.3s ease-in-out;
     }
 
     .team-logo-psg {
@@ -98,6 +101,9 @@
     .team-qcb h3 {
       border: 3px solid red;
       color: red;
+      box-shadow: 0 0 15px black; /* Black glow */
+      cursor: pointer;
+      transition: transform 0.3s ease-in-out;
     }
 
     .team-logo-qcb {
@@ -105,7 +111,7 @@
       height: auto;
       border-radius: 12px;
       border: 5px solid #000000; /* Black border around the logo */
-      box-shadow: 0 0 15px #000000; /* Black glow effect */
+      box-shadow: 0 0 15px black; /* Black glow effect */
       cursor: pointer;
       transition: transform 0.3s ease-in-out;
     }
@@ -121,6 +127,7 @@
       flex-wrap: nowrap;
       margin-top: 1rem;
       overflow-x: auto;
+      display: none; /* Initially hide player list */
     }
 
     .player-card, .player-card-psg, .player-card-qcb {
@@ -219,7 +226,7 @@
     <!-- Prestige Worldwide -->
     <div class="team">
       <h3 class="team-psg" onclick="togglePlayers('pw-players')">
-        <img src="psglogo.png" alt="Prestige Worldwide Logo" class="team-logo-psg" onclick="togglePlayers('pw-players')" />
+        <img src="psglogo.png" alt="Prestige Worldwide Logo" class="team-logo-psg" />
         Prestige Worldwide
       </h3>
       <div id="pw-players" class="team-players">
@@ -289,7 +296,7 @@
     <!-- Queen City Bullets -->
     <div class="team">
       <h3 class="team-qcb" onclick="togglePlayers('qcb-players')">
-        <img src="bulletslogo.png" alt="Queen City Bullets Logo" class="team-logo-qcb" onclick="togglePlayers('qcb-players')" />
+        <img src="bulletslogo.png" alt="Queen City Bullets Logo" class="team-logo-qcb" />
         Queen City Bullets
       </h3>
       <div id="qcb-players" class="team-players">
