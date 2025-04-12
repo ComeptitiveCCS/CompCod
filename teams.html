@@ -9,8 +9,8 @@
     body {
       margin: 0;
       font-family: 'Orbitron', sans-serif;
-      background-color: #0a0f2c;
-      color: #ffffff;
+      background-color: #0a0f2c; /* Dark background */
+      color: #ffffff; /* White text */
     }
 
     nav {
@@ -23,7 +23,7 @@
 
     nav .logo {
       font-size: 1.5rem;
-      color: #ffffff;
+      color: #ffffff; /* White logo */
     }
 
     nav ul {
@@ -33,26 +33,25 @@
     }
 
     nav ul li a {
-      color: #ffffff;
+      color: #ffffff; /* White text for links */
       text-decoration: none;
       transition: color 0.3s;
     }
 
     nav ul li a:hover {
-      color: #5da9ff;
+      color: #5da9ff; /* Highlighted color on hover */
     }
 
     #teams {
       padding: 4rem 2rem;
       text-align: center;
-      background: #ffffff;
-      backdrop-filter: blur(4px);
+      background: #0a0f2c; /* Keep background dark */
     }
 
     #teams h2 {
       font-size: 2.5rem;
       margin-bottom: 2rem;
-      color: #000;
+      color: #ffffff; /* White header text */
     }
 
     .team {
@@ -65,7 +64,7 @@
     .team h3 {
       font-size: 1.8rem;
       margin-bottom: 1rem;
-      color: #000;
+      color: #ffffff; /* White team name */
       cursor: pointer;
       display: flex;
       justify-content: center;
@@ -96,7 +95,7 @@
     .player-card, .player-card-psg {
       width: 220px;
       height: 400px;
-      background-color: black;
+      background-color: black; /* Black background for player cards */
       border-radius: 12px;
       overflow: hidden;
       display: flex;
@@ -120,6 +119,7 @@
       font-size: 1.2rem;
       margin-bottom: 0.3rem;
       z-index: 2;
+      color: #ffffff; /* White text for player name */
       text-shadow: 0 0 8px red;
     }
 
@@ -133,6 +133,7 @@
       margin-bottom: 1rem;
       z-index: 2;
       position: relative;
+      color: #ffffff; /* White text for player info */
     }
 
     .player-info-psg {
@@ -252,21 +253,21 @@
           <img src="canadalogo.png" alt="Canada Flag" style="width: 40px; margin-bottom: 0.5rem;">
           <img src="defaultlogo.png" alt="Default Headshot" class="headshot">
           <div class="player-info-psg">
-            <div>SMG Role</div>
+            <div>AR Role</div>
             <div>Canada</div>
-            <div>Age 26</div>
+            <div>Age 25</div>
           </div>
         </div>
         <!-- Slaw -->
         <div class="player-card-psg">
           <img src="psglogo.png" alt="Small Logo" class="team-logo-small">
-          <div class="player-name-psg">Michael "Slaw" Coleridge</div>
+          <div class="player-name-psg">Zane "Slaw" Slawson</div>
           <img src="canadalogo.png" alt="Canada Flag" style="width: 40px; margin-bottom: 0.5rem;">
           <img src="defaultlogo.png" alt="Default Headshot" class="headshot">
           <div class="player-info-psg">
-            <div>AR Role</div>
+            <div>Flex Role</div>
             <div>Canada</div>
-            <div>Age 25</div>
+            <div>Age 24</div>
           </div>
         </div>
       </div>
@@ -274,7 +275,7 @@
   </section>
 
   <footer>
-    &copy; 2025 Competitive CoD Series | All Rights Reserved
+    <p>&copy; 2025 Competitive CoD Series</p>
   </footer>
 </body>
 </html>
