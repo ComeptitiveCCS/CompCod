@@ -85,11 +85,16 @@
     }
 
     .team-players {
-      display: none;
-      justify-content: center;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
       gap: 2rem;
-      flex-wrap: wrap;
+      justify-items: center;
       margin-top: 1rem;
+    }
+
+    .team-players.center-row {
+      grid-template-columns: repeat(2, 1fr);
+      justify-items: center;
     }
 
     .player-card, .player-card-psg {
@@ -181,27 +186,6 @@
   <section id="teams">
     <h2>Teams</h2>
 
-    <!-- Queen City Bullets -->
-    <div class="team">
-      <h3 onclick="togglePlayers('qcb-players')">
-        <img src="bulletslogo.png" alt="Bullets Logo">
-        Queen City Bullets
-      </h3>
-      <div id="qcb-players" class="team-players">
-        <div class="player-card">
-          <img src="bulletslogo2.png" alt="Small Logo" class="team-logo-small">
-          <div class="player-name">Kai "CreeK" Godwin</div>
-          <img src="usalogo.png" alt="USA Flag" style="width: 45px; margin-bottom: 0.5rem;">
-          <img src="creek.png" alt="Kai Godwin Headshot" class="headshot">
-          <div class="player-info">
-            <div>AR Role</div>
-            <div>Charlotte, NC</div>
-            <div>Age 23</div>
-          </div>
-        </div>
-      </div>
-    </div>
-
     <!-- Prestige Worldwide -->
     <div class="team">
       <h3 class="team-psg" onclick="togglePlayers('pw-players')">
@@ -209,7 +193,7 @@
         Prestige Worldwide
       </h3>
       <div id="pw-players" class="team-players">
-        <!-- Tec -->
+        <!-- First Row (3 Players) -->
         <div class="player-card-psg">
           <img src="psglogo.png" alt="Small Logo" class="team-logo-small">
           <div class="player-name-psg">Robbie "Tec" Hufnagel</div>
@@ -221,7 +205,6 @@
             <div>Age 24</div>
           </div>
         </div>
-        <!-- AA -->
         <div class="player-card-psg">
           <img src="psglogo.png" alt="Small Logo" class="team-logo-small">
           <div class="player-name-psg">Anton "AA" Amundrud</div>
@@ -233,7 +216,6 @@
             <div>Age 23</div>
           </div>
         </div>
-        <!-- Hunnybunsun -->
         <div class="player-card-psg">
           <img src="psglogo.png" alt="Small Logo" class="team-logo-small">
           <div class="player-name-psg">Jordin "hunnybunsun" Rusnack</div>
@@ -245,8 +227,9 @@
             <div>Age 23</div>
           </div>
         </div>
-        <!-- Steeze -->
-        <div class="player-card-psg">
+
+        <!-- Second Row (2 Players) -->
+        <div class="player-card-psg center-row">
           <img src="psglogo.png" alt="Small Logo" class="team-logo-small">
           <div class="player-name-psg">Zack "Steeze" Renton</div>
           <img src="canadalogo.png" alt="Canada Flag" style="width: 40px; margin-bottom: 0.5rem;">
@@ -257,8 +240,7 @@
             <div>Age 26</div>
           </div>
         </div>
-        <!-- Slaw -->
-        <div class="player-card-psg">
+        <div class="player-card-psg center-row">
           <img src="psglogo.png" alt="Small Logo" class="team-logo-small">
           <div class="player-name-psg">Michael "Slaw" Coleridge</div>
           <img src="canadalogo.png" alt="Canada Flag" style="width: 40px; margin-bottom: 0.5rem;">
@@ -278,5 +260,6 @@
   </footer>
 </body>
 </html>
+
 
 
