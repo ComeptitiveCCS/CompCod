@@ -84,6 +84,23 @@
       margin-right: 12px;
     }
 
+    .clickable-icon {
+      width: 30px;
+      height: 30px;
+      background-color: #00ff00;  /* Green color */
+      border-radius: 50%;
+      display: inline-block;
+      margin-left: 10px;
+      border: 3px solid #0000ff;  /* Blue border */
+      box-shadow: 0 0 10px #0000ff;  /* Blue glow */
+      cursor: pointer;
+      transition: transform 0.3s ease-in-out;
+    }
+
+    .clickable-icon:hover {
+      transform: scale(1.2);  /* Makes the icon slightly larger on hover */
+    }
+
     .team-players {
       display: flex;
       justify-content: center;
@@ -206,6 +223,7 @@
     <div class="team">
       <h3 class="team-psg" onclick="togglePlayers('pw-players')">
         <img src="psglogo.png" alt="Prestige Worldwide Logo">
+        <span class="clickable-icon"></span> <!-- Green icon with blue glow -->
         Prestige Worldwide
       </h3>
       <div id="pw-players" class="team-players">
@@ -278,6 +296,7 @@
   </footer>
 </body>
 </html>
+
 
 
 
