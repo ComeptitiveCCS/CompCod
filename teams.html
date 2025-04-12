@@ -70,6 +70,13 @@
       display: flex;
       justify-content: center;
       align-items: center;
+      border: 3px solid red;
+      border-radius: 12px;
+      padding: 0.5rem;
+    }
+
+    .team-psg {
+      border-color: #00ffcc;
     }
 
     .team h3 img {
@@ -85,7 +92,7 @@
       margin-top: 1rem;
     }
 
-    .player-card {
+    .player-card, .player-card-psg {
       width: 220px;
       height: 400px;
       background-color: black;
@@ -97,7 +104,11 @@
       padding: 1rem;
       margin-left: 1rem;
       position: relative;
-      box-shadow: 0 0 15px 5px rgba(255, 0, 0, 0.8); /* Red glowing border for Queen City */
+      box-shadow: 0 0 15px red;
+    }
+
+    .player-card-psg {
+      box-shadow: 0 0 15px #00ffcc;
     }
 
     .team-logo-small {
@@ -105,75 +116,36 @@
       margin-bottom: 0.25rem;
     }
 
-    .player-name {
+    .player-name, .player-name-psg {
       font-size: 1.2rem;
       margin-bottom: 0.3rem;
       z-index: 2;
-      text-shadow: 0 0 8px red, 0 0 12px red; /* Red glow for player name */
-    }
-
-    .player-card img.headshot {
-      width: 100%;
-      height: auto;
-      object-fit: cover;
-      position: absolute;
-      bottom: -30px; /* pushed down more */
-    }
-
-    .player-info {
-      text-align: center;
-      margin-top: auto;
-      margin-bottom: 0.5rem; /* moved lower */
-      z-index: 2;
-      position: relative;
-      text-shadow: 0 0 8px red, 0 0 12px red; /* Red glow for player info */
-    }
-
-    /* New styles for Prestige Worldwide */
-    .team-psg {
-      border: 2px solid blue; /* Blue border */
-      padding: 0.5rem 1rem;
-      border-radius: 10px;
-      background-color: rgba(0, 0, 255, 0.1); /* Light blue background */
-    }
-
-    .player-card-psg {
-      width: 220px;
-      height: 400px;
-      background-color: black; /* Same background as Queen City */
-      border-radius: 12px;
-      overflow: hidden;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      padding: 1rem;
-      margin-left: 1rem;
-      position: relative;
-      box-shadow: 0 0 15px 5px rgba(0, 255, 0, 0.8); /* Green glowing border */
+      text-shadow: 0 0 8px red;
     }
 
     .player-name-psg {
-      font-size: 1.2rem;
-      margin-bottom: 0.3rem;
-      z-index: 2;
-      text-shadow: 0 0 8px green, 0 0 12px green; /* Green glow for player name */
+      text-shadow: 0 0 8px #00ffcc;
     }
 
+    .player-info, .player-info-psg {
+      text-align: center;
+      margin-top: auto;
+      margin-bottom: 1rem;
+      z-index: 2;
+      position: relative;
+    }
+
+    .player-info-psg {
+      margin-bottom: 1rem;
+    }
+
+    .player-card img.headshot,
     .player-card-psg img.headshot {
       width: 100%;
       height: auto;
       object-fit: cover;
       position: absolute;
-      bottom: -30px; /* pushed down more */
-    }
-
-    .player-info-psg {
-      text-align: center;
-      margin-top: auto;
-      margin-bottom: 0.5rem; /* moved lower */
-      z-index: 2;
-      position: relative;
-      text-shadow: 0 0 8px green, 0 0 12px green; /* Green glow for player info */
+      bottom: -20px;
     }
 
     footer {
@@ -211,7 +183,7 @@
 
     <!-- Queen City Bullets -->
     <div class="team">
-      <h3 class="team-qcb" onclick="togglePlayers('qcb-players')">
+      <h3 onclick="togglePlayers('qcb-players')">
         <img src="bulletslogo.png" alt="Bullets Logo">
         Queen City Bullets
       </h3>
@@ -219,7 +191,7 @@
         <div class="player-card">
           <img src="bulletslogo2.png" alt="Small Logo" class="team-logo-small">
           <div class="player-name">Kai "CreeK" Godwin</div>
-          <img src="usalogo.png" alt="USA Logo" style="width: 60px; margin-bottom: 0.5rem;">
+          <img src="usalogo.png" alt="USA Flag" style="width: 45px; margin-bottom: 0.5rem;">
           <img src="creek.png" alt="Kai Godwin Headshot" class="headshot">
           <div class="player-info">
             <div>AR Role</div>
@@ -265,7 +237,46 @@
         <div class="player-card-psg">
           <img src="psglogo.png" alt="Small Logo" class="team-logo-small">
           <div class="player-name-psg">Jordin "hunnybunsun" Rusnack</div>
-          <img src="canadalogo.png" alt="Canada Flag" style="width: 40px; margin-bottom: 0.5rem
+          <img src="canadalogo.png" alt="Canada Flag" style="width: 40px; margin-bottom: 0.5rem;">
+          <img src="hunnybun.png" alt="Hunnybunsun Headshot" class="headshot">
+          <div class="player-info-psg">
+            <div>SMG Role</div>
+            <div>Canada</div>
+            <div>Age 23</div>
+          </div>
+        </div>
+        <!-- Steeze -->
+        <div class="player-card-psg">
+          <img src="psglogo.png" alt="Small Logo" class="team-logo-small">
+          <div class="player-name-psg">Zack "Steeze" Renton</div>
+          <img src="canadalogo.png" alt="Canada Flag" style="width: 40px; margin-bottom: 0.5rem;">
+          <img src="defaultlogo.png" alt="Default Headshot" class="headshot">
+          <div class="player-info-psg">
+            <div>SMG Role</div>
+            <div>Canada</div>
+            <div>Age 26</div>
+          </div>
+        </div>
+        <!-- Slaw -->
+        <div class="player-card-psg">
+          <img src="psglogo.png" alt="Small Logo" class="team-logo-small">
+          <div class="player-name-psg">Michael "Slaw" Coleridge</div>
+          <img src="canadalogo.png" alt="Canada Flag" style="width: 40px; margin-bottom: 0.5rem;">
+          <img src="defaultlogo.png" alt="Default Headshot" class="headshot">
+          <div class="player-info-psg">
+            <div>AR Role</div>
+            <div>Canada</div>
+            <div>Age 25</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
+  <footer>
+    &copy; 2025 Competitive CoD Series | All Rights Reserved
+  </footer>
+</body>
+</html>
 
 
