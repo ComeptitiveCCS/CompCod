@@ -59,9 +59,7 @@
       background: rgba(0, 0, 0, 0.05);
       border-radius: 10px;
       padding: 2rem;
-      margin-bottom: 1rem;  /* Adjusted margin-bottom to make teams closer */
-      display: inline-block; /* Ensures teams are aligned horizontally */
-      width: 100%;
+      margin-bottom: 1rem; /* Reduced space between teams */
     }
 
     .team h3 {
@@ -87,11 +85,12 @@
     }
 
     .team-players {
-      display: none;
+      display: flex;
       justify-content: center;
       gap: 2rem;
-      flex-wrap: wrap;
+      flex-wrap: nowrap;
       margin-top: 1rem;
+      overflow-x: auto;
     }
 
     .player-card, .player-card-psg {
@@ -104,7 +103,6 @@
       flex-direction: column;
       align-items: center;
       padding: 1rem;
-      margin-left: 1rem;
       position: relative;
       box-shadow: 0 0 15px red;
     }
@@ -176,109 +174,6 @@
       <li><a href="index.html">Home</a></li>
       <li><a href="teams.html">Teams</a></li>
       <li><a href="#">Standings</a></li>
-      <li><a href="#media">Media</a></li>
-    </ul>
-  </nav>
-
-  <section id="teams">
-    <h2>Teams</h2>
-
-    <!-- Queen City Bullets -->
-    <div class="team">
-      <h3 onclick="togglePlayers('qcb-players')">
-        <img src="bulletslogo.png" alt="Bullets Logo">
-        Queen City Bullets
-      </h3>
-      <div id="qcb-players" class="team-players">
-        <div class="player-card">
-          <img src="bulletslogo2.png" alt="Small Logo" class="team-logo-small">
-          <div class="player-name">Kai "CreeK" Godwin</div>
-          <img src="usalogo.png" alt="USA Flag" style="width: 45px; margin-bottom: 0.5rem;">
-          <img src="creek.png" alt="Kai Godwin Headshot" class="headshot">
-          <div class="player-info">
-            <div>AR Role</div>
-            <div>Charlotte, NC</div>
-            <div>Age 23</div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- Prestige Worldwide -->
-    <div class="team">
-      <h3 class="team-psg" onclick="togglePlayers('pw-players')">
-        <img src="psglogo.png" alt="Prestige Worldwide Logo">
-        Prestige Worldwide
-      </h3>
-      <div id="pw-players" class="team-players">
-        <!-- Tec -->
-        <div class="player-card-psg">
-          <img src="psglogo.png" alt="Small Logo" class="team-logo-small">
-          <div class="player-name-psg">Robbie "Tec" Hufnagel</div>
-          <img src="canadalogo.png" alt="Canada Flag" style="width: 40px; margin-bottom: 0.5rem;">
-          <img src="defaultlogo.png" alt="Default Headshot" class="headshot">
-          <div class="player-info-psg">
-            <div>AR Role</div>
-            <div>Canada</div>
-            <div>Age 24</div>
-          </div>
-        </div>
-        <!-- AA -->
-        <div class="player-card-psg">
-          <img src="psglogo.png" alt="Small Logo" class="team-logo-small">
-          <div class="player-name-psg">Anton "AA" Amundrud</div>
-          <img src="canadalogo.png" alt="Canada Flag" style="width: 40px; margin-bottom: 0.5rem;">
-          <img src="defaultlogo.png" alt="Default Headshot" class="headshot">
-          <div class="player-info-psg">
-            <div>AR Role</div>
-            <div>Canada</div>
-            <div>Age 23</div>
-          </div>
-        </div>
-        <!-- Hunnybunsun -->
-        <div class="player-card-psg">
-          <img src="psglogo.png" alt="Small Logo" class="team-logo-small">
-          <div class="player-name-psg">Jordin "hunnybunsun" Rusnack</div>
-          <img src="canadalogo.png" alt="Canada Flag" style="width: 40px; margin-bottom: 0.5rem;">
-          <img src="hunnybun.png" alt="Hunnybunsun Headshot" class="headshot">
-          <div class="player-info-psg">
-            <div>SMG Role</div>
-            <div>Canada</div>
-            <div>Age 23</div>
-          </div>
-        </div>
-        <!-- Steeze -->
-        <div class="player-card-psg">
-          <img src="psglogo.png" alt="Small Logo" class="team-logo-small">
-          <div class="player-name-psg">Zack "Steeze" Renton</div>
-          <img src="canadalogo.png" alt="Canada Flag" style="width: 40px; margin-bottom: 0.5rem;">
-          <img src="defaultlogo.png" alt="Default Headshot" class="headshot">
-          <div class="player-info-psg">
-            <div>SMG Role</div>
-            <div>Canada</div>
-            <div>Age 26</div>
-          </div>
-        </div>
-        <!-- Slaw -->
-        <div class="player-card-psg">
-          <img src="psglogo.png" alt="Small Logo" class="team-logo-small">
-          <div class="player-name-psg">Michael "Slaw" Coleridge</div>
-          <img src="canadalogo.png" alt="Canada Flag" style="width: 40px; margin-bottom: 0.5rem;">
-          <img src="defaultlogo.png" alt="Default Headshot" class="headshot">
-          <div class="player-info-psg">
-            <div>AR Role</div>
-            <div>Canada</div>
-            <div>Age 25</div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <footer>
-    &copy; 2025 Competitive CoD Series | All Rights Reserved
-  </footer>
-</body>
-</html>
+      <li><a href="#media">Media
 
 
