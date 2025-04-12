@@ -85,12 +85,11 @@
     }
 
     .team-players {
-      display: flex;
-      justify-content: center; /* Center the players horizontally */
-      gap: 1.5rem;
+      display: none;
+      justify-content: center;
+      gap: 2rem;
       flex-wrap: wrap;
       margin-top: 1rem;
-      align-items: center; /* Center players vertically */
     }
 
     .player-card, .player-card-psg {
@@ -156,18 +155,6 @@
       font-size: 0.9rem;
       color: #ccc;
     }
-
-    @media (max-width: 768px) {
-      .team-players {
-        justify-content: center;
-        gap: 1rem;
-      }
-
-      .player-card-psg {
-        width: 90%;
-        max-width: 220px;
-      }
-    }
   </style>
   <script>
     function togglePlayers(teamId) {
@@ -222,7 +209,7 @@
         Prestige Worldwide
       </h3>
       <div id="pw-players" class="team-players">
-        <!-- First Row of Players -->
+        <!-- Tec -->
         <div class="player-card-psg">
           <img src="psglogo.png" alt="Small Logo" class="team-logo-small">
           <div class="player-name-psg">Robbie "Tec" Hufnagel</div>
@@ -234,6 +221,7 @@
             <div>Age 24</div>
           </div>
         </div>
+        <!-- AA -->
         <div class="player-card-psg">
           <img src="psglogo.png" alt="Small Logo" class="team-logo-small">
           <div class="player-name-psg">Anton "AA" Amundrud</div>
@@ -245,6 +233,7 @@
             <div>Age 23</div>
           </div>
         </div>
+        <!-- Hunnybunsun -->
         <div class="player-card-psg">
           <img src="psglogo.png" alt="Small Logo" class="team-logo-small">
           <div class="player-name-psg">Jordin "hunnybunsun" Rusnack</div>
@@ -256,9 +245,38 @@
             <div>Age 23</div>
           </div>
         </div>
-
-        <!-- Second Row of Players -->
+        <!-- Steeze -->
         <div class="player-card-psg">
           <img src="psglogo.png" alt="Small Logo" class="team-logo-small">
-         
+          <div class="player-name-psg">Zack "Steeze" Renton</div>
+          <img src="canadalogo.png" alt="Canada Flag" style="width: 40px; margin-bottom: 0.5rem;">
+          <img src="defaultlogo.png" alt="Default Headshot" class="headshot">
+          <div class="player-info-psg">
+            <div>SMG Role</div>
+            <div>Canada</div>
+            <div>Age 26</div>
+          </div>
+        </div>
+        <!-- Slaw -->
+        <div class="player-card-psg">
+          <img src="psglogo.png" alt="Small Logo" class="team-logo-small">
+          <div class="player-name-psg">Michael "Slaw" Coleridge</div>
+          <img src="canadalogo.png" alt="Canada Flag" style="width: 40px; margin-bottom: 0.5rem;">
+          <img src="defaultlogo.png" alt="Default Headshot" class="headshot">
+          <div class="player-info-psg">
+            <div>AR Role</div>
+            <div>Canada</div>
+            <div>Age 25</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    &copy; 2025 Competitive CoD Series | All Rights Reserved
+  </footer>
+</body>
+</html>
+
 
