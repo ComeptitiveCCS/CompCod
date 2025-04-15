@@ -273,63 +273,166 @@
       </div>
     </div>
  
-/* Fix cut-off glow effect */
-.player-card {
-  position: relative;
-  overflow: visible;
-  padding: 1rem;
-  margin: 1rem;
-  border-radius: 15px;
-  background-color: #111;
-  width: 230px;
-  min-height: 370px;
-  box-sizing: border-box;
-}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Team FeaR Roster</title>
+  <style>
+    body {
+      background-color: #0b0b0b;
+      font-family: Arial, sans-serif;
+      color: white;
+      padding: 2rem;
+    }
 
-/* Glow for FeaR players */
-.fear-glow {
-  border: 2px solid purple;
-  box-shadow: 0 0 16px purple, 0 0 32px rgba(128, 0, 128, 0.4);
-}
+    .team-fear {
+      color: purple;
+      text-shadow: 0 0 10px purple;
+      cursor: pointer;
+      font-size: 2rem;
+      text-align: center;
+      margin-bottom: 1rem;
+    }
 
-/* Standard flag style */
-.player-card img[src*="logo"] {
-  width: 50px !important;
-  height: auto;
-  margin: 0.5rem 0;
-}
+    .roster {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 2rem;
+    }
 
-/* Headshot styling */
-.headshot {
-  width: 100%;
-  height: auto;
-  border-radius: 10px;
-  object-fit: cover;
-  margin-top: 0.5rem;
-}
+    .player-card {
+      position: relative;
+      overflow: visible;
+      padding: 1rem;
+      margin: 1rem;
+      border-radius: 15px;
+      background-color: #111;
+      width: 230px;
+      min-height: 370px;
+      box-sizing: border-box;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      transition: transform 0.2s ease-in-out;
+    }
 
-/* Text visibility improvement */
-.player-info {
-  margin-top: 0.5rem;
-  padding: 0.5rem;
-  background: rgba(0, 0, 0, 0.7); /* semi-transparent dark background */
-  border-radius: 10px;
-  backdrop-filter: blur(4px);
-}
+    .fear-glow {
+      border: 2px solid purple;
+      box-shadow: 0 0 16px purple, 0 0 32px rgba(128, 0, 128, 0.4);
+    }
 
-/* Text styles */
-.fear-text {
-  color: #d0a0ff;
-  text-shadow: 0 0 5px purple;
-  font-weight: 500;
-}
+    .player-card img[src*="logo"] {
+      width: 50px;
+      height: auto;
+      margin: 0.5rem 0;
+      object-fit: contain;
+    }
 
-/* Team name clickable */
-.team-fear {
-  color: purple;
-  text-shadow: 0 0 10px purple;
-  cursor: pointer;
-}
+    .headshot {
+      width: 100%;
+      height: auto;
+      border-radius: 10px;
+      object-fit: cover;
+      margin-top: 0.5rem;
+    }
+
+    .player-info {
+      margin-top: 0.5rem;
+      padding: 0.5rem;
+      background: rgba(0, 0, 0, 0.7);
+      border-radius: 10px;
+      backdrop-filter: blur(4px);
+      width: 100%;
+      text-align: center;
+    }
+
+    .fear-text {
+      color: #d0a0ff;
+      text-shadow: 0 0 5px purple;
+      font-weight: 500;
+      margin: 0.2rem 0;
+    }
+
+    .player-card:hover {
+      transform: scale(1.05);
+    }
+  </style>
+</head>
+<body>
+  <div class="team-fear">FeaR</div>
+  <div class="roster">
+    <!-- Krospect -->
+    <div class="player-card fear-glow">
+      <img class="headshot" src="krospect.png" alt="Krospect">
+      <img src="usalogo.png" alt="USA Flag">
+      <div class="player-info">
+        <h3 class="fear-text">Krospect</h3>
+        <p class="fear-text">Age: 24</p>
+        <p class="fear-text">Role: Flex</p>
+      </div>
+    </div>
+
+    <!-- GrowBills -->
+    <div class="player-card fear-glow">
+      <img class="headshot" src="growbills.png" alt="GrowBills">
+      <img src="usalogo.png" alt="USA Flag">
+      <div class="player-info">
+        <h3 class="fear-text">GrowBills</h3>
+        <p class="fear-text">Age: 25</p>
+        <p class="fear-text">Role: AR</p>
+      </div>
+    </div>
+
+    <!-- xDynexity -->
+    <div class="player-card fear-glow">
+      <img class="headshot" src="xdynexity.png" alt="xDynexity">
+      <img src="usalogo.png" alt="USA Flag">
+      <div class="player-info">
+        <h3 class="fear-text">xDynexity</h3>
+        <p class="fear-text">Age: 28</p>
+        <p class="fear-text">Role: SMG</p>
+      </div>
+    </div>
+
+    <!-- METRO -->
+    <div class="player-card fear-glow">
+      <img class="headshot" src="metro.png" alt="METRO">
+      <img src="usalogo.png" alt="USA Flag">
+      <div class="player-info">
+        <h3 class="fear-text">METRO</h3>
+        <p class="fear-text">Age: 26</p>
+        <p class="fear-text">Role: AR</p>
+      </div>
+    </div>
+
+    <!-- BigDMando -->
+    <div class="player-card fear-glow">
+      <img class="headshot" src="bigdmando.png" alt="BigDMando">
+      <img src="argentinalogo.png" alt="Argentina Flag">
+      <div class="player-info">
+        <h3 class="fear-text">BigDMando</h3>
+        <p class="fear-text">Age: 27</p>
+        <p class="fear-text">Role: Flex</p>
+      </div>
+    </div>
+
+    <!-- Kryptonite -->
+    <div class="player-card fear-glow">
+      <img class="headshot" src="kryptonite.png" alt="Kryptonite">
+      <img src="canadalogo.png" alt="Canada Flag">
+      <div class="player-info">
+        <h3 class="fear-text">Kryptonite</h3>
+        <p class="fear-text">Age: 27</p>
+        <p class="fear-text">Role: AR</p>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
+
 
 
 
