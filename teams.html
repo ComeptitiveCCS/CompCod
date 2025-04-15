@@ -360,6 +360,100 @@
 <body>
 
 <!-- Team FeaR -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Team FeaR</title>
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    /* Global Styles */
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #1a1a1a;
+      color: white;
+    }
+    
+    .team-fear {
+      border-color: purple;
+      color: #bb86fc;
+      text-shadow: 0 0 8px #bb86fc;
+      cursor: pointer;
+    }
+
+    .player-card-fear {
+      width: 220px;
+      height: 400px;
+      background-color: black;
+      border-radius: 12px;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 1rem;
+      position: relative;
+      box-shadow: 0 0 15px purple;
+      margin: 1rem;
+    }
+
+    .player-name-fear {
+      font-size: 1.2rem;
+      margin-bottom: 0.3rem;
+      z-index: 2;
+      text-shadow: 0 0 8px #bb86fc;
+      color: #bb86fc;
+    }
+
+    .real-name {
+      font-size: 1rem;
+      margin-bottom: 0.5rem;
+      color: white;
+      text-shadow: 0 0 8px #bb86fc;
+    }
+
+    .player-info-fear {
+      text-align: center;
+      margin-top: auto;
+      margin-bottom: 1rem;
+      z-index: 2;
+      position: relative;
+      background: rgba(0, 0, 0, 0.6);
+      padding: 0.5rem;
+      border-radius: 8px;
+    }
+
+    .flag-icon {
+      width: 45px;
+      margin-bottom: 0.5rem;
+    }
+
+    .headshot {
+      width: 100%;
+      height: auto;
+      object-fit: cover;
+      position: absolute;
+      bottom: -20px;
+      z-index: 1;
+    }
+
+    .team-logo-small {
+      width: 50px;
+      height: 50px;
+      margin-bottom: 10px;
+    }
+
+    /* Hidden by default, displayed when the team name is clicked */
+    .team-players {
+      display: flex;
+      flex-wrap: wrap;
+    }
+    
+  </style>
+</head>
+<body>
+
+<!-- Team FeaR -->
 <div class="team">
   <h3 class="team-fear" onclick="togglePlayers('fear-players')">
     <img src="Fearlogo.png" alt="Team FeaR Logo" class="team-logo-small">
@@ -370,6 +464,7 @@
     <div class="player-card-fear">
       <img src="Fearlogo.png" alt="Small Logo" class="team-logo-small">
       <div class="player-name-fear">Krospect</div>
+      <div class="real-name">Juan "Krospect" Perez</div>
       <img src="usalogo.png" alt="USA Flag" class="flag-icon">
       <img src="defaultlogo.png" alt="Krospect Headshot" class="headshot">
       <div class="player-info-fear">
@@ -382,6 +477,7 @@
     <div class="player-card-fear">
       <img src="Fearlogo.png" alt="Small Logo" class="team-logo-small">
       <div class="player-name-fear">GrowBills</div>
+      <div class="real-name">Wahab "GrowBills" Dar</div>
       <img src="usalogo.png" alt="USA Flag" class="flag-icon">
       <img src="defaultlogo.png" alt="GrowBills Headshot" class="headshot">
       <div class="player-info-fear">
@@ -394,6 +490,7 @@
     <div class="player-card-fear">
       <img src="Fearlogo.png" alt="Small Logo" class="team-logo-small">
       <div class="player-name-fear">xDynexity</div>
+      <div class="real-name">Dakota "xDynexity" Reed</div>
       <img src="usalogo.png" alt="USA Flag" class="flag-icon">
       <img src="defaultlogo.png" alt="xDynexity Headshot" class="headshot">
       <div class="player-info-fear">
@@ -406,6 +503,7 @@
     <div class="player-card-fear">
       <img src="Fearlogo.png" alt="Small Logo" class="team-logo-small">
       <div class="player-name-fear">METRO</div>
+      <div class="real-name">Brandon "METRO"</div>
       <img src="usalogo.png" alt="USA Flag" class="flag-icon">
       <img src="defaultlogo.png" alt="METRO Headshot" class="headshot">
       <div class="player-info-fear">
@@ -418,6 +516,7 @@
     <div class="player-card-fear">
       <img src="Fearlogo.png" alt="Small Logo" class="team-logo-small">
       <div class="player-name-fear">BigDMando</div>
+      <div class="real-name">N/A</div>
       <img src="argentinalogo.png" alt="Argentina Flag" class="flag-icon">
       <img src="defaultlogo.png" alt="BigDMando Headshot" class="headshot">
       <div class="player-info-fear">
@@ -430,6 +529,7 @@
     <div class="player-card-fear">
       <img src="Fearlogo.png" alt="Small Logo" class="team-logo-small">
       <div class="player-name-fear">Kryptonite</div>
+      <div class="real-name">Juan "Kryptonite" Perez</div>
       <img src="canadalogo.png" alt="Canada Flag" class="flag-icon">
       <img src="defaultlogo.png" alt="Kryptonite Headshot" class="headshot">
       <div class="player-info-fear">
@@ -453,6 +553,7 @@
 
 </body>
 </html>
+
 
 
 
