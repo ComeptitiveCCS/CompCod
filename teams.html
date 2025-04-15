@@ -273,81 +273,64 @@
       </div>
     </div>
  
-<!-- Team FeaR -->
-<div class="team">
-  <h3 class="team-fear" onclick="togglePlayers('fear-players')">
-    <img src="Fearlogo.png" alt="FeaR Logo">
-    Team FeaR
-  </h3>
-  <div id="fear-players" class="team-players" style="display: none;">
-    <!-- Player Cards -->
-    <div class="player-card fear-glow">
-      <img src="Fearlogo.png" alt="Small Logo" class="team-logo-small">
-      <div class="player-name fear-text">Wahab "Krospect" Dar</div>
-      <img src="usalogo.png" alt="USA Flag" style="width: 45px; margin-bottom: 0.5rem;">
-      <img src="defaultlogo.png" alt="Krospect Headshot" class="headshot">
-      <div class="player-info fear-text">
-        <div>Flex Role</div>
-        <div>Age 24</div>
-      </div>
-    </div>
+/* Fix cut-off glow effect */
+.player-card {
+  position: relative;
+  overflow: visible;
+  padding: 1rem;
+  margin: 1rem;
+  border-radius: 15px;
+  background-color: #111;
+  width: 230px;
+  min-height: 370px;
+  box-sizing: border-box;
+}
 
-    <div class="player-card fear-glow">
-      <img src="Fearlogo.png" alt="Small Logo" class="team-logo-small">
-      <div class="player-name fear-text">GrowBills</div>
-      <img src="usalogo.png" alt="USA Flag" style="width: 45px; margin-bottom: 0.5rem;">
-      <img src="defaultlogo.png" alt="GrowBills Headshot" class="headshot">
-      <div class="player-info fear-text">
-        <div>AR Role</div>
-        <div>Age 25</div>
-      </div>
-    </div>
+/* Glow for FeaR players */
+.fear-glow {
+  border: 2px solid purple;
+  box-shadow: 0 0 16px purple, 0 0 32px rgba(128, 0, 128, 0.4);
+}
 
-    <div class="player-card fear-glow">
-      <img src="Fearlogo.png" alt="Small Logo" class="team-logo-small">
-      <div class="player-name fear-text">Dakota "xDynexity" Reed</div>
-      <img src="usalogo.png" alt="USA Flag" style="width: 45px; margin-bottom: 0.5rem;">
-      <img src="defaultlogo.png" alt="xDynexity Headshot" class="headshot">
-      <div class="player-info fear-text">
-        <div>SMG Role</div>
-        <div>Age 28</div>
-      </div>
-    </div>
+/* Standard flag style */
+.player-card img[src*="logo"] {
+  width: 50px !important;
+  height: auto;
+  margin: 0.5rem 0;
+}
 
-    <div class="player-card fear-glow">
-      <img src="Fearlogo.png" alt="Small Logo" class="team-logo-small">
-      <div class="player-name fear-text">Brandon "METRO"</div>
-      <img src="usalogo.png" alt="USA Flag" style="width: 45px; margin-bottom: 0.5rem;">
-      <img src="defaultlogo.png" alt="METRO Headshot" class="headshot">
-      <div class="player-info fear-text">
-        <div>AR Role</div>
-        <div>Age 26</div>
-      </div>
-    </div>
+/* Headshot styling */
+.headshot {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  object-fit: cover;
+  margin-top: 0.5rem;
+}
 
-    <div class="player-card fear-glow">
-      <img src="Fearlogo.png" alt="Small Logo" class="team-logo-small">
-      <div class="player-name fear-text">BigDMando</div>
-      <img src="argentinalogo.png" alt="Argentina Flag" style="width: 45px; margin-bottom: 0.5rem;">
-      <img src="defaultlogo.png" alt="BigDMando Headshot" class="headshot">
-      <div class="player-info fear-text">
-        <div>Flex Role</div>
-        <div>Age 27</div>
-      </div>
-    </div>
+/* Text visibility improvement */
+.player-info {
+  margin-top: 0.5rem;
+  padding: 0.5rem;
+  background: rgba(0, 0, 0, 0.7); /* semi-transparent dark background */
+  border-radius: 10px;
+  backdrop-filter: blur(4px);
+}
 
-    <div class="player-card fear-glow">
-      <img src="Fearlogo.png" alt="Small Logo" class="team-logo-small">
-      <div class="player-name fear-text">Juan "Kryptonite" Perez</div>
-      <img src="canadalogo.png" alt="Canada Flag" style="width: 45px; margin-bottom: 0.5rem;">
-      <img src="defaultlogo.png" alt="Kryptonite Headshot" class="headshot">
-      <div class="player-info fear-text">
-        <div>AR Role</div>
-        <div>Age 27</div>
-      </div>
-    </div>
-  </div>
-</div>
+/* Text styles */
+.fear-text {
+  color: #d0a0ff;
+  text-shadow: 0 0 5px purple;
+  font-weight: 500;
+}
+
+/* Team name clickable */
+.team-fear {
+  color: purple;
+  text-shadow: 0 0 10px purple;
+  cursor: pointer;
+}
+
 
 
   </section>
