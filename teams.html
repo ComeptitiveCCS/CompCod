@@ -278,160 +278,182 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Team FeaR Roster</title>
+  <title>Team FeaR</title>
+  <link rel="stylesheet" href="styles.css">
   <style>
+    /* Global Styles */
     body {
-      background-color: #0b0b0b;
       font-family: Arial, sans-serif;
+      background-color: #1a1a1a;
       color: white;
-      padding: 2rem;
     }
-
+    
     .team-fear {
-      color: purple;
-      text-shadow: 0 0 10px purple;
+      border-color: purple;
+      color: #bb86fc;
+      text-shadow: 0 0 8px #bb86fc;
       cursor: pointer;
-      font-size: 2rem;
-      text-align: center;
-      margin-bottom: 1rem;
     }
 
-    .roster {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 2rem;
-    }
-
-    .player-card {
-      position: relative;
-      overflow: visible;
-      padding: 1rem;
-      margin: 1rem;
-      border-radius: 15px;
-      background-color: #111;
-      width: 230px;
-      min-height: 370px;
-      box-sizing: border-box;
+    .player-card-fear {
+      width: 220px;
+      height: 400px;
+      background-color: black;
+      border-radius: 12px;
+      overflow: hidden;
       display: flex;
       flex-direction: column;
       align-items: center;
-      transition: transform 0.2s ease-in-out;
+      padding: 1rem;
+      position: relative;
+      box-shadow: 0 0 15px purple;
+      margin: 1rem;
     }
 
-    .fear-glow {
-      border: 2px solid purple;
-      box-shadow: 0 0 16px purple, 0 0 32px rgba(128, 0, 128, 0.4);
+    .player-name-fear {
+      font-size: 1.2rem;
+      margin-bottom: 0.3rem;
+      z-index: 2;
+      text-shadow: 0 0 8px #bb86fc;
+      color: #bb86fc;
     }
 
-    .player-card img[src*="logo"] {
-      width: 50px;
-      height: auto;
-      margin: 0.5rem 0;
-      object-fit: contain;
+    .player-info-fear {
+      text-align: center;
+      margin-top: auto;
+      margin-bottom: 1rem;
+      z-index: 2;
+      position: relative;
+      background: rgba(0, 0, 0, 0.6);
+      padding: 0.5rem;
+      border-radius: 8px;
+    }
+
+    .flag-icon {
+      width: 45px;
+      margin-bottom: 0.5rem;
     }
 
     .headshot {
       width: 100%;
       height: auto;
-      border-radius: 10px;
       object-fit: cover;
-      margin-top: 0.5rem;
+      position: absolute;
+      bottom: -20px;
+      z-index: 1;
     }
 
-    .player-info {
-      margin-top: 0.5rem;
-      padding: 0.5rem;
-      background: rgba(0, 0, 0, 0.7);
-      border-radius: 10px;
-      backdrop-filter: blur(4px);
-      width: 100%;
-      text-align: center;
+    .team-logo-small {
+      width: 50px;
+      height: 50px;
+      margin-bottom: 10px;
     }
 
-    .fear-text {
-      color: #d0a0ff;
-      text-shadow: 0 0 5px purple;
-      font-weight: 500;
-      margin: 0.2rem 0;
+    /* Hidden by default, displayed when the team name is clicked */
+    .team-players {
+      display: flex;
+      flex-wrap: wrap;
     }
-
-    .player-card:hover {
-      transform: scale(1.05);
-    }
+    
   </style>
 </head>
 <body>
-  <div class="team-fear">FeaR</div>
-  <div class="roster">
+
+<!-- Team FeaR -->
+<div class="team">
+  <h3 class="team-fear" onclick="togglePlayers('fear-players')">
+    <img src="Fearlogo.png" alt="Team FeaR Logo" class="team-logo-small">
+    Team FeaR
+  </h3>
+  <div id="fear-players" class="team-players" style="display: none;">
     <!-- Krospect -->
-    <div class="player-card fear-glow">
-      <img class="headshot" src="krospect.png" alt="Krospect">
-      <img src="usalogo.png" alt="USA Flag">
-      <div class="player-info">
-        <h3 class="fear-text">Krospect</h3>
-        <p class="fear-text">Age: 24</p>
-        <p class="fear-text">Role: Flex</p>
+    <div class="player-card-fear">
+      <img src="Fearlogo.png" alt="Small Logo" class="team-logo-small">
+      <div class="player-name-fear">Krospect</div>
+      <img src="usalogo.png" alt="USA Flag" class="flag-icon">
+      <img src="defaultlogo.png" alt="Krospect Headshot" class="headshot">
+      <div class="player-info-fear">
+        <div>Flex Role</div>
+        <div>Age 24</div>
       </div>
     </div>
 
     <!-- GrowBills -->
-    <div class="player-card fear-glow">
-      <img class="headshot" src="growbills.png" alt="GrowBills">
-      <img src="usalogo.png" alt="USA Flag">
-      <div class="player-info">
-        <h3 class="fear-text">GrowBills</h3>
-        <p class="fear-text">Age: 25</p>
-        <p class="fear-text">Role: AR</p>
+    <div class="player-card-fear">
+      <img src="Fearlogo.png" alt="Small Logo" class="team-logo-small">
+      <div class="player-name-fear">GrowBills</div>
+      <img src="usalogo.png" alt="USA Flag" class="flag-icon">
+      <img src="defaultlogo.png" alt="GrowBills Headshot" class="headshot">
+      <div class="player-info-fear">
+        <div>AR Role</div>
+        <div>Age 25</div>
       </div>
     </div>
 
     <!-- xDynexity -->
-    <div class="player-card fear-glow">
-      <img class="headshot" src="xdynexity.png" alt="xDynexity">
-      <img src="usalogo.png" alt="USA Flag">
-      <div class="player-info">
-        <h3 class="fear-text">xDynexity</h3>
-        <p class="fear-text">Age: 28</p>
-        <p class="fear-text">Role: SMG</p>
+    <div class="player-card-fear">
+      <img src="Fearlogo.png" alt="Small Logo" class="team-logo-small">
+      <div class="player-name-fear">xDynexity</div>
+      <img src="usalogo.png" alt="USA Flag" class="flag-icon">
+      <img src="defaultlogo.png" alt="xDynexity Headshot" class="headshot">
+      <div class="player-info-fear">
+        <div>SMG Role</div>
+        <div>Age 28</div>
       </div>
     </div>
 
     <!-- METRO -->
-    <div class="player-card fear-glow">
-      <img class="headshot" src="metro.png" alt="METRO">
-      <img src="usalogo.png" alt="USA Flag">
-      <div class="player-info">
-        <h3 class="fear-text">METRO</h3>
-        <p class="fear-text">Age: 26</p>
-        <p class="fear-text">Role: AR</p>
+    <div class="player-card-fear">
+      <img src="Fearlogo.png" alt="Small Logo" class="team-logo-small">
+      <div class="player-name-fear">METRO</div>
+      <img src="usalogo.png" alt="USA Flag" class="flag-icon">
+      <img src="defaultlogo.png" alt="METRO Headshot" class="headshot">
+      <div class="player-info-fear">
+        <div>AR Role</div>
+        <div>Age 26</div>
       </div>
     </div>
 
-    <!-- BigDMando -->
-    <div class="player-card fear-glow">
-      <img class="headshot" src="bigdmando.png" alt="BigDMando">
-      <img src="argentinalogo.png" alt="Argentina Flag">
-      <div class="player-info">
-        <h3 class="fear-text">BigDMando</h3>
-        <p class="fear-text">Age: 27</p>
-        <p class="fear-text">Role: Flex</p>
+    <!-- BigDMando (Sub) -->
+    <div class="player-card-fear">
+      <img src="Fearlogo.png" alt="Small Logo" class="team-logo-small">
+      <div class="player-name-fear">BigDMando</div>
+      <img src="argentinalogo.png" alt="Argentina Flag" class="flag-icon">
+      <img src="defaultlogo.png" alt="BigDMando Headshot" class="headshot">
+      <div class="player-info-fear">
+        <div>Flex Role</div>
+        <div>Age 27</div>
       </div>
     </div>
 
-    <!-- Kryptonite -->
-    <div class="player-card fear-glow">
-      <img class="headshot" src="kryptonite.png" alt="Kryptonite">
-      <img src="canadalogo.png" alt="Canada Flag">
-      <div class="player-info">
-        <h3 class="fear-text">Kryptonite</h3>
-        <p class="fear-text">Age: 27</p>
-        <p class="fear-text">Role: AR</p>
+    <!-- Kryptonite (Sub) -->
+    <div class="player-card-fear">
+      <img src="Fearlogo.png" alt="Small Logo" class="team-logo-small">
+      <div class="player-name-fear">Kryptonite</div>
+      <img src="canadalogo.png" alt="Canada Flag" class="flag-icon">
+      <img src="defaultlogo.png" alt="Kryptonite Headshot" class="headshot">
+      <div class="player-info-fear">
+        <div>AR Role</div>
+        <div>Age 27</div>
       </div>
     </div>
   </div>
+</div>
+
+<script>
+  function togglePlayers(id) {
+    const players = document.getElementById(id);
+    if (players.style.display === "none") {
+      players.style.display = "flex";
+    } else {
+      players.style.display = "none";
+    }
+  }
+</script>
+
 </body>
 </html>
+
 
 
 
