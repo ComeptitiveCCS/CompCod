@@ -541,6 +541,172 @@
   </div>
 </div>
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>NoRo Roster</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #111;
+      color: white;
+      margin: 0;
+      padding: 20px;
+    }
+
+    .team-container {
+      max-width: 700px;
+      margin: auto;
+      border: 2px solid limegreen;
+      border-radius: 15px;
+      background-color: #1a1a1a;
+      padding: 20px;
+    }
+
+    .team-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      cursor: pointer;
+      background-color: limegreen;
+      color: black;
+      padding: 15px;
+      border-radius: 10px;
+    }
+
+    .team-header h2 {
+      margin: 0;
+    }
+
+    .player-list {
+      margin-top: 15px;
+      display: none;
+      flex-direction: column;
+      gap: 15px;
+    }
+
+    .player-card {
+      background-color: #222;
+      border: 1px solid #444;
+      border-radius: 10px;
+      padding: 10px;
+      display: flex;
+      align-items: center;
+      gap: 15px;
+    }
+
+    .player-card img {
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 2px solid limegreen;
+    }
+
+    .flag-img {
+      width: 30px;
+      height: 20px;
+      object-fit: cover;
+      border-radius: 5px;
+    }
+
+    .player-info {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .player-info strong {
+      color: limegreen;
+    }
+
+    .rotate {
+      transform: rotate(90deg);
+      transition: 0.2s;
+    }
+
+    .rotate.open {
+      transform: rotate(270deg);
+    }
+  </style>
+</head>
+<body>
+
+<div class="team-container">
+  <div class="team-header" onclick="togglePlayers()">
+    <h2>NoRo</h2>
+    <span id="arrow" class="rotate">▶</span>
+  </div>
+  <div id="playerList" class="player-list">
+    <div class="player-card">
+      <img src="defaultlogo.png" alt="Headshot" />
+      <div class="player-info">
+        <strong>Allan "Hxpno" Breaux</strong>
+        <span>Role: Flex</span>
+        <span>Age: 18</span>
+      </div>
+      <img class="flag-img" src="usalogo.png" alt="US Flag"/>
+    </div>
+    <div class="player-card">
+      <img src="defaultlogo.png" alt="Headshot" />
+      <div class="player-info">
+        <strong>Yahir "Prisa" Rivas</strong>
+        <span>Role: Flex</span>
+        <span>Age: 20</span>
+      </div>
+      <img class="flag-img" src="usalogo.png" alt="US Flag"/>
+    </div>
+    <div class="player-card">
+      <img src="defaultlogo.png" alt="Headshot" />
+      <div class="player-info">
+        <strong>Andrew "Sorrows" Correa</strong>
+        <span>Role: Flex</span>
+        <span>Age: 24</span>
+      </div>
+      <img class="flag-img" src="usalogo.png" alt="US Flag"/>
+    </div>
+    <div class="player-card">
+      <img src="defaultlogo.png" alt="Headshot" />
+      <div class="player-info">
+        <strong>Omar "OmieSaiyan" Ahmad</strong>
+        <span>Role: Sub</span>
+        <span>Age: 23</span>
+      </div>
+      <img class="flag-img" src="usalogo.png" alt="US Flag"/>
+    </div>
+    <div class="player-card">
+      <img src="defaultlogo.png" alt="Headshot" />
+      <div class="player-info">
+        <strong>Aaron "AiRRains" Krause</strong>
+        <span>Role: AR </span>
+        <span>Age: 22</span>
+      </div>
+      <img class="flag-img" src="usalogo.png" alt="US Flag"/>
+    </div>
+    <div class="player-card">
+      <img src="defaultlogo.png" alt="Headshot" />
+      <div class="player-info">
+        <strong>Gabe "Poopypants" Sorci</strong>
+        <span>Role: AR</span>
+        <span>Age: 22</span>
+      </div>
+      <img class="flag-img" src="usalogo.png" alt="US Flag"/>
+    </div>
+  </div>
+</div>
+
+<script>
+  function togglePlayers() {
+    const list = document.getElementById("playerList");
+    const arrow = document.getElementById("arrow");
+    list.style.display = list.style.display === "flex" ? "none" : "flex";
+    arrow.classList.toggle("open");
+  }
+</script>
+
+</body>
+</html>
 
 
 
