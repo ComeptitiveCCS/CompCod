@@ -541,93 +541,196 @@
   </div>
 </div>
 
-NoRo
-<style>
-  .team {
-    background-color: white;
-    color: limegreen;
-    padding: 20px;
-    border-radius: 10px;
-    border: 2px solid limegreen;
-    text-align: center;
-    width: 300px;
-    margin: 10px;
-  }
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Team NoRo</title>
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    /* Global Styles */
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #1a1a1a;
+      color: white;
+    }
 
-  .team h2 {
-    font-size: 24px;
-    margin-bottom: 15px;
-  }
+    .team-noro {
+      border-color: limegreen;
+      color: limegreen;
+      text-shadow: 0 0 8px limegreen;
+      cursor: pointer;
+    }
 
-  .team img {
-    max-width: 100%;
-    height: auto;
-    border-radius: 8px;
-  }
+    .player-card-noro {
+      width: 220px;
+      height: 400px;
+      background-color: black;
+      border-radius: 12px;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 1rem;
+      position: relative;
+      box-shadow: 0 0 15px limegreen;
+      margin: 1rem;
+    }
 
-  .players {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-  }
+    .player-name-noro {
+      font-size: 1.2rem;
+      margin-bottom: 0.3rem;
+      z-index: 2;
+      text-shadow: 0 0 8px limegreen;
+      color: limegreen;
+    }
 
-  .player {
-    margin: 10px;
-    text-align: center;
-  }
+    .real-name {
+      font-size: 1rem;
+      margin-bottom: 0.5rem;
+      color: white;
+      text-shadow: 0 0 8px limegreen;
+    }
 
-  .player img {
-    width: 80px;
-    height: 80px;
-    border-radius: 50%;
-    border: 2px solid limegreen;
-  }
+    .player-info-noro {
+      text-align: center;
+      margin-top: auto;
+      margin-bottom: 1rem;
+      z-index: 2;
+      position: relative;
+      background: rgba(0, 0, 0, 0.6);
+      padding: 0.5rem;
+      border-radius: 8px;
+    }
 
-  .player p {
-    font-size: 14px;
-    color: limegreen;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
+    .flag-icon {
+      width: 45px;
+      margin-bottom: 0.5rem;
+    }
 
-  .flag {
-    width: 20px;
-    height: 15px;
-    margin-left: 10px;
-  }
-</style>
+    .headshot {
+      width: 100%;
+      height: auto;
+      object-fit: cover;
+      position: absolute;
+      bottom: -20px;
+      z-index: 1;
+    }
 
+    .team-logo-small {
+      width: 50px;
+      height: 50px;
+      margin-bottom: 10px;
+    }
+
+    /* Hidden by default, displayed when the team name is clicked */
+    .team-players {
+      display: flex;
+      flex-wrap: wrap;
+    }
+    
+  </style>
+</head>
+<body>
+
+<!-- Team NoRo -->
 <div class="team">
-  <h2>NoRo</h2>
-  <img src="norologo.png" alt="NoRo Team Logo">
-  <div class="players">
-    <div class="player">
-      <img src="defaultlogo.png" alt="Allan 'Hxpno' Breaux">
-      <p>Allan "Hxpno" Breaux - 18, Flex <img src="usalogo.png" alt="USA Flag" class="flag"></p>
+  <h3 class="team-noro" onclick="togglePlayers('noro-players')">
+    <img src="norologo.png" alt="Team NoRo Logo" class="team-logo-small">
+    NoRo
+  </h3>
+  <div id="noro-players" class="team-players" style="display: none;">
+    <!-- Allan "Hxpno" Breaux (Starting Roster) -->
+    <div class="player-card-noro">
+      <img src="norologo.png" alt="Small Logo" class="team-logo-small">
+      <div class="player-name-noro">Allan "Hxpno" Breaux</div>
+      <div class="real-name">Allan "Hxpno" Breaux</div>
+      <img src="usalogo.png" alt="USA Flag" class="flag-icon">
+      <img src="defaultlogo.png" alt="Hxpno Headshot" class="headshot">
+      <div class="player-info-noro">
+        <div>Flex Role</div>
+        <div>Age 18</div>
+      </div>
     </div>
-    <div class="player">
-      <img src="defaultlogo.png" alt="Yahir 'Prisa' Rivas">
-      <p>Yahir "Prisa" Rivas - 20, Flex <img src="usalogo.png" alt="USA Flag" class="flag"></p>
+
+    <!-- Yahir "Prisa" Rivas (Starting Roster) -->
+    <div class="player-card-noro">
+      <img src="norologo.png" alt="Small Logo" class="team-logo-small">
+      <div class="player-name-noro">Yahir "Prisa" Rivas</div>
+      <div class="real-name">Yahir "Prisa" Rivas</div>
+      <img src="usalogo.png" alt="USA Flag" class="flag-icon">
+      <img src="defaultlogo.png" alt="Prisa Headshot" class="headshot">
+      <div class="player-info-noro">
+        <div>Flex Role</div>
+        <div>Age 20</div>
+      </div>
     </div>
-    <div class="player">
-      <img src="defaultlogo.png" alt="Andrew 'Sorrows' Correa">
-      <p>Andrew "Sorrows" Correa - 24, Flex <img src="usalogo.png" alt="USA Flag" class="flag"></p>
+
+    <!-- Andrew "Sorrows" Correa (Starting Roster) -->
+    <div class="player-card-noro">
+      <img src="norologo.png" alt="Small Logo" class="team-logo-small">
+      <div class="player-name-noro">Andrew "Sorrows" Correa</div>
+      <div class="real-name">Andrew "Sorrows" Correa</div>
+      <img src="usalogo.png" alt="USA Flag" class="flag-icon">
+      <img src="defaultlogo.png" alt="Sorrows Headshot" class="headshot">
+      <div class="player-info-noro">
+        <div>Flex Role</div>
+        <div>Age 24</div>
+      </div>
     </div>
-    <div class="player">
-      <img src="defaultlogo.png" alt="Omar 'OmieSaiyan' Ahmad">
-      <p>Omar "OmieSaiyan" Ahmad - 23, Sub <img src="usalogo.png" alt="USA Flag" class="flag"></p>
+
+    <!-- Omar "OmieSaiyan" Ahmad (Substitute) -->
+    <div class="player-card-noro">
+      <img src="norologo.png" alt="Small Logo" class="team-logo-small">
+      <div class="player-name-noro">Omar "OmieSaiyan" Ahmad</div>
+      <div class="real-name">Omar "OmieSaiyan" Ahmad</div>
+      <img src="usalogo.png" alt="USA Flag" class="flag-icon">
+      <img src="defaultlogo.png" alt="OmieSaiyan Headshot" class="headshot">
+      <div class="player-info-noro">
+        <div>Substitute</div>
+        <div>Age 23</div>
+      </div>
     </div>
-    <div class="player">
-      <img src="defaultlogo.png" alt="Aaron 'AiRRains' Krause">
-      <p>Aaron "AiRRains" Krause - 22, AR <img src="usalogo.png" alt="USA Flag" class="flag"></p>
+
+    <!-- Aaron "AiRRains" Krause (Starting Roster) -->
+    <div class="player-card-noro">
+      <img src="norologo.png" alt="Small Logo" class="team-logo-small">
+      <div class="player-name-noro">Aaron "AiRRains" Krause</div>
+      <div class="real-name">Aaron "AiRRains" Krause</div>
+      <img src="usalogo.png" alt="USA Flag" class="flag-icon">
+      <img src="defaultlogo.png" alt="AiRRains Headshot" class="headshot">
+      <div class="player-info-noro">
+        <div>AR Role</div>
+        <div>Age 22</div>
+      </div>
     </div>
-    <div class="player">
-      <img src="defaultlogo.png" alt="Gabe 'Poopypants' Sorci">
-      <p>Gabe "Poopypants" Sorci - 22, AR <img src="usalogo.png" alt="USA Flag" class="flag"></p>
+
+    <!-- Gabe "Poopypants" Sorci (Starting Roster) -->
+    <div class="player-card-noro">
+      <img src="norologo.png" alt="Small Logo" class="team-logo-small">
+      <div class="player-name-noro">Gabe "Poopypants" Sorci</div>
+      <div class="real-name">Gabe "Poopypants" Sorci</div>
+      <img src="usalogo.png" alt="USA Flag" class="flag-icon">
+      <img src="defaultlogo.png" alt="Poopypants Headshot" class="headshot">
+      <div class="player-info-noro">
+        <div>AR Role</div>
+        <div>Age 22</div>
+      </div>
     </div>
   </div>
 </div>
+
+<script>
+  function togglePlayers(id) {
+    const element = document.getElementById(id);
+    element.style.display = (element.style.display === "none") ? "flex" : "none";
+  }
+</script>
+
+</body>
+</html>
+
 
 
 
