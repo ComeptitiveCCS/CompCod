@@ -563,6 +563,13 @@
       cursor: pointer;
     }
 
+    /* Adjusted for larger team logo on clickable page */
+    .team-logo-large {
+      width: 150px;  /* Adjust the size here */
+      height: 150px; /* Adjust the size here */
+      margin-bottom: 10px;
+    }
+
     .player-card-noro {
       width: 220px;
       height: 400px;
@@ -629,7 +636,7 @@
       display: flex;
       flex-wrap: wrap;
     }
-    
+
   </style>
 </head>
 <body>
@@ -637,7 +644,7 @@
 <!-- Team NoRo -->
 <div class="team">
   <h3 class="team-noro" onclick="togglePlayers('noro-players')">
-    <img src="norologo.png" alt="Team NoRo Logo" class="team-logo-small">
+    <img src="norologo.png" alt="Team NoRo Logo" class="team-logo-large"> <!-- Updated logo size -->
     NoRo
   </h3>
   <div id="noro-players" class="team-players" style="display: none;">
@@ -730,6 +737,7 @@
 
 </body>
 </html>
+
 
 
 
