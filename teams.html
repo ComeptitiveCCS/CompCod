@@ -555,7 +555,7 @@
       background-color: #1a1a1a;
       color: white;
     }
-
+    
     .team-noro {
       border-color: limegreen;
       color: limegreen;
@@ -578,19 +578,21 @@
       margin: 1rem;
     }
 
+    /* Glowing In-Game Name */
     .player-name-noro {
-      font-size: 1.2rem;
+      font-size: 1.5rem;
       margin-bottom: 0.3rem;
-      z-index: 2;
-      text-shadow: 0 0 8px limegreen;
+      text-shadow: 0 0 8px limegreen, 0 0 20px limegreen;
       color: limegreen;
+      font-weight: bold;
+      position: absolute;
+      top: 10px; /* Positioning above the real name */
     }
 
     .real-name {
       font-size: 1rem;
-      margin-bottom: 0.5rem;
+      margin-top: 3rem; /* Adding space to avoid overlap */
       color: white;
-      text-shadow: 0 0 8px limegreen;
     }
 
     .player-info-noro {
@@ -619,8 +621,8 @@
     }
 
     .team-logo-small {
-      width: 50px;
-      height: 50px;
+      width: 100px;  /* Increased size */
+      height: 100px; /* Increased size */
       margin-bottom: 10px;
     }
 
@@ -641,10 +643,10 @@
     NoRo
   </h3>
   <div id="noro-players" class="team-players" style="display: none;">
-    <!-- Allan "Hxpno" Breaux (Starting Roster) -->
+    <!-- Allan "Hxpno" Breaux -->
     <div class="player-card-noro">
       <img src="norologo.png" alt="Small Logo" class="team-logo-small">
-      <div class="player-name-noro">Allan "Hxpno" Breaux</div>
+      <div class="player-name-noro">Hxpno</div>
       <div class="real-name">Allan "Hxpno" Breaux</div>
       <img src="usalogo.png" alt="USA Flag" class="flag-icon">
       <img src="defaultlogo.png" alt="Hxpno Headshot" class="headshot">
@@ -654,10 +656,10 @@
       </div>
     </div>
 
-    <!-- Yahir "Prisa" Rivas (Starting Roster) -->
+    <!-- Yahir "Prisa" Rivas -->
     <div class="player-card-noro">
       <img src="norologo.png" alt="Small Logo" class="team-logo-small">
-      <div class="player-name-noro">Yahir "Prisa" Rivas</div>
+      <div class="player-name-noro">Prisa</div>
       <div class="real-name">Yahir "Prisa" Rivas</div>
       <img src="usalogo.png" alt="USA Flag" class="flag-icon">
       <img src="defaultlogo.png" alt="Prisa Headshot" class="headshot">
@@ -667,10 +669,10 @@
       </div>
     </div>
 
-    <!-- Andrew "Sorrows" Correa (Starting Roster) -->
+    <!-- Andrew "Sorrows" Correa -->
     <div class="player-card-noro">
       <img src="norologo.png" alt="Small Logo" class="team-logo-small">
-      <div class="player-name-noro">Andrew "Sorrows" Correa</div>
+      <div class="player-name-noro">Sorrows</div>
       <div class="real-name">Andrew "Sorrows" Correa</div>
       <img src="usalogo.png" alt="USA Flag" class="flag-icon">
       <img src="defaultlogo.png" alt="Sorrows Headshot" class="headshot">
@@ -680,10 +682,10 @@
       </div>
     </div>
 
-    <!-- Omar "OmieSaiyan" Ahmad (Substitute) -->
+    <!-- Omar "OmieSaiyan" Ahmad -->
     <div class="player-card-noro">
       <img src="norologo.png" alt="Small Logo" class="team-logo-small">
-      <div class="player-name-noro">Omar "OmieSaiyan" Ahmad</div>
+      <div class="player-name-noro">OmieSaiyan</div>
       <div class="real-name">Omar "OmieSaiyan" Ahmad</div>
       <img src="usalogo.png" alt="USA Flag" class="flag-icon">
       <img src="defaultlogo.png" alt="OmieSaiyan Headshot" class="headshot">
@@ -693,10 +695,10 @@
       </div>
     </div>
 
-    <!-- Aaron "AiRRains" Krause (Starting Roster) -->
+    <!-- Aaron "AiRRains" Krause -->
     <div class="player-card-noro">
       <img src="norologo.png" alt="Small Logo" class="team-logo-small">
-      <div class="player-name-noro">Aaron "AiRRains" Krause</div>
+      <div class="player-name-noro">AiRRains</div>
       <div class="real-name">Aaron "AiRRains" Krause</div>
       <img src="usalogo.png" alt="USA Flag" class="flag-icon">
       <img src="defaultlogo.png" alt="AiRRains Headshot" class="headshot">
@@ -706,10 +708,10 @@
       </div>
     </div>
 
-    <!-- Gabe "Poopypants" Sorci (Starting Roster) -->
+    <!-- Gabe "Poopypants" Sorci -->
     <div class="player-card-noro">
       <img src="norologo.png" alt="Small Logo" class="team-logo-small">
-      <div class="player-name-noro">Gabe "Poopypants" Sorci</div>
+      <div class="player-name-noro">Poopypants</div>
       <div class="real-name">Gabe "Poopypants" Sorci</div>
       <img src="usalogo.png" alt="USA Flag" class="flag-icon">
       <img src="defaultlogo.png" alt="Poopypants Headshot" class="headshot">
@@ -721,16 +723,8 @@
   </div>
 </div>
 
-<script>
-  function togglePlayers(id) {
-    const element = document.getElementById(id);
-    element.style.display = (element.style.display === "none") ? "flex" : "none";
-  }
-</script>
-
 </body>
 </html>
-
 
 
 
