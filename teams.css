@@ -1,15 +1,17 @@
+/* General styling for the page */
 html, body {
   margin: 0;
   padding: 0;
   width: 100%;
   height: 100%;
-  background-color: #000000;
+  background-color: #000000; /* Black background */
   color: #ffffff;
   font-family: 'Orbitron', sans-serif;
 }
 
+/* Navigation Bar */
 nav {
-  background: #ffffff;
+  background: #ffffff; /* White header */
   padding: 1rem 2rem;
   display: flex;
   justify-content: space-between;
@@ -45,6 +47,7 @@ nav ul li a:hover {
   color: #5da9ff;
 }
 
+/* Teams Section Styling */
 .teams-container {
   padding: 3rem 2rem;
   text-align: center;
@@ -56,6 +59,7 @@ nav ul li a:hover {
   text-shadow: 0 0 10px #5da9ff;
 }
 
+/* Grid layout for teams */
 .team-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
@@ -64,37 +68,48 @@ nav ul li a:hover {
   margin: 0 auto;
 }
 
+/* Individual Team Card */
 .team-card {
-  background-color: #111111;
-  border: 2px solid #5da9ff;
+  background-color: #111111; /* Dark background for each card */
+  border: 2px solid #5da9ff; /* Blue border for each card */
   padding: 1.5rem;
   border-radius: 12px;
   transition: transform 0.3s;
 }
 
 .team-card:hover {
-  transform: scale(1.05);
+  transform: scale(1.05); /* Adds hover effect */
 }
 
+/* Team Logo Styling */
 .team-card img {
   width: 120px;
   height: auto;
   margin-bottom: 1rem;
 }
 
+/* Specific styling for NoRo logo to make it bigger */
 .team-card img.noro-logo {
   transform: scale(1.5); /* Makes NoRo logo bigger */
   width: auto;
   max-width: 150px; /* Optional: limits the max width */
 }
 
+/* Team Name Styling */
 .team-card h2 {
   margin: 0;
   font-size: 1.5rem;
 }
 
+/* Remove underline from links (if team names are clickable) */
+.team-card a {
+  text-decoration: none; /* Removes the underline from links */
+  color: #ffffff; /* Ensure text color is white or adjust as needed */
+}
+
+/* Footer Styling */
 footer {
-  background: #ffffff;
+  background: #ffffff; /* White footer */
   text-align: center;
   padding: 1rem;
   font-size: 0.8rem;
