@@ -45,12 +45,11 @@ ul li a {
   text-align: center;
 }
 
-.team-title {
+h1 {
   font-size: 2.5rem;
   margin-bottom: 1rem;
   text-transform: uppercase;
-  color: #00ccff;
-  text-shadow: 0 0 8px #00ff99;
+  color: #00aaff; /* Blue color for Team Prestige Worldwide */
 }
 
 .player-grid {
@@ -60,7 +59,7 @@ ul li a {
   gap: 20px;
 }
 
-.player-card-psg {
+.player-card-noro {
   width: 220px;
   height: 400px;
   background-color: #222;
@@ -70,31 +69,31 @@ ul li a {
   flex-direction: column;
   align-items: center;
   position: relative;
-  box-shadow: 0 0 15px #00ccff;
+  box-shadow: 0 0 15px #00aaff; /* Blue glow for Team Prestige Worldwide */
   padding: 10px;
   margin: 10px;
-  border: 3px solid #00ccff;
+  border: 3px solid #00aaff; /* Blue border for Team Prestige Worldwide */
 }
 
-.team-logo-small-psg {
+.team-logo-small-noro {
   width: 50px;
   height: 50px;
   margin-bottom: 10px;
 }
 
-.player-name-psg {
+.player-name-noro {
   font-size: 1.2rem;
   margin-bottom: 0.3rem;
-  color: #00ccff;
-  text-shadow: 0 0 8px #00ff99;
+  color: #00aaff; /* Blue color for player name */
+  text-shadow: 0 0 8px #00aaff; /* Blue text shadow */
 }
 
-.flag-icon-psg {
+.flag-icon-noro {
   width: 45px;
   margin-bottom: 0.5rem;
 }
 
-.headshot-psg {
+.headshot-noro {
   width: 100%;
   height: 58%;
   object-fit: cover;
@@ -103,7 +102,7 @@ ul li a {
   z-index: 1;
 }
 
-.player-info-psg {
+.player-info-noro {
   position: absolute;
   bottom: 0;
   background-color: rgba(0, 0, 0, 0.7);
@@ -113,7 +112,7 @@ ul li a {
   color: white;
 }
 
-.player-info-psg p {
+.player-info-noro p {
   margin: 5px 0;
 }
 
@@ -124,3 +123,4 @@ footer {
   text-align: center;
   padding: 20px;
 }
+
