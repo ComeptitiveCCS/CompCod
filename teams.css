@@ -114,11 +114,11 @@ nav ul li a:hover {
 }
 
 /* Prestige Worldwide (PSG) styling */
-.team-card.psg {
+.team-card.prestige {
   border: 2px solid blue;
   box-shadow: 0 0 12px blue;
 }
-.team-card.psg h2 {
+.team-card.prestige h2 {
   color: blue;
   text-shadow: 0 0 8px blue;
 }
