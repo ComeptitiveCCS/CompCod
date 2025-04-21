@@ -1,8 +1,9 @@
 body {
-  margin: 0;
+  background-color: #000;
   font-family: 'Orbitron', sans-serif;
-  background-color: #121212;
   color: white;
+  margin: 0;
+  padding: 0;
 }
 
 nav {
@@ -31,16 +32,24 @@ nav ul li a {
   font-weight: bold;
 }
 
-.roster-container {
-  padding: 2rem;
+footer {
+  background-color: #1c1c1c;
+  color: white;
   text-align: center;
+  padding: 1rem 0;
+  margin-top: 2rem;
 }
 
-.roster-container h1 {
-  color: red;
+.roster-container {
+  text-align: center;
+  padding: 2rem;
+}
+
+.team-header {
+  color: white;
   font-size: 2rem;
-  text-shadow: 0 0 10px red;
   margin-bottom: 2rem;
+  text-shadow: 0 0 10px red;
 }
 
 .player-grid {
@@ -51,68 +60,61 @@ nav ul li a {
 }
 
 .player-card-elite {
-  width: 200px;
-  height: 360px;
-  background-color: #000;
+  width: 220px;
+  height: 400px;
+  background-color: black;
+  border: 2px solid red;
   border-radius: 12px;
   overflow: hidden;
   display: flex;
   flex-direction: column;
   align-items: center;
   position: relative;
-  border: 2px solid red;
-  box-shadow: 0 0 12px red;
-  padding-top: 0.5rem;
+  box-shadow: 0 0 15px red;
 }
 
-.team-logo-small {
-  width: 36px;
-  height: 36px;
-  margin-bottom: 0.3rem;
-  z-index: 2;
+.team-logo {
+  width: 40px;
+  margin-top: 0.5rem;
 }
 
 .player-name-elite {
-  font-size: 1rem;
-  color: red;
-  text-shadow: 0 0 8px red;
-  margin: 0.2rem 0;
+  font-size: 1.2rem;
+  margin: 0.5rem 0 0.2rem 0;
   z-index: 2;
+  text-shadow: 0 0 6px red;
+  color: red;
 }
 
 .flag-icon {
-  width: 26px;
-  height: auto;
+  width: 35px;
   margin-bottom: 0.3rem;
   z-index: 2;
 }
 
 .headshot {
-  position: absolute;
-  bottom: 0;
   width: 100%;
   height: 58%;
   object-fit: cover;
+  position: absolute;
+  bottom: 0;
   z-index: 1;
 }
 
 .player-info-elite {
   text-align: center;
-  padding: 0.4rem;
-  background-color: rgba(0, 0, 0, 0.6);
-  width: 100%;
-  position: absolute;
-  bottom: 0;
+  margin-top: auto;
+  margin-bottom: 0.5rem;
   z-index: 2;
+  position: relative;
+  background: rgba(0, 0, 0, 0.7);
+  padding: 0.5rem;
+  border-radius: 8px;
   color: white;
   text-shadow: 0 0 4px red;
-  font-size: 0.85rem;
 }
 
-.player-info-elite p {
-  margin: 0.2rem 0;
-}
-
-.player-info-elite p:has(span.captain) {
+.captain {
   color: gold;
+  font-weight: bold;
 }
