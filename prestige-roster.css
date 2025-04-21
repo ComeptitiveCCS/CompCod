@@ -49,7 +49,7 @@ h1 {
   font-size: 2.5rem;
   margin-bottom: 1rem;
   text-transform: uppercase;
-  color: #00aaff; /* Blue color for Team Prestige Worldwide */
+  color: #00ff00; /* Green text for the team name */
 }
 
 .player-grid {
@@ -59,7 +59,7 @@ h1 {
   gap: 20px;
 }
 
-.player-card-noro {
+.player-card-prestige {
   width: 220px;
   height: 400px;
   background-color: #222;
@@ -69,31 +69,31 @@ h1 {
   flex-direction: column;
   align-items: center;
   position: relative;
-  box-shadow: 0 0 15px #00aaff; /* Blue glow for Team Prestige Worldwide */
+  box-shadow: 0 0 15px #00ff00;
   padding: 10px;
   margin: 10px;
-  border: 3px solid #00aaff; /* Blue border for Team Prestige Worldwide */
+  border: 3px solid #00ff00; /* Green border for Team Prestige Worldwide */
 }
 
-.team-logo-small-noro {
+.team-logo-small-prestige {
   width: 50px;
   height: 50px;
   margin-bottom: 10px;
 }
 
-.player-name-noro {
+.player-name-prestige {
   font-size: 1.2rem;
   margin-bottom: 0.3rem;
-  color: #00aaff; /* Blue color for player name */
-  text-shadow: 0 0 8px #00aaff; /* Blue text shadow */
+  color: #00ff00;
+  text-shadow: 0 0 8px #00ff00;
 }
 
-.flag-icon-noro {
+.flag-icon-prestige {
   width: 45px;
   margin-bottom: 0.5rem;
 }
 
-.headshot-noro {
+.headshot-prestige {
   width: 100%;
   height: 58%;
   object-fit: cover;
@@ -102,7 +102,7 @@ h1 {
   z-index: 1;
 }
 
-.player-info-noro {
+.player-info-prestige {
   position: absolute;
   bottom: 0;
   background-color: rgba(0, 0, 0, 0.7);
@@ -112,7 +112,7 @@ h1 {
   color: white;
 }
 
-.player-info-noro p {
+.player-info-prestige p {
   margin: 5px 0;
 }
 
@@ -123,4 +123,3 @@ footer {
   text-align: center;
   padding: 20px;
 }
-
