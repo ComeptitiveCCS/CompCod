@@ -53,7 +53,7 @@ nav ul li a:hover {
 .teams-container h1 {
   font-size: 2.5rem;
   margin-bottom: 2rem;
-  text-shadow: 0 0 10px #5da9ff;
+  text-shadow: 0 0 10px #ffffff;
 }
 
 .team-grid {
@@ -69,6 +69,7 @@ nav ul li a:hover {
   padding: 1.5rem;
   border-radius: 12px;
   transition: transform 0.3s;
+  text-decoration: none;
 }
 
 .team-card:hover {
@@ -82,47 +83,54 @@ nav ul li a:hover {
 }
 
 .team-card img.noro-logo {
-  transform: scale(1.5); /* Makes NoRo logo bigger */
+  transform: scale(1.5);
   width: auto;
-  max-width: 150px; /* Optional: limits the max width */
+  max-width: 150px;
 }
 
-.team-card h2 {
-  margin: 0;
-  font-size: 1.5rem;
+/* Remove underline from h2 links */
+.team-card a {
+  text-decoration: none;
 }
 
-/* Team-Specific Styles */
+/* Elite styling */
 .team-card.elite {
   border: 2px solid red;
+  box-shadow: 0 0 12px red;
 }
-
 .team-card.elite h2 {
   color: red;
+  text-shadow: 0 0 8px red;
 }
 
+/* NoRo styling */
 .team-card.noro {
   border: 2px solid green;
+  box-shadow: 0 0 12px green;
 }
-
 .team-card.noro h2 {
   color: green;
+  text-shadow: 0 0 8px green;
 }
 
+/* Prestige Worldwide (PSG) styling */
 .team-card.psg {
   border: 2px solid blue;
+  box-shadow: 0 0 12px blue;
 }
-
 .team-card.psg h2 {
   color: blue;
+  text-shadow: 0 0 8px blue;
 }
 
+/* FeaR styling */
 .team-card.fear {
   border: 2px solid purple;
+  box-shadow: 0 0 12px purple;
 }
-
 .team-card.fear h2 {
   color: purple;
+  text-shadow: 0 0 8px purple;
 }
 
 footer {
