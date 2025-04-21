@@ -733,7 +733,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Elite</title>
+  <title>Teams</title>
   <link rel="stylesheet" href="styles.css">
   <style>
     /* Global Styles */
@@ -743,32 +743,90 @@
       color: white;
     }
 
-    /* Team Elite */
-    .team-name.elite {
-      color: red;
-      text-shadow: 0 0 10px red;
-      border-bottom: 2px solid red;
-    }
-
-    /* Team Header - clickable */
-    .team-header {
-      display: flex;
-      align-items: center;
-      gap: 1rem;
+    .team-noro {
+      border-color: limegreen;
+      color: limegreen;
+      text-shadow: 0 0 8px limegreen;
       cursor: pointer;
     }
 
-    /* Adjusted for larger team logo on clickable page */
     .team-logo-large {
       width: 150px;
       height: 150px;
       margin-bottom: 10px;
     }
 
+    .player-card-noro {
+      width: 220px;
+      height: 400px;
+      background-color: black;
+      border-radius: 12px;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 1rem;
+      position: relative;
+      box-shadow: 0 0 15px limegreen;
+      margin: 1rem;
+    }
+
+    .player-name-noro {
+      font-size: 1.2rem;
+      margin-bottom: 0.3rem;
+      z-index: 2;
+      text-shadow: 0 0 8px limegreen;
+      color: limegreen;
+    }
+
+    .real-name {
+      font-size: 1rem;
+      margin-bottom: 0.5rem;
+      color: white;
+    }
+
+    .player-info-noro {
+      text-align: center;
+      margin-top: auto;
+      margin-bottom: 1rem;
+      z-index: 2;
+      position: relative;
+      background: rgba(0, 0, 0, 0.6);
+      padding: 0.5rem;
+      border-radius: 8px;
+    }
+
+    .flag-icon {
+      width: 45px;
+      margin-bottom: 0.5rem;
+    }
+
+    .headshot {
+      width: 100%;
+      height: auto;
+      object-fit: cover;
+      position: absolute;
+      bottom: -20px;
+      z-index: 1;
+    }
+
     .team-logo-small {
-      width: 50px;
-      height: 50px;
+      width: 75px;
+      height: 75px;
       margin-bottom: 10px;
+    }
+
+    .team-players {
+      display: flex;
+      flex-wrap: wrap;
+    }
+
+    /* Elite red and white theme */
+    .team-name.elite {
+      color: red;
+      text-shadow: 0 0 10px red;
+      border-bottom: 2px solid red;
+      cursor: pointer;
     }
 
     .player-card-elite {
@@ -794,13 +852,6 @@
       color: red;
     }
 
-    .real-name {
-      font-size: 1rem;
-      margin-bottom: 0.5rem;
-      color: white;
-      text-shadow: 0 0 8px red;
-    }
-
     .player-info-elite {
       text-align: center;
       margin-top: auto;
@@ -811,81 +862,73 @@
       padding: 0.5rem;
       border-radius: 8px;
     }
-
-    .flag-icon {
-      width: 45px;
-      margin-bottom: 0.5rem;
-    }
-
-    .headshot {
-      width: 100%;
-      height: auto;
-      object-fit: cover;
-      position: absolute;
-      bottom: -20px;
-      z-index: 1;
-    }
-
-    .team-players {
-      display: flex;
-      flex-wrap: wrap;
-    }
-
   </style>
 </head>
 <body>
 
+<!-- Team NoRo -->
+<div class="team">
+  <h3 class="team-noro" onclick="togglePlayers('noro-players')">
+    <img src="norologo.png" alt="Team NoRo Logo" class="team-logo-large">
+    NoRo
+  </h3>
+  <div id="noro-players" class="team-players" style="display: none;">
+    <!-- Repeat player-card-noro blocks as needed... (you already had them in your original code) -->
+  </div>
+</div>
+
 <!-- Team Elite -->
 <div class="team">
-  <div class="team-header team-name elite" onclick="togglePlayers('elite-players')">
-    <img src="elitelogo.png" alt="Team Elite Logo" class="team-logo-large"> <!-- Updated logo size -->
-    <h3>Elite</h3>
-  </div>
+  <h3 class="team-name elite" onclick="togglePlayers('elite-players')">
+    <img src="elitelogo.png" alt="Team Elite Logo" class="team-logo-large">
+    Elite
+  </h3>
   <div id="elite-players" class="team-players" style="display: none;">
-    <!-- Toxic_Punk (Starting Roster) -->
+
+    <!-- Toxic_Punk -->
     <div class="player-card-elite">
       <img src="elitelogo.png" alt="Small Logo" class="team-logo-small">
       <div class="player-name-elite">Toxic_Punk</div>
-      <div class="real-name">Toxic_Punk</div>
+      <div class="real-name">@toxic_punk22</div>
       <img src="usalogo.png" alt="USA Flag" class="flag-icon">
       <img src="defaultlogo.png" alt="Toxic_Punk Headshot" class="headshot">
       <div class="player-info-elite">
         <div>SMG</div>
-        <div>Age 22</div>
-      </div>
-    </div>
-
-    <!-- Federal (Starting Roster) -->
-    <div class="player-card-elite">
-      <img src="elitelogo.png" alt="Small Logo" class="team-logo-small">
-      <div class="player-name-elite">Federal</div>
-      <div class="real-name">Federal</div>
-      <img src="usalogo.png" alt="USA Flag" class="flag-icon">
-      <img src="defaultlogo.png" alt="Federal Headshot" class="headshot">
-      <div class="player-info-elite">
-        <div>AR</div>
         <div>Age 24</div>
       </div>
     </div>
 
-    <!-- Nomad (Starting Roster) -->
+    <!-- Federal -->
+    <div class="player-card-elite">
+      <img src="elitelogo.png" alt="Small Logo" class="team-logo-small">
+      <div class="player-name-elite">Federal</div>
+      <div class="real-name">@derehk</div>
+      <img src="usalogo.png" alt="USA Flag" class="flag-icon">
+      <img src="defaultlogo.png" alt="Federal Headshot" class="headshot">
+      <div class="player-info-elite">
+        <div>AR</div>
+        <div>Age 27</div>
+      </div>
+    </div>
+
+    <!-- Nomad -->
     <div class="player-card-elite">
       <img src="elitelogo.png" alt="Small Logo" class="team-logo-small">
       <div class="player-name-elite">Nomad</div>
-      <div class="real-name">Nomad</div>
+      <div class="real-name">@motozack</div>
       <img src="usalogo.png" alt="USA Flag" class="flag-icon">
       <img src="defaultlogo.png" alt="Nomad Headshot" class="headshot">
       <div class="player-info-elite">
         <div>AR</div>
-        <div>Age 26</div>
+        <div>Age 30</div>
       </div>
     </div>
 
-    <!-- Robert Pinkerton (Starting Roster) -->
+    <!-- Robert Pinkerton -->
     <div class="player-card-elite">
       <img src="elitelogo.png" alt="Small Logo" class="team-logo-small">
       <div class="player-name-elite">Robert Pinkerton</div>
-      <div class="real-name">Robert Pinkerton</div>
+      <div class="real-name">@fugokyuu</div>
       <img src="usalogo.png" alt="USA Flag" class="flag-icon">
       <img src="defaultlogo.png" alt="Robert Pinkerton Headshot" class="headshot">
       <div class="player-info-elite">
@@ -894,24 +937,24 @@
       </div>
     </div>
 
-    <!-- UG iNFiNiTYx (Starting Roster) -->
+    <!-- UG iNFiNiTYx -->
     <div class="player-card-elite">
       <img src="elitelogo.png" alt="Small Logo" class="team-logo-small">
       <div class="player-name-elite">UG iNFiNiTYx</div>
-      <div class="real-name">UG iNFiNiTYx</div>
+      <div class="real-name">@h2oinfinityx</div>
       <img src="usalogo.png" alt="USA Flag" class="flag-icon">
       <img src="defaultlogo.png" alt="UG iNFiNiTYx Headshot" class="headshot">
       <div class="player-info-elite">
         <div>SMG</div>
-        <div>Age 28</div>
+        <div>Age 32</div>
       </div>
     </div>
 
-    <!-- Vocals (Starting Roster) -->
+    <!-- Vocals -->
     <div class="player-card-elite">
       <img src="elitelogo.png" alt="Small Logo" class="team-logo-small">
       <div class="player-name-elite">Vocals</div>
-      <div class="real-name">Vocals</div>
+      <div class="real-name">@itzvocals</div>
       <img src="usalogo.png" alt="USA Flag" class="flag-icon">
       <img src="defaultlogo.png" alt="Vocals Headshot" class="headshot">
       <div class="player-info-elite">
@@ -919,6 +962,7 @@
         <div>Age 26</div>
       </div>
     </div>
+
   </div>
 </div>
 
@@ -931,6 +975,7 @@
 
 </body>
 </html>
+
 
 
 
