@@ -1,77 +1,101 @@
 body {
-  margin: 0;
+  background-color: black;
+  color: white;
   font-family: Arial, sans-serif;
-  background-color: #000;
-  color: white;
-}
-
-.site-header,
-.site-footer {
+  margin: 0;
+  padding: 0;
   text-align: center;
-  background-color: #000;
-  color: white;
-  padding: 20px 0;
 }
 
-.roster-container {
+.roster-header,
+.roster-footer {
+  padding: 20px 0;
+  background-color: black;
+  color: white;
+}
+
+.roster-header h1,
+.roster-footer p {
+  margin: 0;
+  font-size: 1.8rem;
+  text-align: center;
+}
+
+.team-logo {
+  width: 100px;
+  height: auto;
+  margin-bottom: 10px;
+}
+
+.team-players {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 20px;
-  padding: 20px;
+  padding: 2rem;
 }
 
 .player-card-psg {
-  background-color: #111;
-  border: 3px solid blue;
-  border-radius: 15px;
-  width: 250px;
-  padding: 10px;
-  box-shadow: 0 0 15px blue;
+  width: 220px;
+  height: 400px;
+  background-color: black;
+  border-radius: 12px;
+  overflow: hidden;
   display: flex;
   flex-direction: column;
   align-items: center;
-  color: blue;
+  padding: 1rem;
   position: relative;
-  overflow: hidden;
+  box-shadow: 0 0 15px blue;
+  margin: 1rem;
+  border: 2px solid blue;
+  text-shadow: 0 0 8px blue;
 }
 
 .player-name-psg {
-  font-size: 1.2em;
-  font-weight: bold;
-  text-align: center;
-  margin-top: 10px;
-}
-
-.player-name-psg.captain::after {
-  content: " (Captain)";
-  font-size: 0.9em;
-  color: #0ff;
+  font-size: 1.2rem;
+  margin-bottom: 0.3rem;
+  z-index: 2;
+  color: #5fb9ff;
 }
 
 .flag-icon {
-  width: 30px;
-  margin: 5px 0;
+  width: 45px;
+  margin-bottom: 0.5rem;
+  z-index: 2;
 }
 
 .headshot {
   width: 100%;
   height: 58%;
   object-fit: cover;
-  border-radius: 10px;
   position: absolute;
   bottom: 0;
-  z-index: 0;
-  opacity: 0.3;
+  z-index: 1;
 }
 
 .player-info-psg {
-  position: relative;
-  z-index: 1;
   text-align: center;
   margin-top: auto;
-  padding: 10px 0;
-  background-color: rgba(0, 0, 0, 0.7);
-  width: 100%;
-  border-radius: 0 0 15px 15px;
+  margin-bottom: 1rem;
+  z-index: 2;
+  position: relative;
+  background: rgba(0, 0, 0, 0.6);
+  padding: 0.5rem;
+  border-radius: 8px;
+  color: #5fb9ff;
+  font-size: 0.9rem;
+}
+
+.captain-label {
+  font-weight: bold;
+  color: #5fb9ff;
+  display: block;
+  margin-top: 5px;
+}
+
+.team-logo-psg {
+  width: 40px;
+  height: 40px;
+  margin-bottom: 10px;
+  z-index: 2;
 }
