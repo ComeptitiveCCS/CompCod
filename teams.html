@@ -1,21 +1,22 @@
+teams.html
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>CCS Teams</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Teams | Competitive CoD Series</title>
   <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600&display=swap" rel="stylesheet">
   <style>
     body {
       margin: 0;
-      padding: 0;
-      background-color: #000;
-      color: #fff;
       font-family: 'Orbitron', sans-serif;
+      background-color: #0a0f2c; /* Dark background */
+      color: #ffffff; /* White text */
     }
 
     nav {
-      background: #ffffff;
+      background: rgba(18, 28, 74, 0.95);
       padding: 1rem 2rem;
       display: flex;
       justify-content: space-between;
@@ -23,15 +24,8 @@
     }
 
     nav .logo {
-      display: flex;
-      align-items: center;
       font-size: 1.5rem;
-      color: #000000;
-    }
-
-    nav .logo img {
-      height: 40px;
-      margin-left: 10px;
+      color: #ffffff; /* White logo */
     }
 
     nav ul {
@@ -41,96 +35,156 @@
     }
 
     nav ul li a {
-      color: #000000;
+      color: #ffffff; /* White text for links */
       text-decoration: none;
       transition: color 0.3s;
     }
 
     nav ul li a:hover {
-      color: #5da9ff;
+      color: #5da9ff; /* Highlighted color on hover */
     }
 
-    .teams-section {
-      padding: 3rem 2rem;
+    #teams {
+      padding: 4rem 2rem;
       text-align: center;
+      background: #0a0f2c; /* Keep background dark */
     }
 
-    .teams-section h1 {
+    #teams h2 {
       font-size: 2.5rem;
       margin-bottom: 2rem;
-      text-transform: uppercase;
-      letter-spacing: 2px;
+      color: #ffffff; /* White header text */
     }
 
-    .team-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 2rem;
-      justify-items: center;
-    }
-
-    .team-card {
-      background: #111;
-      border: 2px solid #5da9ff;
+    .team {
+      background: rgba(0, 0, 0, 0.05);
       border-radius: 10px;
-      padding: 1.5rem;
-      width: 100%;
-      max-width: 300px;
-      transition: transform 0.3s;
+      padding: 2rem;
+      margin-bottom: 2rem;
     }
 
-    .team-card:hover {
-      transform: scale(1.05);
-    }
-
-    .team-card img {
-      width: 100px;
-      height: 100px;
-      object-fit: cover;
+    .team h3 {
+      font-size: 1.8rem;
       margin-bottom: 1rem;
-      border-radius: 50%;
-      border: 2px solid #5da9ff;
+      color: #ffffff; /* White team name */
+      cursor: pointer;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border: 3px solid red;
+      border-radius: 12px;
+      padding: 0.5rem;
     }
 
-    .team-card h3 {
-      margin: 0.5rem 0;
-      font-size: 1.4rem;
-      color: #5da9ff;
+    .team-psg {
+      border-color: #00ffcc;
     }
 
-    .team-card p {
-      font-size: 0.95rem;
-      color: #ccc;
+    .team h3 img {
+      height: 60px;
+      margin-right: 12px;
+    }
+
+    .team-players {
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+      flex-wrap: nowrap;
+      margin-top: 1rem;
+      overflow-x: auto;
+    }
+
+    .player-card, .player-card-psg {
+      width: 220px;
+      height: 400px;
+      background-color: black; /* Black background for player cards */
+      border-radius: 12px;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 1rem;
+      position: relative;
+      box-shadow: 0 0 15px red;
+    }
+
+    .player-card-psg {
+      box-shadow: 0 0 15px #00ffcc;
+    }
+
+    .team-logo-small {
+      height: 65px;
+      margin-bottom: 0.25rem;
+    }
+
+    .player-name, .player-name-psg {
+      font-size: 1.2rem;
+      margin-bottom: 0.3rem;
+      z-index: 2;
+      color: #ffffff; /* White text for player name */
+      text-shadow: 0 0 8px red;
+    }
+
+    .player-name-psg {
+      text-shadow: 0 0 8px #00ffcc;
+    }
+
+    .player-info, .player-info-psg {
+      text-align: center;
+      margin-top: auto;
+      margin-bottom: 1rem;
+      z-index: 2;
+      position: relative;
+      color: #ffffff; /* White text for player info */
+    }
+
+    .player-info-psg {
+      margin-bottom: 1rem;
+    }
+
+    .player-card img.headshot,
+    .player-card-psg img.headshot {
+      width: 100%;
+      height: auto;
+      object-fit: cover;
+      position: absolute;
+      bottom: -20px;
     }
 
     footer {
-      background: #ffffff;
       text-align: center;
-      padding: 1rem;
-      font-size: 0.8rem;
-      color: #000000;
+      padding: 2rem;
+      background: rgba(18, 28, 74, 0.95);
+      font-size: 0.9rem;
+      color: #ccc;
     }
   </style>
+  <script>
+    function togglePlayers(teamId) {
+      const teamPlayers = document.getElementById(teamId);
+      if (teamPlayers.style.display === "none" || teamPlayers.style.display === "") {
+        teamPlayers.style.display = "flex";
+      } else {
+        teamPlayers.style.display = "none";
+      }
+    }
+  </script>
 </head>
 <body>
   <nav>
-    <div class="logo">
-      Competitive CoD Series
-      <img src="logo.png" alt="CCS Logo" />
-    </div>
+    <div class="logo">Competitive CoD Series</div>
     <ul>
       <li><a href="index.html">Home</a></li>
       <li><a href="teams.html">Teams</a></li>
-      <li><a href="standings.html">Standings</a></li>
-      <li><a href="media.html">Media</a></li>
+      <li><a href="#">Standings</a></li>
+      <li><a href="#media">Media</a></li>
     </ul>
   </nav>
 
-  <section class="teams-section">
-    <h1>Meet the Teams</h1>
-    <div class="team-grid">
-      <!-- Team 1 -->
-      <!-- Prestige Worldwide -->
+  <section id="teams">
+    <h2>Teams</h2>
+
+    <!-- Prestige Worldwide -->
     <div class="team">
       <h3 class="team-psg" onclick="togglePlayers('pw-players')">
         <img src="psglogo.png" alt="Prestige Worldwide Logo">
@@ -200,10 +254,7 @@
       </div>
     </div>
  
-
-
-      <!-- Team 2 -->
-     <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
@@ -471,9 +522,7 @@
   </div>
 </div>
 
-
-      <!-- Team 3 -->
-   <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
@@ -573,6 +622,93 @@
 </head>
 <body>
 
+<!-- Team NoRo -->
+<div class="team">
+  <h3 class="team-noro" onclick="togglePlayers('noro-players')">
+    <img src="norologo.png" alt="Team NoRo Logo" class="team-logo-large"> <!-- Updated logo size -->
+    NoRo
+  </h3>
+  <div id="noro-players" class="team-players" style="display: none;">
+    <!-- Allan "Hxpno" Breaux (Starting Roster) -->
+    <div class="player-card-noro">
+      <img src="norologo.png" alt="Small Logo" class="team-logo-small">
+      <div class="player-name-noro">Hxpno</div>
+      <div class="real-name">Allan "Hxpno" Breaux</div>
+      <img src="usalogo.png" alt="USA Flag" class="flag-icon">
+      <img src="defaultlogo.png" alt="Hxpno Headshot" class="headshot">
+      <div class="player-info-noro">
+        <div>Flex Role</div>
+        <div>Age 18</div>
+      </div>
+    </div>
+
+    <!-- Yahir "Prisa" Rivas (Starting Roster) -->
+    <div class="player-card-noro">
+      <img src="norologo.png" alt="Small Logo" class="team-logo-small">
+      <div class="player-name-noro">Prisa</div>
+      <div class="real-name">Yahir "Prisa" Rivas</div>
+      <img src="usalogo.png" alt="USA Flag" class="flag-icon">
+      <img src="defaultlogo.png" alt="Prisa Headshot" class="headshot">
+      <div class="player-info-noro">
+        <div>Flex Role</div>
+        <div>Age 20</div>
+      </div>
+    </div>
+
+    <!-- Andrew "Sorrows" Correa (Starting Roster) -->
+    <div class="player-card-noro">
+      <img src="norologo.png" alt="Small Logo" class="team-logo-small">
+      <div class="player-name-noro">Sorrows</div>
+      <div class="real-name">Andrew "Sorrows" Correa</div>
+      <img src="usalogo.png" alt="USA Flag" class="flag-icon">
+      <img src="defaultlogo.png" alt="Sorrows Headshot" class="headshot">
+      <div class="player-info-noro">
+        <div>Flex Role</div>
+        <div>Age 24</div>
+      </div>
+    </div>
+
+    <!-- Omar "OmieSaiyan" Ahmad (Substitute) -->
+    <div class="player-card-noro">
+      <img src="norologo.png" alt="Small Logo" class="team-logo-small">
+      <div class="player-name-noro">OmieSaiyan</div>
+      <div class="real-name">Omar "OmieSaiyan" Ahmad</div>
+      <img src="usalogo.png" alt="USA Flag" class="flag-icon">
+      <img src="defaultlogo.png" alt="OmieSaiyan Headshot" class="headshot">
+      <div class="player-info-noro">
+        <div>SMG</div>
+        <div>Age 23</div>
+      </div>
+    </div>
+
+    <!-- Aaron "AiRRains" Krause (Starting Roster) -->
+    <div class="player-card-noro">
+      <img src="norologo.png" alt="Small Logo" class="team-logo-small">
+      <div class="player-name-noro">AiRRains</div>
+      <div class="real-name">Aaron "AiRRains" Krause</div>
+      <img src="usalogo.png" alt="USA Flag" class="flag-icon">
+      <img src="defaultlogo.png" alt="AiRRains Headshot" class="headshot">
+      <div class="player-info-noro">
+        <div>AR Role</div>
+        <div>Age 22</div>
+      </div>
+    </div>
+
+    <!-- Gabe "Poopypants" Sorci (Starting Roster) -->
+    <div class="player-card-noro">
+      <img src="norologo.png" alt="Small Logo" class="team-logo-small">
+      <div class="player-name-noro">Poopypants</div>
+      <div class="real-name">Gabe "Poopypants" Sorci</div>
+      <img src="usalogo.png" alt="USA Flag" class="flag-icon">
+      <img src="defaultlogo.png" alt="Poopypants Headshot" class="headshot">
+      <div class="player-info-noro">
+        <div>AR Role</div>
+        <div>Age 22</div>
+      </div>
+    </div>
+  </div>
+</div>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -661,7 +797,6 @@
       margin-bottom: 10px;
     }
 
-    /* Hidden by default, displayed when the team name is clicked */
     .team-players {
       display: flex;
       flex-wrap: wrap;
@@ -712,93 +847,6 @@
 </head>
 <body>
 
-<!-- Team NoRo -->
-<div class="team">
-  <h3 class="team-noro" onclick="togglePlayers('noro-players')">
-    <img src="norologo.png" alt="Team NoRo Logo" class="team-logo-large">
-    NoRo
-  </h3>
-  <div id="noro-players" class="team-players" style="display: none;">
-    <!-- Allan "Hxpno" Breaux (Starting Roster) -->
-    <div class="player-card-noro">
-      <img src="norologo.png" alt="Small Logo" class="team-logo-small">
-      <div class="player-name-noro">Hxpno</div>
-      <div class="real-name">Allan "Hxpno" Breaux</div>
-      <img src="usalogo.png" alt="USA Flag" class="flag-icon">
-      <img src="defaultlogo.png" alt="Hxpno Headshot" class="headshot">
-      <div class="player-info-noro">
-        <div>Flex Role</div>
-        <div>Age 18</div>
-      </div>
-    </div>
-
-    <!-- Yahir "Prisa" Rivas (Starting Roster) -->
-    <div class="player-card-noro">
-      <img src="norologo.png" alt="Small Logo" class="team-logo-small">
-      <div class="player-name-noro">Prisa</div>
-      <div class="real-name">Yahir "Prisa" Rivas</div>
-      <img src="usalogo.png" alt="USA Flag" class="flag-icon">
-      <img src="defaultlogo.png" alt="Prisa Headshot" class="headshot">
-      <div class="player-info-noro">
-        <div>Flex Role</div>
-        <div>Age 20</div>
-      </div>
-    </div>
-
-    <!-- Andrew "Sorrows" Correa (Starting Roster) -->
-    <div class="player-card-noro">
-      <img src="norologo.png" alt="Small Logo" class="team-logo-small">
-      <div class="player-name-noro">Sorrows</div>
-      <div class="real-name">Andrew "Sorrows" Correa</div>
-      <img src="usalogo.png" alt="USA Flag" class="flag-icon">
-      <img src="defaultlogo.png" alt="Sorrows Headshot" class="headshot">
-      <div class="player-info-noro">
-        <div>Flex Role</div>
-        <div>Age 24</div>
-      </div>
-    </div>
-
-    <!-- Omar "OmieSaiyan" Ahmad (Substitute) -->
-    <div class="player-card-noro">
-      <img src="norologo.png" alt="Small Logo" class="team-logo-small">
-      <div class="player-name-noro">OmieSaiyan</div>
-      <div class="real-name">Omar "OmieSaiyan" Ahmad</div>
-      <img src="usalogo.png" alt="USA Flag" class="flag-icon">
-      <img src="defaultlogo.png" alt="OmieSaiyan Headshot" class="headshot">
-      <div class="player-info-noro">
-        <div>SMG</div>
-        <div>Age 23</div>
-      </div>
-    </div>
-
-    <!-- Aaron "AiRRains" Krause (Starting Roster) -->
-    <div class="player-card-noro">
-      <img src="norologo.png" alt="Small Logo" class="team-logo-small">
-      <div class="player-name-noro">AiRRains</div>
-      <div class="real-name">Aaron "AiRRains" Krause</div>
-      <img src="usalogo.png" alt="USA Flag" class="flag-icon">
-      <img src="defaultlogo.png" alt="AiRRains Headshot" class="headshot">
-      <div class="player-info-noro">
-        <div>AR Role</div>
-        <div>Age 22</div>
-      </div>
-    </div>
-
-    <!-- Gabe "Poopypants" Sorci (Starting Roster) -->
-    <div class="player-card-noro">
-      <img src="norologo.png" alt="Small Logo" class="team-logo-small">
-      <div class="player-name-noro">Poopypants</div>
-      <div class="real-name">Gabe "Poopypants" Sorci</div>
-      <img src="usalogo.png" alt="USA Flag" class="flag-icon">
-      <img src="defaultlogo.png" alt="Poopypants Headshot" class="headshot">
-      <div class="player-info-noro">
-        <div>AR Role</div>
-        <div>Age 22</div>
-      </div>
-    </div>
-  </div>
-</div>
-
 <!-- Team Elite -->
 <div class="team">
   <h3 class="team-name elite" onclick="togglePlayers('elite-players')">
@@ -806,6 +854,7 @@
     Elite
   </h3>
   <div id="elite-players" class="team-players" style="display: none;">
+
     <!-- Toxic_Punk -->
     <div class="player-card-elite">
       <img src="elitelogo.png" alt="Small Logo" class="team-logo-small">
@@ -849,21 +898,48 @@
     <div class="player-card-elite">
       <img src="elitelogo.png" alt="Small Logo" class="team-logo-small">
       <div class="player-name-elite">Robert Pinkerton</div>
-      <div class="real-name">Robert Pinkerton</div>
+      <div class="real-name">@fugokyuu</div>
       <img src="usalogo.png" alt="USA Flag" class="flag-icon">
       <img src="defaultlogo.png" alt="Robert Pinkerton Headshot" class="headshot">
       <div class="player-info-elite">
-        <div>Flex</div>
-        <div>Age 25</div>
+        <div>SMG</div>
+        <div>Age 22</div>
       </div>
     </div>
+
+    <!-- UG iNFiNiTYx -->
+    <div class="player-card-elite">
+      <img src="elitelogo.png" alt="Small Logo" class="team-logo-small">
+      <div class="player-name-elite">UG iNFiNiTYx</div>
+      <div class="real-name">@h2oinfinityx</div>
+      <img src="usalogo.png" alt="USA Flag" class="flag-icon">
+      <img src="defaultlogo.png" alt="UG iNFiNiTYx Headshot" class="headshot">
+      <div class="player-info-elite">
+        <div>SMG</div>
+        <div>Age 32</div>
+      </div>
+    </div>
+
+    <!-- Vocals -->
+    <div class="player-card-elite">
+      <img src="elitelogo.png" alt="Small Logo" class="team-logo-small">
+      <div class="player-name-elite">Vocals</div>
+      <div class="real-name">@itzvocals</div>
+      <img src="usalogo.png" alt="USA Flag" class="flag-icon">
+      <img src="defaultlogo.png" alt="Vocals Headshot" class="headshot">
+      <div class="player-info-elite">
+        <div>AR</div>
+        <div>Age 26</div>
+      </div>
+    </div>
+
   </div>
 </div>
 
 <script>
-  function togglePlayers(team) {
-    const players = document.getElementById(team);
-    players.style.display = players.style.display === 'none' ? 'flex' : 'none';
+  function togglePlayers(id) {
+    const element = document.getElementById(id);
+    element.style.display = (element.style.display === "none") ? "flex" : "none";
   }
 </script>
 
@@ -871,10 +947,13 @@
 </html>
 
 
+
+
+  </section>
+
   <footer>
-    &copy; 2025 Competitive CoD Series | All Rights Reserved
+    <p>&copy; 2025 Competitive CoD Series</p>
   </footer>
 </body>
 </html>
-
 
