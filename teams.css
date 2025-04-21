@@ -1,17 +1,15 @@
-/* General styling for the page */
 html, body {
   margin: 0;
   padding: 0;
   width: 100%;
   height: 100%;
-  background-color: #000000; /* Black background */
+  background-color: #000000;
   color: #ffffff;
   font-family: 'Orbitron', sans-serif;
 }
 
-/* Navigation Bar */
 nav {
-  background: #ffffff; /* White header */
+  background: #ffffff;
   padding: 1rem 2rem;
   display: flex;
   justify-content: space-between;
@@ -47,7 +45,6 @@ nav ul li a:hover {
   color: #5da9ff;
 }
 
-/* Teams Section Styling */
 .teams-container {
   padding: 3rem 2rem;
   text-align: center;
@@ -57,58 +54,50 @@ nav ul li a:hover {
   font-size: 2.5rem;
   margin-bottom: 2rem;
   text-shadow: 0 0 10px #5da9ff;
-  text-transform: uppercase;
 }
 
-/* Grid layout for teams */
 .team-grid {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
   gap: 2rem;
   max-width: 1000px;
   margin: 0 auto;
 }
 
-/* Individual Team Card */
 .team-card {
-  background-color: #111111; /* Dark background for each card */
-  border: 2px solid #5da9ff; /* Blue border for each card */
+  background-color: #111111;
+  border: 2px solid #5da9ff;
   padding: 1.5rem;
   border-radius: 12px;
   transition: transform 0.3s;
-  display: flex;
-  flex-direction: column;
-  align-items: center; /* Centers content horizontally */
-  justify-content: center; /* Centers content vertically */
-  text-align: center; /* Centers text inside the card */
 }
 
 .team-card:hover {
-  transform: scale(1.05); /* Adds hover effect */
+  transform: scale(1.05);
 }
 
-/* Team Logo Styling */
 .team-card img {
   width: 120px;
   height: auto;
   margin-bottom: 1rem;
 }
 
-/* Team Name Styling */
+.team-card img.noro-logo {
+  transform: scale(1.5); /* Makes NoRo logo bigger */
+  width: auto;
+  max-width: 150px; /* Optional: limits the max width */
+}
+
 .team-card h2 {
   margin: 0;
   font-size: 1.5rem;
-  text-transform: uppercase;
 }
 
-/* Footer Styling */
 footer {
-  background: #ffffff; /* White footer */
+  background: #ffffff;
   text-align: center;
   padding: 1rem;
   font-size: 0.8rem;
   color: #000000;
 }
-
 
