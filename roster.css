@@ -34,6 +34,7 @@ nav ul {
   list-style: none;
   display: flex;
   gap: 2rem;
+  margin: 0;
 }
 
 nav ul li a {
@@ -68,10 +69,10 @@ nav ul li a:hover {
   padding-bottom: 4rem;
 }
 
-/* Player Card (Updated dimensions) */
+/* Player Card */
 .player-card {
-  width: 220px; /* Updated width */
-  height: 400px; /* Updated height */
+  width: 220px; /* Card width */
+  height: 400px; /* Card height */
   background-color: black;
   border-radius: 12px;
   overflow: hidden;
@@ -93,47 +94,55 @@ nav ul li a:hover {
 
 /* Player Name */
 .player-name {
-  font-size: 1.2rem;
-  margin-bottom: 0.3rem;
-  z-index: 2;
+  font-size: 1.4rem;
+  margin-bottom: 0.5rem;
   text-shadow: 0 0 8px #bb86fc;
   color: #bb86fc;
   position: relative;
-}
-
-/* Player Info Styling (Positioned at the bottom) */
-.player-info {
-  text-align: center;
-  margin-top: auto;
-  margin-bottom: 1rem;
   z-index: 2;
-  position: relative;
-  background: rgba(0, 0, 0, 0.6);
-  padding: 0.5rem;
-  border-radius: 8px;
 }
 
 /* Flag Styling */
 .flag {
-  width: 45px; /* Updated size */
-  height: 30px; /* Adjusted flag size */
+  width: 50px;
+  height: 35px;
   object-fit: contain;
-  margin-bottom: 0.5rem;
-  z-index: 2;
+  margin-bottom: 1rem;
   position: relative;
+  z-index: 2;
 }
 
 /* Headshot Styling */
 .headshot {
   width: 100%;
-  height: auto;
+  height: 58%; /* Headshot now takes 58% of the card height */
   object-fit: cover;
   position: absolute;
-  bottom: -20px;
+  bottom: 0; /* Position headshot at the bottom */
   z-index: 1;
+  left: 0; /* Align headshot to the left */
+  right: 0; /* Align headshot to the right */
 }
 
-/* Captain Text Styling */
+/* Player Info Styling */
+.player-info {
+  text-align: center;
+  z-index: 2;
+  position: absolute;
+  bottom: 10px; /* Place info on top of the headshot */
+  width: 100%;
+  background: rgba(0, 0, 0, 0.6); /* Slight transparency for text readability */
+  padding: 0.5rem;
+  border-radius: 8px;
+  color: white;
+  font-size: 0.9rem;
+}
+
+.player-info p {
+  margin: 0.3rem 0;
+}
+
+/* Captain Text */
 .captain {
   font-weight: bold;
   color: gold;
