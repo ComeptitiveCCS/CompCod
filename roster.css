@@ -61,10 +61,11 @@ nav ul li a:hover {
 /* Player Grid */
 .player-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 2rem;
   max-width: 1000px;
   margin: 0 auto;
+  padding-bottom: 4rem;
 }
 
 /* Player Card */
@@ -78,6 +79,7 @@ nav ul li a:hover {
   display: flex;
   flex-direction: column;
   align-items: center;
+  height: 350px; /* Set height to avoid overflow */
   transition: transform 0.3s;
 }
 
@@ -156,3 +158,4 @@ footer {
   font-size: 0.8rem;
   color: #000000;
 }
+
