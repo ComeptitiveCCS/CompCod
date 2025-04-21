@@ -129,116 +129,8 @@
   <section class="teams-section">
     <h1>Meet the Teams</h1>
     <div class="team-grid">
-
-    .team-psg {
-      border-color: #00ffcc;
-    }
-
-    .team h3 img {
-      height: 60px;
-      margin-right: 12px;
-    }
-
-    .team-players {
-      display: flex;
-      justify-content: center;
-      gap: 2rem;
-      flex-wrap: nowrap;
-      margin-top: 1rem;
-      overflow-x: auto;
-    }
-
-    .player-card, .player-card-psg {
-      width: 220px;
-      height: 400px;
-      background-color: black; /* Black background for player cards */
-      border-radius: 12px;
-      overflow: hidden;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      padding: 1rem;
-      position: relative;
-      box-shadow: 0 0 15px red;
-    }
-
-    .player-card-psg {
-      box-shadow: 0 0 15px #00ffcc;
-    }
-
-    .team-logo-small {
-      height: 65px;
-      margin-bottom: 0.25rem;
-    }
-
-    .player-name, .player-name-psg {
-      font-size: 1.2rem;
-      margin-bottom: 0.3rem;
-      z-index: 2;
-      color: #ffffff; /* White text for player name */
-      text-shadow: 0 0 8px red;
-    }
-
-    .player-name-psg {
-      text-shadow: 0 0 8px #00ffcc;
-    }
-
-    .player-info, .player-info-psg {
-      text-align: center;
-      margin-top: auto;
-      margin-bottom: 1rem;
-      z-index: 2;
-      position: relative;
-      color: #ffffff; /* White text for player info */
-    }
-
-    .player-info-psg {
-      margin-bottom: 1rem;
-    }
-
-    .player-card img.headshot,
-    .player-card-psg img.headshot {
-      width: 100%;
-      height: auto;
-      object-fit: cover;
-      position: absolute;
-      bottom: -20px;
-    }
-
-    footer {
-      text-align: center;
-      padding: 2rem;
-      background: rgba(18, 28, 74, 0.95);
-      font-size: 0.9rem;
-      color: #ccc;
-    }
-  </style>
-  <script>
-    function togglePlayers(teamId) {
-      const teamPlayers = document.getElementById(teamId);
-      if (teamPlayers.style.display === "none" || teamPlayers.style.display === "") {
-        teamPlayers.style.display = "flex";
-      } else {
-        teamPlayers.style.display = "none";
-      }
-    }
-  </script>
-</head>
-<body>
-  <nav>
-    <div class="logo">Competitive CoD Series</div>
-    <ul>
-      <li><a href="index.html">Home</a></li>
-      <li><a href="teams.html">Teams</a></li>
-      <li><a href="#">Standings</a></li>
-      <li><a href="#media">Media</a></li>
-    </ul>
-  </nav>
-
-  <section id="teams">
-    <h2>Teams</h2>
-
-    <!-- Prestige Worldwide -->
+      <!-- Team 1 -->
+      <!-- Prestige Worldwide -->
     <div class="team">
       <h3 class="team-psg" onclick="togglePlayers('pw-players')">
         <img src="psglogo.png" alt="Prestige Worldwide Logo">
@@ -308,7 +200,10 @@
       </div>
     </div>
  
-<!DOCTYPE html>
+
+
+      <!-- Team 2 -->
+     <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
@@ -576,7 +471,9 @@
   </div>
 </div>
 
-<!DOCTYPE html>
+
+      <!-- Team 3 -->
+   <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
@@ -762,8 +659,10 @@
     </div>
   </div>
 </div>
+   
 
-<!DOCTYPE html>
+      <!-- Team 4 -->
+ <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
@@ -1010,4 +909,15 @@
   </footer>
 </body>
 </html>
+    
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    &copy; 2025 Competitive CoD Series | All Rights Reserved
+  </footer>
+</body>
+</html>
+
 
