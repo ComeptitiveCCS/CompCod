@@ -6,10 +6,7 @@ body {
     margin: 0;
     padding: 0;
 }
-/* Logo size adjustments */
-header img {
-  width: 150px;  /* Adjust the width as needed */
-  height: auto;  /* Maintain aspect ratio */
+
 }
 
 header {
