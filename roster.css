@@ -73,42 +73,69 @@ nav ul li a:hover {
   border: 2px solid;
   padding: 1.5rem;
   border-radius: 12px;
-  transition: transform 0.3s;
+  position: relative;
+  overflow: hidden;
   display: flex;
   flex-direction: column;
   align-items: center;
-  position: relative;
+  transition: transform 0.3s;
 }
 
 .player-card:hover {
   transform: scale(1.05);
 }
 
-.player-card img.headshot {
-  width: 80%;
-  height: auto;
-  margin-bottom: 1rem;
-  object-fit: cover;
-  max-height: 250px;
+/* Headshot Styling */
+.player-card .headshot {
+  width: 100%;
+  height: 66%;
+  overflow: hidden;
 }
 
+.player-card .headshot img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Player Name */
 .player-name {
   font-size: 1.5rem;
   margin: 0;
+  position: absolute;
+  top: 10px;
+  z-index: 2;
   text-shadow: 0 0 10px;
   color: inherit;
 }
 
+/* Flag Styling */
 .flag {
-  width: 100px;
-  height: 60px;
+  width: 50px; /* Smaller size for the flag */
+  height: 30px; /* Adjusted height proportionally */
   object-fit: contain;
-  margin-bottom: 1rem;
+  margin-top: 5px; /* Reduced margin for better alignment */
+  z-index: 2;
+  position: relative;
 }
 
+/* Text Over the Headshot */
+.player-card p {
+  position: absolute;
+  bottom: 20px;
+  text-align: center;
+  color: white;
+  width: 100%;
+  z-index: 2;
+  font-size: 1rem;
+  text-shadow: 0 0 5px #ffffff, 0 0 10px #ffffff;
+}
+
+/* Captain Text Styling */
 .captain {
-  color: gold;
   font-weight: bold;
+  color: gold;
+  text-shadow: 0 0 10px gold, 0 0 20px gold;
 }
 
 /* Adding specific team colors for border and name glow */
@@ -121,11 +148,7 @@ nav ul li a:hover {
   border-color: red;
 }
 
-/* Add glow effect to Captain */
-.captain {
-  text-shadow: 0 0 5px gold, 0 0 10px gold, 0 0 20px gold;
-}
-
+/* Footer Styling */
 footer {
   background: #ffffff;
   text-align: center;
