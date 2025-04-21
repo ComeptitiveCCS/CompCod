@@ -68,91 +68,76 @@ nav ul li a:hover {
   padding-bottom: 4rem;
 }
 
-/* Player Card */
+/* Player Card (Updated dimensions) */
 .player-card {
-  background-color: #111111;
-  border: 2px solid;
-  padding: 1rem;
+  width: 220px; /* Updated width */
+  height: 400px; /* Updated height */
+  background-color: black;
   border-radius: 12px;
-  position: relative;
   overflow: hidden;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
-  height: 400px; /* Adjusted height */
-  width: 250px;
-  transition: transform 0.3s;
-  background-size: cover;
-  background-position: center;
+  padding: 1rem;
+  position: relative;
+  box-shadow: 0 0 15px purple;
+  margin: 1rem;
+  cursor: pointer;
+  transition: transform 0.3s ease-in-out;
 }
 
 .player-card:hover {
   transform: scale(1.05);
 }
 
-/* Headshot Styling */
-.player-card .headshot {
-  width: 100%;
-  height: 50%; /* Headshot takes up the bottom half */
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  z-index: 1;
-  overflow: hidden;
-}
-
-.player-card .headshot img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover; /* Ensures the image fills the space without stretching */
-}
-
 /* Player Name */
 .player-name {
-  font-size: 1.5rem;
-  margin: 0;
-  position: absolute;
-  top: 10px;
+  font-size: 1.2rem;
+  margin-bottom: 0.3rem;
   z-index: 2;
-  text-shadow: 0 0 10px;
-  color: inherit;
-  width: 100%;
+  text-shadow: 0 0 8px #bb86fc;
+  color: #bb86fc;
+  position: relative;
+}
+
+/* Player Info Styling (Positioned at the bottom) */
+.player-info {
   text-align: center;
+  margin-top: auto;
+  margin-bottom: 1rem;
+  z-index: 2;
+  position: relative;
+  background: rgba(0, 0, 0, 0.6);
+  padding: 0.5rem;
+  border-radius: 8px;
 }
 
 /* Flag Styling */
 .flag {
-  width: 50px; /* Adjusted size */
-  height: 30px; /* Adjusted height */
+  width: 45px; /* Updated size */
+  height: 30px; /* Adjusted flag size */
   object-fit: contain;
-  margin-top: 5px;
+  margin-bottom: 0.5rem;
   z-index: 2;
   position: relative;
 }
 
-/* Info Text Styling */
-.player-card .info {
-  position: absolute;
-  bottom: 15px;
+/* Headshot Styling */
+.headshot {
   width: 100%;
-  text-align: center;
-  color: white;
-  z-index: 3; /* Makes sure the text appears above the headshot */
-  font-size: 1rem;
-  text-shadow: 0 0 5px #ffffff, 0 0 10px #ffffff;
+  height: auto;
+  object-fit: cover;
+  position: absolute;
+  bottom: -20px;
+  z-index: 1;
 }
 
-.player-card .captain {
+/* Captain Text Styling */
+.captain {
   font-weight: bold;
   color: gold;
   text-shadow: 0 0 10px gold, 0 0 20px gold;
-}
-
-/* Text Over the Headshot */
-.player-card p {
-  position: relative;
-  z-index: 3;
 }
 
 /* Adding specific team colors for border and name glow */
