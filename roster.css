@@ -1,12 +1,10 @@
-/* Base Styling */
-html, body {
-  margin: 0;
-  padding: 0;
-  width: 100%;
-  height: 100%;
+/* General Styling */
+body {
+  font-family: 'Orbitron', sans-serif;
   background-color: #000000;
   color: #ffffff;
-  font-family: 'Orbitron', sans-serif;
+  margin: 0;
+  padding: 0;
 }
 
 nav {
@@ -24,17 +22,10 @@ nav .logo {
   color: #000000;
 }
 
-nav .logo img {
-  height: 40px;
-  width: auto;
-  margin-left: 10px;
-}
-
 nav ul {
   list-style: none;
   display: flex;
   gap: 2rem;
-  margin: 0;
 }
 
 nav ul li a {
@@ -47,7 +38,6 @@ nav ul li a:hover {
   color: #5da9ff;
 }
 
-/* Roster Container */
 .roster-container {
   padding: 3rem 2rem;
   text-align: center;
@@ -59,107 +49,90 @@ nav ul li a:hover {
   text-shadow: 0 0 10px #5da9ff;
 }
 
-/* Player Grid */
 .player-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
   gap: 2rem;
   max-width: 1000px;
   margin: 0 auto;
-  padding-bottom: 4rem;
 }
 
-/* Player Card */
+/* Player Card Styling */
 .player-card {
-  width: 220px; /* Card width */
-  height: 400px; /* Card height */
+  width: 220px;
+  height: 400px;
   background-color: black;
   border-radius: 12px;
   overflow: hidden;
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
   align-items: center;
   padding: 1rem;
   position: relative;
-  box-shadow: 0 0 15px purple;
+  box-shadow: 0 0 15px red;
   margin: 1rem;
-  cursor: pointer;
-  transition: transform 0.3s ease-in-out;
+  border-color: red;
 }
 
+.player-card .team-logo {
+  width: 60px;
+  height: 60px;
+  margin-bottom: 10px;
+}
+
+.player-card img.headshot {
+  width: 100%;
+  height: 58%;  /* Headshot takes up 58% of the card height */
+  object-fit: cover;
+  position: absolute;
+  bottom: 0;
+  z-index: 1;
+}
+
+.player-card .player-name {
+  font-size: 1.2rem;
+  margin-top: 1rem;
+  text-shadow: 0 0 10px red;
+  color: red;
+  z-index: 2;
+}
+
+.player-card .flag {
+  width: 45px;
+  margin-bottom: 0.5rem;
+  z-index: 2;
+}
+
+.player-card .player-info {
+  text-align: center;
+  margin-top: auto;
+  margin-bottom: 1rem;
+  z-index: 2;
+  position: relative;
+  background: rgba(0, 0, 0, 0.6);
+  padding: 0.5rem;
+  border-radius: 8px;
+}
+
+.player-card .captain {
+  color: gold;
+  font-weight: bold;
+  z-index: 2;
+}
+
+/* Player Info (Age, Role, Twitter) Styling */
+.player-info p {
+  font-size: 1rem;
+  margin: 0.3rem 0;
+  text-shadow: 0 0 5px red;  /* Glow effect in team color */
+}
+
+/* Hover Effect */
 .player-card:hover {
   transform: scale(1.05);
 }
 
-/* Player Name */
-.player-name {
-  font-size: 1.4rem;
-  margin-bottom: 0.5rem;
-  text-shadow: 0 0 8px #bb86fc;
-  color: #bb86fc;
-  position: relative;
-  z-index: 2;
-}
-
-/* Flag Styling */
-.flag {
-  width: 50px;
-  height: 35px;
-  object-fit: contain;
-  margin-bottom: 1rem;
-  position: relative;
-  z-index: 2;
-}
-
-/* Headshot Styling */
-.headshot {
-  width: 100%;
-  height: 58%; /* Headshot now takes 58% of the card height */
-  object-fit: cover;
-  position: absolute;
-  bottom: 0; /* Position headshot at the bottom */
-  z-index: 1;
-  left: 0; /* Align headshot to the left */
-  right: 0; /* Align headshot to the right */
-}
-
-/* Player Info Styling */
-.player-info {
-  text-align: center;
-  z-index: 2;
-  position: absolute;
-  bottom: 10px; /* Place info on top of the headshot */
-  width: 100%;
-  background: rgba(0, 0, 0, 0.6); /* Slight transparency for text readability */
-  padding: 0.5rem;
-  border-radius: 8px;
-  color: white;
-  font-size: 0.9rem;
-}
-
-.player-info p {
-  margin: 0.3rem 0;
-}
-
-/* Captain Text */
-.captain {
-  font-weight: bold;
-  color: gold;
-  text-shadow: 0 0 10px gold, 0 0 20px gold;
-}
-
-/* Adding specific team colors for border and name glow */
-.player-card[style*="red"] .player-name {
-  color: red;
-  text-shadow: 0 0 10px red;
-}
-
-.player-card[style*="red"] {
-  border-color: red;
-}
-
-/* Footer Styling */
+/* Footer */
 footer {
   background: #ffffff;
   text-align: center;
