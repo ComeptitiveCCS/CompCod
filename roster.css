@@ -72,14 +72,16 @@ nav ul li a:hover {
 .player-card {
   background-color: #111111;
   border: 2px solid;
-  padding: 1.5rem;
+  padding: 1rem;
   border-radius: 12px;
   position: relative;
   overflow: hidden;
   display: flex;
   flex-direction: column;
+  justify-content: flex-start;
   align-items: center;
-  height: 350px; /* Set height to avoid overflow */
+  height: 400px; /* Adjusted for better fit */
+  width: 250px;
   transition: transform 0.3s;
 }
 
@@ -90,7 +92,11 @@ nav ul li a:hover {
 /* Headshot Styling */
 .player-card .headshot {
   width: 100%;
-  height: 66%;
+  height: 50%;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  z-index: 1;
   overflow: hidden;
 }
 
@@ -121,23 +127,28 @@ nav ul li a:hover {
   position: relative;
 }
 
-/* Text Over the Headshot */
-.player-card p {
+/* Info Text Styling */
+.player-card .info {
   position: absolute;
-  bottom: 20px;
+  bottom: 15px;
+  width: 100%;
   text-align: center;
   color: white;
-  width: 100%;
   z-index: 2;
   font-size: 1rem;
   text-shadow: 0 0 5px #ffffff, 0 0 10px #ffffff;
 }
 
-/* Captain Text Styling */
-.captain {
+.player-card .captain {
   font-weight: bold;
   color: gold;
   text-shadow: 0 0 10px gold, 0 0 20px gold;
+}
+
+/* Text Over the Headshot */
+.player-card p {
+  position: relative;
+  z-index: 3; /* Keeps the text above the headshot */
 }
 
 /* Adding specific team colors for border and name glow */
@@ -158,4 +169,3 @@ footer {
   font-size: 0.8rem;
   color: #000000;
 }
-
