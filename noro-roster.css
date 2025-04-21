@@ -103,7 +103,8 @@ h1 {
 }
 
 .player-info-noro {
-  position: relative;
+  position: absolute;
+  bottom: 0;
   background-color: rgba(0, 0, 0, 0.7);
   padding: 1rem;
   width: 100%;
