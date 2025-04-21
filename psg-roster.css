@@ -1,8 +1,43 @@
+body {
+  background-color: black;
+  color: white;
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+.roster-header,
+.roster-footer {
+  padding: 20px 0;
+  background-color: black;
+  color: white;
+}
+
+.roster-header h1,
+.roster-footer p {
+  margin: 0;
+  font-size: 1.8rem;
+  text-align: center;
+}
+
+.team-logo {
+  width: 100px;
+  height: auto;
+  margin-bottom: 10px;
+}
+
+.team-players {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 2rem;
+}
+
 .player-card-psg {
   width: 220px;
   height: 400px;
   background-color: black;
-  border: 2px solid blue;
   border-radius: 12px;
   overflow: hidden;
   display: flex;
@@ -12,30 +47,20 @@
   position: relative;
   box-shadow: 0 0 15px blue;
   margin: 1rem;
+  border: 2px solid blue;
+  text-shadow: 0 0 8px blue;
 }
 
 .player-name-psg {
-  font-size: 1.1rem;
-  font-weight: bold;
-  color: #00bfff;
-  text-shadow: 0 0 6px #00bfff;
-  margin-top: 5px;
-  text-align: center;
-  z-index: 2;
-}
-
-.team-logo-psg {
-  width: 40px;
-  height: 40px;
-  object-fit: contain;
+  font-size: 1.2rem;
   margin-bottom: 0.3rem;
   z-index: 2;
+  color: #5fb9ff;
 }
 
 .flag-icon {
-  width: 35px;
-  height: auto;
-  margin-bottom: 0.4rem;
+  width: 45px;
+  margin-bottom: 0.5rem;
   z-index: 2;
 }
 
@@ -45,7 +70,6 @@
   object-fit: cover;
   position: absolute;
   bottom: 0;
-  left: 0;
   z-index: 1;
 }
 
@@ -56,21 +80,22 @@
   z-index: 2;
   position: relative;
   background: rgba(0, 0, 0, 0.6);
-  padding: 0.4rem;
+  padding: 0.5rem;
   border-radius: 8px;
-  color: #00bfff;
-  text-shadow: 0 0 5px #00bfff;
+  color: #5fb9ff;
+  font-size: 0.9rem;
 }
 
-.player-card-psg .captain-label {
-  color: gold;
+.captain-label {
   font-weight: bold;
-  margin-top: 2px;
+  color: #5fb9ff;
+  display: block;
+  margin-top: 5px;
 }
 
-.roster-header,
-.roster-footer {
-  color: white;
-  text-align: center;
-  padding: 1rem 0;
+.team-logo-psg {
+  width: 40px;
+  height: 40px;
+  margin-bottom: 10px;
+  z-index: 2;
 }
