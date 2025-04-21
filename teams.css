@@ -62,12 +62,12 @@ nav ul li a:hover {
 
 /* Grid layout for teams */
 .team-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
   gap: 2rem;
   max-width: 1000px;
   margin: 0 auto;
-  justify-items: center; /* Centers the team cards inside each grid item */
 }
 
 /* Individual Team Card */
@@ -95,13 +95,6 @@ nav ul li a:hover {
   margin-bottom: 1rem;
 }
 
-/* Adjust NoRo logo size */
-.team-card img.noro-logo {
-  transform: scale(1.5); /* Makes NoRo logo bigger */
-  width: auto;
-  max-width: 150px; /* Optional: limits the max width */
-}
-
 /* Team Name Styling */
 .team-card h2 {
   margin: 0;
@@ -109,5 +102,13 @@ nav ul li a:hover {
   text-transform: uppercase;
 }
 
-/
+/* Footer Styling */
+footer {
+  background: #ffffff; /* White footer */
+  text-align: center;
+  padding: 1rem;
+  font-size: 0.8rem;
+  color: #000000;
+}
+
 
