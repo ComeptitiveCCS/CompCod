@@ -1,70 +1,100 @@
+/* General Layout and Styling */
 body {
-  background-color: black;
-  color: white;
-  font-family: Arial, sans-serif;
+  font-family: 'Orbitron', sans-serif;
+  background-color: #111;
+  color: #fff;
   margin: 0;
   padding: 0;
-  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
-.roster-header,
-.roster-footer {
-  padding: 20px 0;
-  background-color: black;
-  color: white;
+nav {
+  width: 100%;
+  padding: 10px;
+  background-color: #333;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
-.roster-header h1,
-.roster-footer p {
+nav .logo img {
+  height: 40px;
+}
+
+ul {
+  list-style-type: none;
   margin: 0;
-  font-size: 1.8rem;
+  padding: 0;
+  display: flex;
+}
+
+ul li {
+  margin: 0 10px;
+}
+
+ul li a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.roster-container {
+  width: 80%;
+  margin: 20px 0;
   text-align: center;
 }
 
-.team-logo {
-  width: 100px;
-  height: auto;
-  margin-bottom: 10px;
+h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  text-transform: uppercase;
+  color: #00ffcc;
+  text-shadow: 0 0 10px #00ffcc, 0 0 20px #00ffcc;
 }
 
-.team-players {
+.player-grid {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  padding: 2rem;
+  gap: 20px;
 }
 
-.player-card-psg {
+.player-card-prestige {
   width: 220px;
   height: 400px;
-  background-color: black;
+  background-color: #222;
   border-radius: 12px;
   overflow: hidden;
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 1rem;
   position: relative;
-  box-shadow: 0 0 15px blue;
-  margin: 1rem;
-  border: 2px solid blue;
-  text-shadow: 0 0 8px blue;
+  box-shadow: 0 0 15px #00ffcc;
+  padding: 10px;
+  margin: 10px;
+  border: 3px solid #00ffcc; /* Prestige Worldwide border color */
 }
 
-.player-name-psg {
+.team-logo-small-prestige {
+  width: 50px;
+  height: 50px;
+  margin-bottom: 10px;
+}
+
+.player-name-prestige {
   font-size: 1.2rem;
   margin-bottom: 0.3rem;
-  z-index: 2;
-  color: #5fb9ff;
+  color: #00ffcc;
+  text-shadow: 0 0 8px #00ffcc;
 }
 
-.flag-icon {
+.flag-icon-prestige {
   width: 45px;
   margin-bottom: 0.5rem;
-  z-index: 2;
 }
 
-.headshot {
+.headshot-prestige {
   width: 100%;
   height: 58%;
   object-fit: cover;
@@ -73,30 +103,24 @@ body {
   z-index: 1;
 }
 
-.player-info-psg {
+.player-info-prestige {
+  position: absolute;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+  padding: 1rem;
+  width: 100%;
+  z-index: 2;
+  color: white;
+}
+
+.player-info-prestige p {
+  margin: 5px 0;
+}
+
+footer {
+  width: 100%;
+  background-color: #333;
+  color: white;
   text-align: center;
-  margin-top: auto;
-  margin-bottom: 1rem;
-  z-index: 2;
-  position: relative;
-  background: rgba(0, 0, 0, 0.6);
-  padding: 0.5rem;
-  border-radius: 8px;
-  color: #5fb9ff;
-  font-size: 0.9rem;
+  padding: 20px;
 }
-
-.captain-label {
-  font-weight: bold;
-  color: #5fb9ff;
-  display: block;
-  margin-top: 5px;
-}
-
-.team-logo-psg {
-  width: 40px;
-  height: 40px;
-  margin-bottom: 10px;
-  z-index: 2;
-}
-
