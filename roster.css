@@ -1,7 +1,9 @@
-/* roster.css */
-body {
+/* Base Styling */
+html, body {
   margin: 0;
   padding: 0;
+  width: 100%;
+  height: 100%;
   background-color: #000000;
   color: #ffffff;
   font-family: 'Orbitron', sans-serif;
@@ -15,8 +17,17 @@ nav {
   align-items: center;
 }
 
+nav .logo {
+  display: flex;
+  align-items: center;
+  font-size: 1.5rem;
+  color: #000000;
+}
+
 nav .logo img {
   height: 40px;
+  width: auto;
+  margin-left: 10px;
 }
 
 nav ul {
@@ -28,25 +39,26 @@ nav ul {
 nav ul li a {
   color: #000000;
   text-decoration: none;
-  font-weight: bold;
+  transition: color 0.3s;
 }
 
 nav ul li a:hover {
-  color: #ff0000;
+  color: #5da9ff;
 }
 
+/* Roster Container */
 .roster-container {
+  padding: 3rem 2rem;
   text-align: center;
-  padding: 2rem;
 }
 
 .roster-container h1 {
   font-size: 2.5rem;
   margin-bottom: 2rem;
-  text-shadow: 0 0 10px red;
-  color: red;
+  text-shadow: 0 0 10px #5da9ff;
 }
 
+/* Player Grid */
 .player-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
@@ -55,42 +67,63 @@ nav ul li a:hover {
   margin: 0 auto;
 }
 
+/* Player Card */
 .player-card {
-  background-color: #111;
-  border: 2px solid red;
-  padding: 1rem;
-  border-radius: 10px;
-  text-align: center;
-  box-shadow: 0 0 10px red;
+  background-color: #111111;
+  border: 2px solid;
+  padding: 1.5rem;
+  border-radius: 12px;
   transition: transform 0.3s;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
 }
 
 .player-card:hover {
   transform: scale(1.05);
 }
 
-.player-card img {
-  width: 100px;
+.player-card img.headshot {
+  width: 80%;
   height: auto;
-  border-radius: 50%;
   margin-bottom: 1rem;
+  object-fit: cover;
+  max-height: 250px;
 }
 
-.player-card h2 {
-  margin: 0.5rem 0;
-  font-size: 1.25rem;
-  color: red;
-  text-shadow: 0 0 8px red;
-}
-
-.player-card p {
-  margin: 0.25rem 0;
+.player-name {
+  font-size: 1.5rem;
+  margin: 0;
+  text-shadow: 0 0 10px;
+  color: inherit;
 }
 
 .flag {
-  width: 32px;
-  height: auto;
-  margin-top: 0.5rem;
+  width: 100px;
+  height: 60px;
+  object-fit: contain;
+  margin-bottom: 1rem;
+}
+
+.captain {
+  color: gold;
+  font-weight: bold;
+}
+
+/* Adding specific team colors for border and name glow */
+.player-card[style*="red"] .player-name {
+  color: red;
+  text-shadow: 0 0 10px red;
+}
+
+.player-card[style*="red"] {
+  border-color: red;
+}
+
+/* Add glow effect to Captain */
+.captain {
+  text-shadow: 0 0 5px gold, 0 0 10px gold, 0 0 20px gold;
 }
 
 footer {
@@ -100,4 +133,3 @@ footer {
   font-size: 0.8rem;
   color: #000000;
 }
-
