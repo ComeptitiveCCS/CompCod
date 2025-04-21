@@ -2,19 +2,20 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Teams | Competitive CoD Series</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>CCS Teams</title>
   <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600&display=swap" rel="stylesheet">
   <style>
     body {
       margin: 0;
+      padding: 0;
+      background-color: #000;
+      color: #fff;
       font-family: 'Orbitron', sans-serif;
-      background-color: #0a0f2c; /* Dark background */
-      color: #ffffff; /* White text */
     }
 
     nav {
-      background: rgba(18, 28, 74, 0.95);
+      background: #ffffff;
       padding: 1rem 2rem;
       display: flex;
       justify-content: space-between;
@@ -22,8 +23,15 @@
     }
 
     nav .logo {
+      display: flex;
+      align-items: center;
       font-size: 1.5rem;
-      color: #ffffff; /* White logo */
+      color: #000000;
+    }
+
+    nav .logo img {
+      height: 40px;
+      margin-left: 10px;
     }
 
     nav ul {
@@ -33,46 +41,94 @@
     }
 
     nav ul li a {
-      color: #ffffff; /* White text for links */
+      color: #000000;
       text-decoration: none;
       transition: color 0.3s;
     }
 
     nav ul li a:hover {
-      color: #5da9ff; /* Highlighted color on hover */
+      color: #5da9ff;
     }
 
-    #teams {
-      padding: 4rem 2rem;
+    .teams-section {
+      padding: 3rem 2rem;
       text-align: center;
-      background: #0a0f2c; /* Keep background dark */
     }
 
-    #teams h2 {
+    .teams-section h1 {
       font-size: 2.5rem;
       margin-bottom: 2rem;
-      color: #ffffff; /* White header text */
+      text-transform: uppercase;
+      letter-spacing: 2px;
     }
 
-    .team {
-      background: rgba(0, 0, 0, 0.05);
+    .team-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 2rem;
+      justify-items: center;
+    }
+
+    .team-card {
+      background: #111;
+      border: 2px solid #5da9ff;
       border-radius: 10px;
-      padding: 2rem;
-      margin-bottom: 2rem;
+      padding: 1.5rem;
+      width: 100%;
+      max-width: 300px;
+      transition: transform 0.3s;
     }
 
-    .team h3 {
-      font-size: 1.8rem;
-      margin-bottom: 1rem;
-      color: #ffffff; /* White team name */
-      cursor: pointer;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      border: 3px solid red;
-      border-radius: 12px;
-      padding: 0.5rem;
+    .team-card:hover {
+      transform: scale(1.05);
     }
+
+    .team-card img {
+      width: 100px;
+      height: 100px;
+      object-fit: cover;
+      margin-bottom: 1rem;
+      border-radius: 50%;
+      border: 2px solid #5da9ff;
+    }
+
+    .team-card h3 {
+      margin: 0.5rem 0;
+      font-size: 1.4rem;
+      color: #5da9ff;
+    }
+
+    .team-card p {
+      font-size: 0.95rem;
+      color: #ccc;
+    }
+
+    footer {
+      background: #ffffff;
+      text-align: center;
+      padding: 1rem;
+      font-size: 0.8rem;
+      color: #000000;
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <div class="logo">
+      Competitive CoD Series
+      <img src="logo.png" alt="CCS Logo" />
+    </div>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="teams.html">Teams</a></li>
+      <li><a href="standings.html">Standings</a></li>
+      <li><a href="media.html">Media</a></li>
+    </ul>
+  </nav>
+
+  <section class="teams-section">
+    <h1>Meet the Teams</h1>
+    <div class="team-grid">
 
     .team-psg {
       border-color: #00ffcc;
