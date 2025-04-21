@@ -1,33 +1,19 @@
 body {
-  background-color: black;
-  color: white;
+  margin: 0;
   font-family: Arial, sans-serif;
-  margin: 0;
-  padding: 0;
-  text-align: center;
-}
-
-.roster-header,
-.roster-footer {
-  padding: 20px 0;
-  background-color: black;
+  background-color: #000;
   color: white;
 }
 
-.roster-header h1,
-.roster-footer p {
-  margin: 0;
-  font-size: 1.8rem;
+header, footer {
+  background-color: #000;
+  color: white;
   text-align: center;
+  padding: 1rem 0;
+  font-size: 1.2rem;
 }
 
-.team-logo {
-  width: 100px;
-  height: auto;
-  margin-bottom: 10px;
-}
-
-.team-players {
+.roster-container {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -37,31 +23,39 @@ body {
 .player-card-psg {
   width: 220px;
   height: 400px;
-  background-color: black;
+  background-color: #000;
   border-radius: 12px;
   overflow: hidden;
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 1rem;
   position: relative;
   box-shadow: 0 0 15px blue;
-  margin: 1rem;
   border: 2px solid blue;
-  text-shadow: 0 0 8px blue;
+  margin: 1rem;
+}
+
+.team-logo-psg {
+  width: 50px;
+  height: 50px;
+  margin-top: 10px;
 }
 
 .player-name-psg {
   font-size: 1.2rem;
-  margin-bottom: 0.3rem;
+  margin-top: 0.5rem;
+  text-shadow: 0 0 8px blue;
+  color: #00aaff;
+  text-align: center;
   z-index: 2;
-  color: #5fb9ff;
+  position: relative;
 }
 
 .flag-icon {
-  width: 45px;
-  margin-bottom: 0.5rem;
+  width: 30px;
+  margin-top: 0.3rem;
   z-index: 2;
+  position: relative;
 }
 
 .headshot {
@@ -75,27 +69,18 @@ body {
 
 .player-info-psg {
   text-align: center;
-  margin-top: auto;
-  margin-bottom: 1rem;
+  position: absolute;
+  bottom: 0;
   z-index: 2;
-  position: relative;
-  background: rgba(0, 0, 0, 0.6);
+  width: 100%;
+  background: rgba(0, 0, 0, 0.7);
   padding: 0.5rem;
-  border-radius: 8px;
-  color: #5fb9ff;
-  font-size: 0.9rem;
+  text-shadow: 0 0 8px blue;
+  color: #00aaff;
 }
 
 .captain-label {
+  color: gold;
   font-weight: bold;
-  color: #5fb9ff;
-  display: block;
-  margin-top: 5px;
-}
-
-.team-logo-psg {
-  width: 40px;
-  height: 40px;
-  margin-bottom: 10px;
-  z-index: 2;
+  margin-top: 0.3rem;
 }
