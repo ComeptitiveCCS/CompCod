@@ -1,22 +1,17 @@
-/* General Layout and Styling */
 body {
   font-family: 'Orbitron', sans-serif;
-  background-color: #111;
-  color: #fff;
   margin: 0;
-  padding: 0;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  background-color: #121212;
+  color: #fff;
 }
 
 nav {
-  width: 100%;
-  padding: 10px;
-  background-color: #333;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding: 1rem;
+  background-color: #000;
+  border-bottom: 2px solid #fff;
 }
 
 nav .logo img {
@@ -24,76 +19,60 @@ nav .logo img {
 }
 
 ul {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
   display: flex;
+  list-style: none;
 }
 
 ul li {
-  margin: 0 10px;
+  margin-left: 1rem;
 }
 
 ul li a {
   color: #fff;
   text-decoration: none;
+  font-size: 1.2rem;
 }
 
 .roster-container {
-  width: 80%;
-  margin: 20px 0;
-  text-align: center;
+  padding: 2rem;
 }
 
 h1 {
-  font-size: 2.5rem;
-  margin-bottom: 1rem;
-  text-transform: uppercase;
-  color: #00ff00;
+  color: #fff;
+  text-align: center;
+  text-shadow: 0 0 8px green;
 }
 
 .player-grid {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 20px;
 }
 
-.player-card-noro {
-  width: 220px;
-  height: 400px;
-  background-color: #222;
+.player-card {
+  background-color: black;
   border-radius: 12px;
   overflow: hidden;
   display: flex;
   flex-direction: column;
   align-items: center;
+  padding: 1rem;
   position: relative;
-  box-shadow: 0 0 15px #00ff00;
-  padding: 10px;
-  margin: 10px;
-  border: 3px solid #00ff00; /* Green border for Team NoRo */
+  margin: 1rem;
+  width: 230px;
+  height: 400px;
+  box-shadow: 0 0 15px green;
+  cursor: pointer;
+  border: 3px solid green;
 }
 
-.team-logo-small-noro {
-  width: 50px;
-  height: 50px;
-  margin-bottom: 10px;
-}
-
-.player-name-noro {
-  font-size: 1.2rem;
-  margin-bottom: 0.3rem;
-  color: #00ff00;
-  text-shadow: 0 0 8px #00ff00;
-}
-
-.flag-icon-noro {
-  width: 45px;
+.player-card .team-logo-small {
+  width: 60px;
+  height: 60px;
   margin-bottom: 0.5rem;
 }
 
-.headshot-noro {
+.player-card img.headshot {
   width: 100%;
   height: 58%;
   object-fit: cover;
@@ -102,24 +81,48 @@ h1 {
   z-index: 1;
 }
 
-.player-info-noro {
-  position: absolute;
-  bottom: 0;
-  background-color: rgba(0, 0, 0, 0.7);
-  padding: 1rem;
-  width: 100%;
+.player-name {
+  font-size: 1.4rem;
+  color: green;
+  text-shadow: 0 0 8px green;
+  margin-top: 1.5rem;
   z-index: 2;
-  color: white;
 }
 
-.player-info-noro p {
-  margin: 5px 0;
+.flag {
+  width: 45px;
+  margin-bottom: 0.5rem;
+  z-index: 2;
+}
+
+.player-info {
+  background: rgba(0, 0, 0, 0.6);
+  padding: 0.5rem;
+  border-radius: 8px;
+  text-align: center;
+  margin-top: auto;
+  z-index: 2;
+}
+
+.player-info p {
+  margin: 0.2rem;
+}
+
+.captain {
+  color: gold;
+  font-weight: bold;
+  text-shadow: 0 0 8px gold;
 }
 
 footer {
-  width: 100%;
-  background-color: #333;
-  color: white;
+  background-color: #000;
+  color: #fff;
   text-align: center;
-  padding: 20px;
+  padding: 1rem;
+  margin-top: 2rem;
 }
+
+footer p {
+  margin: 0;
+}
+
