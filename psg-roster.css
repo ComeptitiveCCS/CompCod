@@ -1,1 +1,96 @@
+/* General styling for the roster container */
+.roster-container {
+  padding: 2rem;
+  text-align: center;
+}
+
+h1 {
+  color: white;
+  font-family: 'Orbitron', sans-serif;
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+/* Player card container */
+.player-grid {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+/* Styling for each player card */
+.player-card.psg {
+  width: 220px;
+  height: 400px;
+  background-color: black;
+  border-radius: 12px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1rem;
+  position: relative;
+  box-shadow: 0 0 15px #1E90FF; /* Blue border glow */
+  margin: 1rem;
+  color: #1E90FF; /* Blue text color */
+}
+
+/* Team logo size and positioning */
+.team-logo {
+  width: 60px;
+  margin-bottom: 10px;
+}
+
+/* Player name styling */
+.player-name {
+  font-size: 1.4rem;
+  margin-bottom: 0.3rem;
+  color: #1E90FF; /* Blue color */
+  text-shadow: 0 0 8px #1E90FF; /* Blue text shadow */
+  z-index: 2;
+}
+
+/* Player headshot */
+.headshot {
+  width: 100%;
+  height: 58%;
+  object-fit: cover;
+  position: absolute;
+  bottom: 0;
+  z-index: 1;
+}
+
+/* Player information at the bottom */
+.player-info {
+  text-align: center;
+  margin-top: auto;
+  margin-bottom: 1rem;
+  position: relative;
+  background: rgba(0, 0, 0, 0.6);
+  padding: 0.5rem;
+  border-radius: 8px;
+  z-index: 2;
+}
+
+/* Flag styling */
+.flag {
+  width: 45px;
+  margin-top: 0.5rem;
+}
+
+/* Captain text styling */
+.captain {
+  font-size: 1.2rem;
+  color: #1E90FF; /* Blue color for captain text */
+  font-weight: bold;
+}
+
+/* Footer styling */
+footer {
+  background-color: black;
+  color: white;
+  padding: 1rem;
+  text-align: center;
+}
 
