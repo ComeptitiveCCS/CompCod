@@ -80,9 +80,11 @@ nav ul li a:hover {
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
-  height: 400px; /* Adjusted for better fit */
+  height: 400px; /* Adjusted height */
   width: 250px;
   transition: transform 0.3s;
+  background-size: cover;
+  background-position: center;
 }
 
 .player-card:hover {
@@ -92,7 +94,7 @@ nav ul li a:hover {
 /* Headshot Styling */
 .player-card .headshot {
   width: 100%;
-  height: 50%;
+  height: 50%; /* Headshot takes up the bottom half */
   position: absolute;
   bottom: 0;
   left: 0;
@@ -103,7 +105,7 @@ nav ul li a:hover {
 .player-card .headshot img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  object-fit: cover; /* Ensures the image fills the space without stretching */
 }
 
 /* Player Name */
@@ -115,14 +117,16 @@ nav ul li a:hover {
   z-index: 2;
   text-shadow: 0 0 10px;
   color: inherit;
+  width: 100%;
+  text-align: center;
 }
 
 /* Flag Styling */
 .flag {
-  width: 50px; /* Smaller size for the flag */
-  height: 30px; /* Adjusted height proportionally */
+  width: 50px; /* Adjusted size */
+  height: 30px; /* Adjusted height */
   object-fit: contain;
-  margin-top: 5px; /* Reduced margin for better alignment */
+  margin-top: 5px;
   z-index: 2;
   position: relative;
 }
@@ -134,7 +138,7 @@ nav ul li a:hover {
   width: 100%;
   text-align: center;
   color: white;
-  z-index: 2;
+  z-index: 3; /* Makes sure the text appears above the headshot */
   font-size: 1rem;
   text-shadow: 0 0 5px #ffffff, 0 0 10px #ffffff;
 }
@@ -148,7 +152,7 @@ nav ul li a:hover {
 /* Text Over the Headshot */
 .player-card p {
   position: relative;
-  z-index: 3; /* Keeps the text above the headshot */
+  z-index: 3;
 }
 
 /* Adding specific team colors for border and name glow */
