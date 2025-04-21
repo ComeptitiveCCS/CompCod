@@ -118,3 +118,70 @@ footer {
   color: gold;
   font-weight: bold;
 }
+/* Team NoRo Styles */
+.team-noro {
+  border-color: #00FF00; /* Green */
+  color: #00FF00; /* Green */
+  text-shadow: 0 0 8px #00FF00; /* Green glow */
+  cursor: pointer;
+}
+
+.player-card-noro {
+  width: 220px;
+  height: 400px;
+  background-color: black;
+  border-radius: 12px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1rem;
+  position: relative;
+  box-shadow: 0 0 15px #00FF00; /* Green box shadow */
+  margin: 1rem;
+}
+
+.player-name-noro {
+  font-size: 1.2rem;
+  margin-bottom: 0.3rem;
+  z-index: 2;
+  text-shadow: 0 0 8px #00FF00; /* Green glow */
+  color: #00FF00; /* Green */
+}
+
+.player-info-noro {
+  text-align: center;
+  margin-top: auto;
+  margin-bottom: 1rem;
+  z-index: 2;
+  position: relative;
+  background: rgba(0, 0, 0, 0.6);
+  padding: 0.5rem;
+  border-radius: 8px;
+}
+
+.flag-icon-noro {
+  width: 45px;
+  margin-bottom: 0.5rem;
+}
+
+.headshot-noro {
+  width: 100%;
+  height: 58%;
+  object-fit: cover;
+  position: absolute;
+  bottom: 0;
+  z-index: 1;
+}
+
+.team-logo-small-noro {
+  width: 50px;
+  height: 50px;
+  margin-bottom: 10px;
+}
+
+/* Hidden by default, displayed when the team name is clicked */
+.team-players-noro {
+  display: flex;
+  flex-wrap: wrap;
+}
