@@ -1,90 +1,77 @@
-/* Add this CSS to your existing file */
-.orbition-text-glow {
-  font-family: 'Orbition', sans-serif;
-  font-size: 48px;
-  color: #1E90FF; /* Blue color */
-  text-shadow: 0 0 5px #1E90FF, 0 0 10px #1E90FF, 0 0 15px #1E90FF;
-  text-align: center;
-}
-
-.roster-header {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 20px;
-  background-color: #222222;
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #000;
   color: white;
 }
 
-.team-logo {
-  width: 80px;
-  height: 80px;
-  margin-right: 20px;
-}
-
-.team-logo-psg {
-  width: 60px;
-  height: 60px;
-  margin-bottom: 10px;
-}
-
-.orbition-text {
-  font-family: 'Orbition', sans-serif;
-  font-size: 18px;
-  color: #1E90FF;
-  text-shadow: 0 0 5px #1E90FF, 0 0 10px #1E90FF, 0 0 15px #1E90FF;
-}
-
-.roster-footer {
-  background-color: #222222;
-  color: white;
-  padding: 20px;
+.site-header,
+.site-footer {
   text-align: center;
+  background-color: #000;
+  color: white;
+  padding: 20px 0;
 }
 
-.team-players {
+.roster-container {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  margin: 20px;
+  gap: 20px;
+  padding: 20px;
 }
 
 .player-card-psg {
-  background-color: #444444;
-  border: 2px solid #1E90FF; /* Blue border */
-  margin: 10px;
-  padding: 20px;
+  background-color: #111;
+  border: 3px solid blue;
+  border-radius: 15px;
   width: 250px;
-  text-align: center;
-  color: white;
-  border-radius: 10px;
+  padding: 10px;
+  box-shadow: 0 0 15px blue;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: blue;
   position: relative;
+  overflow: hidden;
 }
 
 .player-name-psg {
-  font-size: 20px;
+  font-size: 1.2em;
   font-weight: bold;
-  margin-bottom: 10px;
+  text-align: center;
+  margin-top: 10px;
+}
+
+.player-name-psg.captain::after {
+  content: " (Captain)";
+  font-size: 0.9em;
+  color: #0ff;
 }
 
 .flag-icon {
-  width: 20px;
-  height: 20px;
-  margin-bottom: 10px;
+  width: 30px;
+  margin: 5px 0;
 }
 
 .headshot {
-  width: 80px;
-  height: 80px;
-  border-radius: 50%;
-  margin-bottom: 10px;
+  width: 100%;
+  height: 58%;
+  object-fit: cover;
+  border-radius: 10px;
+  position: absolute;
+  bottom: 0;
+  z-index: 0;
+  opacity: 0.3;
 }
 
 .player-info-psg {
-  font-size: 16px;
-}
-
-.captain-label {
-  font-weight: bold;
-  color: gold;
+  position: relative;
+  z-index: 1;
+  text-align: center;
+  margin-top: auto;
+  padding: 10px 0;
+  background-color: rgba(0, 0, 0, 0.7);
+  width: 100%;
+  border-radius: 0 0 15px 15px;
 }
