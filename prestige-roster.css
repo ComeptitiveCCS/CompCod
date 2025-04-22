@@ -49,7 +49,7 @@ h1 {
   font-size: 2.5rem;
   margin-bottom: 1rem;
   text-transform: uppercase;
-  color: #00ff00; /* Green text for the team name */
+  color: #00FF00; /* Green text for the team name */
 }
 
 .player-grid {
@@ -69,10 +69,10 @@ h1 {
   flex-direction: column;
   align-items: center;
   position: relative;
-  box-shadow: 0 0 15px #00ff00;
+  box-shadow: 0 0 15px #00FF00; /* Green glow */
   padding: 10px;
   margin: 10px;
-  border: 3px solid #00ff00; /* Green border for Team Prestige Worldwide */
+  border: 3px solid #0000FF; /* Blue border for Team Prestige Worldwide */
 }
 
 .team-logo-small-prestige {
@@ -84,8 +84,8 @@ h1 {
 .player-name-prestige {
   font-size: 1.2rem;
   margin-bottom: 0.3rem;
-  color: #00ff00;
-  text-shadow: 0 0 8px #00ff00;
+  color: #00FF00; /* Green text for player names */
+  text-shadow: 0 0 8px #00FF00; /* Green text shadow */
 }
 
 .flag-icon-prestige {
@@ -114,6 +114,7 @@ h1 {
 
 .player-info-prestige p {
   margin: 5px 0;
+  color: #00FF00; /* Green text for player information */
 }
 
 footer {
