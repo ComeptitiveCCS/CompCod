@@ -132,6 +132,16 @@ nav ul li a:hover {
   color: purple;
   text-shadow: 0 0 8px purple;
 }
+/* OverTake styling */
+.team-card.overtake {
+  border: 2px solid orange;
+  box-shadow: 0 0 12px orange;
+}
+
+.team-card.overtake h2 {
+  color: orange;
+  text-shadow: 0 0 8px orange;
+}
 
 
 footer {
