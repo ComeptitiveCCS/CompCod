@@ -132,6 +132,10 @@ nav ul li a:hover {
   color: purple;
   text-shadow: 0 0 8px purple;
 }
+.team-card.overtake {
+  border: 2px solid orange;
+  box-shadow: 0 0 10px orange;
+}
 
 footer {
   background: #ffffff;
