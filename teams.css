@@ -138,17 +138,25 @@ nav ul li a:hover {
 .team-card.overtake {
   border: 2px solid orange;
   box-shadow: 0 0 12px orange;
+  min-height: 320px; /* Makes the card taller */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
+
 .team-card.overtake h2 {
   color: orange;
   text-shadow: 0 0 8px orange;
+  margin-top: 1rem;
 }
+
 .team-card.overtake img {
-  width: 120px;
-  height: auto;
-  margin-bottom: 1rem;
-  transform: none;
+  width: auto;
+  height: 140px; /* Adjust height as needed */
+  margin-bottom: 0.5rem;
 }
+
 
 footer {
   background: #ffffff;
