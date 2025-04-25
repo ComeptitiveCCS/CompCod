@@ -156,6 +156,47 @@ nav ul li a:hover {
   height: 110px; /* Adjust height as needed */
   margin-bottom: 0.5rem;
 }
+body {
+  background-color: #121212;
+  color: white;
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.teams-header {
+  text-align: center;
+  padding: 20px;
+  background-color: #1f1f1f;
+  border-bottom: 2px solid #333;
+}
+
+.teams-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  padding: 20px;
+}
+
+.team-link {
+  background-color: #2a2a2a;
+  padding: 15px 25px;
+  border-radius: 12px;
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+  border: 2px solid transparent;
+  transition: all 0.3s ease;
+  box-shadow: 0 0 10px #444;
+}
+
+.team-link:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 15px #ff00ff;
+  border-color: #cc00ff;
+  background-color: #3a3a3a;
+}
 
 
 footer {
