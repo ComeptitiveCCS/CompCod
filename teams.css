@@ -156,32 +156,14 @@ nav ul li a:hover {
   height: 110px; /* Adjust height as needed */
   margin-bottom: 0.5rem;
 }
+/* OWG styling */
 .team-card.owg {
-  background-color: #2a2a2a;
-  border-radius: 15px;
-  padding: 20px;
-  text-align: center;
-  transition: transform 0.3s ease;
-  box-shadow: 0 0 15px purple;
+  border: 2px solid orange;
+  box-shadow: 0 0 12px orange;
 }
-
-.team-card.owg:hover {
-  transform: scale(1.05);
-  box-shadow: 0 0 20px pink;
-}
-
-.team-card .team-logo {
-  width: 100px;
-  height: 100px;
-  border-radius: 50%;
-  border: 3px solid purple;
-}
-
-.team-link {
-  color: white;
-  text-decoration: none;
-  font-size: 18px;
-  display: block;
+.team-card.owg h2 {
+  color: orange;
+  text-shadow: 0 0 8px orange;
 }
 
 
