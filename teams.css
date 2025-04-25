@@ -132,6 +132,7 @@ nav ul li a:hover {
   color: purple;
   text-shadow: 0 0 8px purple;
 }
+
 /* OverTake styling */
 .team-card.overtake {
   border: 2px solid orange;
@@ -143,6 +144,13 @@ nav ul li a:hover {
   text-shadow: 0 0 8px orange;
 }
 
+/* Ensure OverTake logo is consistent with others */
+.team-card.overtake img {
+  transform: none; /* Reset any scaling */
+  width: 120px;    /* Same width as other team logos */
+  height: auto;
+  margin-bottom: 1rem;
+}
 
 footer {
   background: #ffffff;
