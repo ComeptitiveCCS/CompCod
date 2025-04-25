@@ -70,8 +70,6 @@ nav ul li a:hover {
   border-radius: 12px;
   transition: transform 0.3s;
   text-decoration: none;
-  border: 2px solid transparent;
-  box-shadow: 0 0 12px transparent;
 }
 
 .team-card:hover {
@@ -84,15 +82,15 @@ nav ul li a:hover {
   margin-bottom: 1rem;
 }
 
+.team-card img.noro-logo {
+  transform: scale(1.5);
+  width: auto;
+  max-width: 150px;
+}
+
 /* Remove underline from h2 links */
 .team-card a {
   text-decoration: none;
-}
-
-.team-card h2 {
-  font-size: 1.5rem;
-  margin-top: 1rem;
-  color: #ffffff;
 }
 
 /* Elite styling */
@@ -135,15 +133,6 @@ nav ul li a:hover {
   text-shadow: 0 0 8px purple;
 }
 
-/* OverTake styling */
-.team-card.overtake {
-  border: 2px solid orange;
-  box-shadow: 0 0 12px orange;
-}
-.team-card.overtake h2 {
-  color: orange;
-  text-shadow: 0 0 8px orange;
-}
 
 footer {
   background: #ffffff;
@@ -152,4 +141,3 @@ footer {
   font-size: 0.8rem;
   color: #000000;
 }
-
