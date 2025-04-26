@@ -156,15 +156,18 @@ nav ul li a:hover {
   height: 110px; /* Adjust height as needed */
   margin-bottom: 0.5rem;
 }
-/* OWG styling */
 .team-card.owg {
-  border: 2px solid orange;
-  box-shadow: 0 0 12px orange;
+  border: 2px solid purple;
+  box-shadow: 0 0 12px pink;
+  padding-top: 40px; /* pushes everything down */
 }
+
 .team-card.owg h2 {
-  color: orange;
-  text-shadow: 0 0 8px orange;
+  color: pink;
+  text-shadow: 0 0 8px purple;
+  margin-top: 10px;
 }
+
 
 
 
