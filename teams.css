@@ -168,6 +168,17 @@ nav ul li a:hover {
   margin-top: 10px;
 }
 
+.team-card.evaporate {
+  border: 2px solid #00bfff; /* Blue color for Evaporate */
+  box-shadow: 0 0 12px #1e90ff; /* Lighter blue shadow for Evaporate */
+  padding-top: 40px; /* pushes everything down */
+}
+
+.team-card.evaporate h2 {
+  color: #00bfff; /* Blue color for team name */
+  text-shadow: 0 0 8px #1e90ff; /* Lighter blue shadow */
+  margin-top: 10px;
+}
 
 
 
