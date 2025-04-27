@@ -13,6 +13,31 @@
       margin: 0;
       padding: 20px;
     }
+    header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 20px;
+    }
+    .home-button {
+      background-color: transparent;
+      border: 2px solid #00ffff;
+      color: #00ffff;
+      padding: 10px 20px;
+      font-size: 16px;
+      text-decoration: none;
+      border-radius: 8px;
+      transition: 0.3s;
+    }
+    .home-button:hover {
+      background-color: #00ffff;
+      color: #000;
+    }
+    .logo {
+      display: block;
+      margin: 0 auto 20px;
+      max-width: 200px;
+    }
     h1 {
       text-align: center;
       margin-bottom: 30px;
@@ -27,7 +52,7 @@
     th, td {
       padding: 12px;
       text-align: center;
-      border: 1px solid #00ffff;
+      border: 1px solid #ffffff; /* white borders */
       cursor: pointer;
     }
     th {
@@ -57,6 +82,12 @@
   </style>
 </head>
 <body>
+
+  <header>
+    <a href="index.html" class="home-button">Home</a>
+  </header>
+
+  <img src="logo.png" alt="Logo" class="logo">
 
   <h1>Player Stats</h1>
 
@@ -195,4 +226,3 @@
 
 </body>
 </html>
-
