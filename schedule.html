@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!DOCTYPE html> 
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
@@ -84,6 +84,44 @@
       color: #cccccc;
     }
 
+    .schedule-day {
+      margin-top: 2rem;
+    }
+
+    table {
+      width: 100%;
+      max-width: 800px;
+      margin: 1rem auto;
+      border-collapse: collapse;
+    }
+
+    th, td {
+      border: 1px solid #5da9ff;
+      padding: 0.75rem;
+      text-align: center;
+    }
+
+    th {
+      background-color: #111111;
+      color: #5da9ff;
+    }
+
+    td {
+      background-color: #1a1a1a;
+    }
+
+    .match-logo {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+    }
+
+    .match-logo img {
+      height: 30px;
+      width: auto;
+    }
+
     footer {
       background: #ffffff;
       text-align: center;
@@ -113,7 +151,38 @@
   </section>
 
   <section class="schedule-container">
-    <p>Schedule information coming soon. Stay tuned!</p>
+    <div class="schedule-day">
+      <h2>Friday, May 9</h2>
+      <table>
+        <tr><th>Time</th><th>Match</th></tr>
+        <tr><td>5:00 PM</td><td class="match-logo"><img src="100X35logo.png" alt="100X35"> vs <img src="jelqlogo.png" alt="Jelq"></td></tr>
+        <tr><td>6:00 PM</td><td class="match-logo">Naturals vs <img src="trgempirelogo.png" alt="TRG Empire"></td></tr>
+        <tr><td>7:00 PM</td><td class="match-logo"><img src="owglogo.png" alt="OWG"> vs Heavenly Fathers</td></tr>
+        <tr><td>8:00 PM</td><td class="match-logo"><img src="kaoslogo.png" alt="Kaos"> vs <img src="fearlogo.png" alt="FeaR"></td></tr>
+      </table>
+    </div>
+
+    <div class="schedule-day">
+      <h2>Saturday, May 10</h2>
+      <table>
+        <tr><th>Time</th><th>Match</th></tr>
+        <tr><td>5:00 PM</td><td class="match-logo"><img src="evaporatelogo.png" alt="Evaporate"> vs <img src="trgempirelogo.png" alt="TRG Empire"></td></tr>
+        <tr><td>6:00 PM</td><td class="match-logo"><img src="elitelogo.png" alt="Elite"> vs <img src="psglogo.png" alt="Prestige Worldwide"></td></tr>
+        <tr><td>7:00 PM</td><td class="match-logo"><img src="owglogo.png" alt="OWG"> vs <img src="jelqlogo.png" alt="Jelq"></td></tr>
+        <tr><td>8:00 PM</td><td class="match-logo"><img src="kaoslogo.png" alt="Kaos"> vs Naturals</td></tr>
+      </table>
+    </div>
+
+    <div class="schedule-day">
+      <h2>Sunday, May 11</h2>
+      <table>
+        <tr><th>Time</th><th>Match</th></tr>
+        <tr><td>5:00 PM</td><td class="match-logo"><img src="fearlogo.png" alt="FeaR"> vs Heavenly Fathers</td></tr>
+        <tr><td>6:00 PM</td><td class="match-logo"><img src="evaporatelogo.png" alt="Evaporate"> vs <img src="norologo.png" alt="NoRo"></td></tr>
+        <tr><td>7:00 PM</td><td class="match-logo"><img src="100X35logo.png" alt="100X35"> vs <img src="elitelogo.png" alt="Elite"></td></tr>
+        <tr><td>8:00 PM</td><td class="match-logo"><img src="psglogo.png" alt="Prestige Worldwide"> vs <img src="norologo.png" alt="NoRo"></td></tr>
+      </table>
+    </div>
   </section>
 
   <footer>
