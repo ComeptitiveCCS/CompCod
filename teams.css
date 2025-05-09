@@ -159,31 +159,16 @@ nav ul li a:hover {
 }
 
 /* Styling for the 100X35 team card */
-.team-card.hundredx35 {
-  width: 100px;
-  height: 35px;
-  background: linear-gradient(to right, red, blue); /* Red and blue gradient */
-  border-radius: 5px;
-  padding: 5px;
-  text-align: center;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border: 2px solid #ff4500; /* Orange border for 100X35 */
-  box-shadow: 0 0 12px #ff6347; /* Lighter orange shadow for 100X35 */
-  padding-top: 10px; /* Adjust padding to fit the text */
+.team-card.100X35 {
+  border: 2px solid #ff0000; /* Red border */
+  box-shadow: 0 0 12px #0000ff; /* Blue shadow */
+  padding-top: 40px; /* Pushes everything down */
 }
 
-.hundredx35-logo {
-  width: 20px;
-  height: 20px;
-  margin-right: 5px;
-}
-
-.team-card.hundredx35 h2 {
-  color: #ff4500; /* Orange color for team name */
-  text-shadow: 0 0 8px #ff6347; /* Lighter orange shadow */
-  margin-top: 5px;
+.team-card.100X35 h2 {
+  color: #ff0000; /* Red color for team name */
+  text-shadow: 0 0 8px #0000ff; /* Blue shadow for the team name */
+  margin-top: 10px; /* Space above the team name */
 }
 
 
