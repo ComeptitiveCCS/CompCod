@@ -158,16 +158,6 @@ nav ul li a:hover {
   margin-top: 10px;
 }
 
-/* Team Hundred Styling */
-.team-card.hundred {
-  border: 2px solid blue;
-  box-shadow: 0 0 12px red;
-}
-
-.team-card.hundred h2 {
-  color: blue;
-  text-shadow: 0 0 8px red;
-}
 
 
 
