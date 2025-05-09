@@ -158,13 +158,16 @@ nav ul li a:hover {
   margin-top: 10px;
 }
 
-<!-- 100X35 Team -->
-<div class="team-card 100x35">
-  <a href="100X35-roster.html">
-    <img class="team-logo" src="100X35logo.png" alt="100X35 Logo" />
-    <h2>100X35</h2>
-  </a>
-</div>
+/* Team Hundred Styling */
+.team-card.hundred {
+  border: 2px solid blue;
+  box-shadow: 0 0 12px red;
+}
+
+.team-card.hundred h2 {
+  color: blue;
+  text-shadow: 0 0 8px red;
+}
 
 
 
