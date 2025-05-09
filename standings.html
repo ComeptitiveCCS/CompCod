@@ -218,6 +218,7 @@
       const rows = Array.from(table.rows).slice(1); // Skip the header row
 
       if (columnIndex === 1 || columnIndex === 2) {
+        // Sort by Wins and Losses
         rows.sort((rowA, rowB) => {
           const winsA = parseInt(rowA.cells[1].innerText);
           const lossesA = parseInt(rowA.cells[2].innerText);
