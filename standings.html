@@ -71,6 +71,7 @@
     th {
       background-color: #000000;
       color: #5da9ff;
+      cursor: pointer;
     }
 
     td {
@@ -108,17 +109,80 @@
 
   <div class="table-container">
     <h1>Standings</h1>
-    <table>
+    <table id="standingsTable">
       <thead>
         <tr>
-          <th>Team</th>
-          <th>Wins</th>
-          <th>Losses</th>
-          <th>Map W/L</th>
-          <th>Points</th>
+          <th onclick="sortTable(0)">Team</th>
+          <th onclick="sortTable(1)">Wins</th>
+          <th onclick="sortTable(2)">Losses</th>
+          <th onclick="sortTable(3)">Map W/L</th>
+          <th onclick="sortTable(4)">Points</th>
         </tr>
       </thead>
       <tbody>
+        <tr>
+          <td><img src="psglogo.png" alt="Team Prestige Worldwide" class="team-logo"> Prestige Worldwide</td>
+          <td>1</td>
+          <td>0</td>
+          <td>3/0</td>
+          <td>3</td>
+        </tr>
+        <tr>
+          <td><img src="kaoslogo.png" alt="Team U18 Kaos" class="team-logo"> U18 Kaos</td>
+          <td>0</td>
+          <td>1</td>
+          <td>0/3</td>
+          <td>0</td>
+        </tr>
+        <tr>
+          <td><img src="heavenlyfatherslogo.png" alt="Team Heavenly Fathers" class="team-logo"> Heavenly Fathers</td>
+          <td>0</td>
+          <td>0</td>
+          <td>0/0</td>
+          <td>0</td>
+        </tr>
+        <tr>
+          <td><img src="naturalslogo.png" alt="Team Naturals" class="team-logo"> Naturals</td>
+          <td>0</td>
+          <td>0</td>
+          <td>0/0</td>
+          <td>0</td>
+        </tr>
+        <tr>
+          <td><img src="100X35logo.png" alt="Team 100X35" class="team-logo"> 100X35</td>
+          <td>0</td>
+          <td>0</td>
+          <td>0/0</td>
+          <td>0</td>
+        </tr>
+        <tr>
+          <td><img src="owglogo.png" alt="Team OWG" class="team-logo"> OWG</td>
+          <td>0</td>
+          <td>0</td>
+          <td>0/0</td>
+          <td>0</td>
+        </tr>
+        <tr>
+          <td><img src="jelqlogo.png" alt="Team Jelq" class="team-logo"> Jelq</td>
+          <td>0</td>
+          <td>0</td>
+          <td>0/0</td>
+          <td>0</td>
+        </tr>
+        <tr>
+          <td><img src="trgempirelogo.png" alt="Team TRG Empire" class="team-logo"> TRG Empire</td>
+          <td>0</td>
+          <td>0</td>
+          <td>0/0</td>
+          <td>0</td>
+        </tr>
+        <tr>
+          <td><img src="evaporatelogo.png" alt="Team Evaporate" class="team-logo"> Evaporate</td>
+          <td>0</td>
+          <td>0</td>
+          <td>0/0</td>
+          <td>0</td>
+        </tr>
         <tr>
           <td><img src="fearlogo.png" alt="Team FeaR" class="team-logo"> FeaR</td>
           <td>0</td>
@@ -128,13 +192,6 @@
         </tr>
         <tr>
           <td><img src="elitelogo.png" alt="Team Elite" class="team-logo"> Elite</td>
-          <td>0</td>
-          <td>0</td>
-          <td>0/0</td>
-          <td>0</td>
-        </tr>
-        <tr>
-          <td><img src="psglogo.png" alt="Team Prestige Worldwide" class="team-logo"> Prestige Worldwide</td>
           <td>0</td>
           <td>0</td>
           <td>0/0</td>
@@ -155,5 +212,31 @@
     &copy; 2025 Competitive CoD Series | All Rights Reserved
   </footer>
 
+  <script>
+    function sortTable(columnIndex) {
+      const table = document.getElementById("standingsTable");
+      const rows = Array.from(table.rows).slice(1); // Skip the header row
+
+      const isNumeric = columnIndex !== 0 && columnIndex !== 3; // Sorting Wins, Losses, and Points numerically
+
+      rows.sort((rowA, rowB) => {
+        const cellA = rowA.cells[columnIndex].innerText;
+        const cellB = rowB.cells[columnIndex].innerText;
+
+        if (isNumeric) {
+          const numA = parseInt(cellA, 10);
+          const numB = parseInt(cellB, 10);
+          return numB - numA; // Sort in descending order
+        } else {
+          return cellA.localeCompare(cellB); // Sort alphabetically for team names
+        }
+      });
+
+      // Reorder the rows in the table
+      rows.forEach(row => table.appendChild(row));
+    }
+  </script>
+
 </body>
 </html>
+
