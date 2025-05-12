@@ -221,63 +221,25 @@
     const rows = Array.from(table.rows).slice(1); // Skip the header row
 
     rows.sort((rowA, rowB) => {
-      if (columnIndex === 1 || columnIndex === 2) {
-        // Sort by Wins and Losses (Win Rate)
-        const winsA = parseInt(rowA.cells[1].innerText);
-        const lossesA = parseInt(rowA.cells[2].innerText);
-        const winsB = parseInt(rowB.cells[1].innerText);
-        const lossesB = parseInt(rowB.cells[2].innerText);
+      const winsA = parseInt(rowA.cells[1].innerText);
+      const winsB = parseInt(rowB.cells[1].innerText);
+      const mapWinsA = parseInt(rowA.cells[3].innerText.split('/')[0]);  // Get map wins
+      const mapWinsB = parseInt(rowB.cells[3].innerText.split('/')[0]);  // Get map wins
 
-        const winRateA = winsA / (winsA + lossesA);
-        const winRateB = winsB / (winsB + lossesB);
-
-        // Compare by win rate first
-        if (winRateA === winRateB) {
-          // If the win rates are equal, compare by map W/L
-          const mapsA = rowA.cells[3].innerText.split('/');
-          const mapsB = rowB.cells[3].innerText.split('/');
-
-          // Compare by map wins (first part of the W/L string)
-          const mapWinsA = parseInt(mapsA[0]);
-          const mapWinsB = parseInt(mapsB[0]);
-
-          // Sort by map wins in descending order
-          return mapWinsB - mapWinsA;
-        }
-
-        return winRateB - winRateA; // Sort in descending order by win rate
-      } else if (columnIndex === 3) {
-        // If sorting by Map W/L
-        const mapsA = rowA.cells[columnIndex].innerText.split('/');
-        const mapsB = rowB.cells[columnIndex].innerText.split('/');
-
-        // Compare by map wins (first part of the W/L string)
-        const mapWinsA = parseInt(mapsA[0]);
-        const mapWinsB = parseInt(mapsB[0]);
-
-        return mapWinsB - mapWinsA; // Sort by map wins in descending order
-      } else {
-        const isNumeric = columnIndex !== 0; // Sorting non-team columns numerically (Points, Wins, Losses)
-
-        rows.sort((rowA, rowB) => {
-          const cellA = rowA.cells[columnIndex].innerText;
-          const cellB = rowB.cells[columnIndex].innerText;
-
-          if (isNumeric) {
-            const numA = parseInt(cellA, 10);
-            const numB = parseInt(cellB, 10);
-            return numB - numA; // Sort in descending order
-          } else {
-            return cellA.localeCompare(cellB); // Sort alphabetically for team names
-          }
-        });
+      // First, sort by wins in descending order
+      if (winsA !== winsB) {
+        return winsB - winsA;
       }
 
-      // Reorder the rows in the table
-      rows.forEach(row => table.appendChild(row));
+      // If wins are equal, sort by map wins in descending order
+      return mapWinsB - mapWinsA;
     });
+
+    // Reorder the rows in the table based on the sorted data
+    rows.forEach(row => table.appendChild(row));
   }
 </script>
+
 
 
 </body>
