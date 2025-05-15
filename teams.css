@@ -175,21 +175,16 @@ nav ul li a:hover {
   margin-bottom: 10px;
 }
 
-/* Jelq Team Card Styling */
 .team-card.jelq {
-  border: 3px solid #FF69B4; /* Hot pink border */
-  box-shadow: 0 0 15px #FF69B4; /* Pink glow */
-  transition: transform 0.2s ease;
+  border: 2px solid #ff66cc; /* Pink border for Jelq */
+  box-shadow: 0 0 12px #ff99dd; /* Lighter pink shadow for glow */
+  padding-top: 40px; /* Pushes everything down */
 }
 
-.team-card.jelq:hover {
-  transform: scale(1.05);
-}
-
-.jelq-logo {
-  width: 100px;
-  height: auto;
-  margin-bottom: 10px;
+.team-card.jelq h2 {
+  color: #ff66cc; /* Pink color for team name */
+  text-shadow: 0 0 8px #ff99dd; /* Lighter pink text glow */
+  margin-top: 10px;
 }
 
 
