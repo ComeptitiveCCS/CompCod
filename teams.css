@@ -158,6 +158,24 @@ nav ul li a:hover {
   margin-top: 10px;
 }
 
+/* TRG Empire Team Card Styling */
+.team-card.trg {
+  border: 3px solid #FFD700; /* Bright yellow border */
+  box-shadow: 0 0 15px #FFD700; /* Yellow glow */
+  transition: transform 0.2s ease;
+}
+
+.team-card.trg:hover {
+  transform: scale(1.05);
+}
+
+.trg-logo {
+  width: 100px;
+  height: auto;
+  margin-bottom: 10px;
+}
+
+
 
 
 
