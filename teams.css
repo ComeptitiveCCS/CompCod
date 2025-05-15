@@ -175,6 +175,22 @@ nav ul li a:hover {
   margin-bottom: 10px;
 }
 
+/* Jelq Team Card Styling */
+.team-card.jelq {
+  border: 3px solid #FF69B4; /* Hot pink border */
+  box-shadow: 0 0 15px #FF69B4; /* Pink glow */
+  transition: transform 0.2s ease;
+}
+
+.team-card.jelq:hover {
+  transform: scale(1.05);
+}
+
+.jelq-logo {
+  width: 100px;
+  height: auto;
+  margin-bottom: 10px;
+}
 
 
 
