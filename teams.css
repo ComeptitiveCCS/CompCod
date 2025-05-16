@@ -188,15 +188,19 @@ nav ul li a:hover {
 }
 
 .team-card.heavenlyfathers {
-  border: 2px solid #ff4444; /* Red border for HeavenlyFathers */
-  box-shadow: 0 0 12px #ff6666; /* Lighter red shadow for glow */
-  padding-top: 40px; /* Pushes everything down */
+  border: 3px solid #FF3333; /* Bright red border */
+  box-shadow: 0 0 15px #FF3333; /* Red glow */
+  transition: transform 0.2s ease;
 }
 
-.team-card.heavenlyfathers h2 {
-  color: #ff4444; /* Red color for team name */
-  text-shadow: 0 0 8px #ff6666; /* Lighter red text glow */
-  margin-top: 10px;
+.team-card.heavenlyfathers:hover {
+  transform: scale(1.05);
+}
+
+.heavenlyfathers-logo {
+  width: 100px;
+  height: auto;
+  margin-bottom: 10px;
 }
 
 
