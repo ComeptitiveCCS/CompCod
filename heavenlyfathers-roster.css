@@ -49,7 +49,7 @@ h1 {
   font-size: 2.5rem;
   margin-bottom: 1rem;
   text-transform: uppercase;
-  color: #ff4444; /* Bright red */
+  color: #ff3333; /* Bright red for team name */
   text-shadow: 0 0 10px #ff6666; /* Soft red glow */
 }
 
@@ -70,7 +70,7 @@ h1 {
   flex-direction: column;
   align-items: center;
   position: relative;
-  box-shadow: 0 0 15px #ff4444; /* Red glow */
+  box-shadow: 0 0 15px #ff3333; /* Red glow */
   padding: 10px;
   margin: 10px;
   border: 3px solid #ff6666; /* Lighter red border */
@@ -85,7 +85,7 @@ h1 {
 .player-name-heavenlyfathers {
   font-size: 1.2rem;
   margin-bottom: 0.3rem;
-  color: #ff4444; /* Bright red */
+  color: #ff3333; /* Bright red player name */
   text-shadow: 0 0 8px #ff6666; /* Soft red glow */
 }
 
