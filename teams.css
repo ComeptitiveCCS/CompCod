@@ -187,6 +187,17 @@ nav ul li a:hover {
   margin-top: 10px;
 }
 
+.team-card.heavenlyfathers {
+  border: 2px solid #ff4444; /* Red border for HeavenlyFathers */
+  box-shadow: 0 0 12px #ff6666; /* Lighter red shadow for glow */
+  padding-top: 40px; /* Pushes everything down */
+}
+
+.team-card.heavenlyfathers h2 {
+  color: #ff4444; /* Red color for team name */
+  text-shadow: 0 0 8px #ff6666; /* Lighter red text glow */
+  margin-top: 10px;
+}
 
 
 
