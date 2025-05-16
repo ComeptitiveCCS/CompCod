@@ -162,7 +162,6 @@ nav ul li a:hover {
 .team-card.trg {
   border: 3px solid #FFD700; /* Bright yellow border */
   box-shadow: 0 0 15px #FFD700; /* Yellow glow */
-  transition: transform 0.2s ease;
 }
 
 .team-card.trg:hover {
@@ -190,7 +189,6 @@ nav ul li a:hover {
 .team-card.heavenlyfathers {
   border: 3px solid #FF3333; /* Bright red border */
   box-shadow: 0 0 15px #FF3333; /* Red glow */
-  transition: transform 0.2s ease;
 }
 
 .team-card.heavenlyfathers:hover {
