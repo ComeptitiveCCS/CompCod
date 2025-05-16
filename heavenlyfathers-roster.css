@@ -1,1 +1,95 @@
+/* General Layout and Styling */
+body {
+  font-family: 'Orbitron', sans-serif;
+  background-color: #111;
+  color: #fff;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+nav {
+  width: 100%;
+  padding: 10px;
+  background-color: #333;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+nav .logo img {
+  height: 40px;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+ul li {
+  margin: 0 10px;
+}
+
+ul li a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.roster-container {
+  width: 80%;
+  margin: 20px 0;
+  text-align: center;
+}
+
+h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  text-transform: uppercase;
+  color: #FF4444; /* HeavenlyFathers red */
+  text-shadow: 0 0 10px #FF6666; /* Lighter red glow */
+}
+
+.player-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.player-card-heavenlyfathers {
+  width: 220px;
+  height: 400px;
+  background-color: #222;
+  border-radius: 12px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  box-shadow: 0 0 15px #FF4444; /* Red glow */
+  padding: 10px;
+  margin: 10px;
+  border: 3px solid #FF6666; /* Red border */
+}
+
+.team-logo-small-heavenlyfathers {
+  width: 50px;
+  height: 50px;
+  margin-bottom: 10px;
+}
+
+.player-name-heavenlyfathers {
+  font-size: 1.2rem;
+  margin-bottom: 0.3rem;
+  color: #FF4444; /* Red text */
+  text-shadow: 0 0 8px #FF6666; /* Lighter red glow */
+}
+
+.flag-icon-heavenlyfathers {
+  width: 45px;
+  margin-bottom: 0.5
 
