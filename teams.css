@@ -212,6 +212,17 @@ nav ul li a:hover {
   text-shadow: 0 0 8px #ff0000; /* Red glow behind text */
   margin-top: 10px;
 }
+.team-card.naturals {
+  border: 2px solid #ff0000;    /* Red border */
+  box-shadow: 0 0 12px #808080; /* Gray glow */
+  padding-top: 40px;            /* Pushes everything down */
+}
+
+.team-card.naturals h2 {
+  color: #ff0000;               /* Red for team name */
+  text-shadow: 0 0 8px #808080; /* Gray glow behind text */
+  margin-top: 10px;
+}
 
 
 
