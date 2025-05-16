@@ -201,6 +201,18 @@ nav ul li a:hover {
   margin-bottom: 10px;
 }
 
+.team-card.team100x35 {
+  border: 2px solid #ff0000;    /* Red border */
+  box-shadow: 0 0 12px #1e90ff; /* Blue glow */
+  padding-top: 40px;            /* Pushes everything down */
+}
+
+.team-card.team100x35 h2 {
+  color: #1e90ff;               /* Blue for team name */
+  text-shadow: 0 0 8px #ff0000; /* Red glow behind text */
+  margin-top: 10px;
+}
+
 
 
 
