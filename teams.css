@@ -223,6 +223,17 @@ nav ul li a:hover {
   text-shadow: 0 0 8px #808080; /* Gray glow behind text */
   margin-top: 10px;
 }
+.team-card.nycshiesty {
+  border: 2px solid #000080;    /* Navy border */
+  box-shadow: 0 0 12px #808080; /* Gray glow */
+  padding-top: 40px;            /* Pushes everything down */
+}
+
+.team-card.nycshiesty h2 {
+  color: #000080;               /* Navy for team name */
+  text-shadow: 0 0 8px #808080; /* Gray glow behind text */
+  margin-top: 10px;
+}
 
 
 
