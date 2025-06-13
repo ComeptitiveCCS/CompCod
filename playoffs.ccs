@@ -1,0 +1,72 @@
+body {
+  background-color: #0e0e0e;
+  color: white;
+  font-family: Arial, sans-serif;
+  padding: 20px;
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 40px;
+  color: #00eaff;
+}
+
+.bracket {
+  display: flex;
+  justify-content: flex-start;
+  gap: 40px;
+  overflow-x: auto;
+  padding-bottom: 40px;
+}
+
+.round {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  min-width: 220px;
+  position: relative;
+}
+
+.round h2 {
+  text-align: center;
+  color: #ffdf00;
+  font-size: 18px;
+}
+
+.matchup {
+  background: #1e1e1e;
+  border-left: 4px solid #444;
+  padding: 10px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px #000;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.team {
+  background: #2c2c2c;
+  padding: 6px 10px;
+  border-radius: 6px;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+}
+
+.team-logo {
+  width: 18px;
+  height: 18px;
+  margin-right: 8px;
+}
+
+/* Optional: scrollbar styling for wide brackets */
+.bracket::-webkit-scrollbar {
+  height: 8px;
+}
+.bracket::-webkit-scrollbar-track {
+  background: #1c1c1c;
+}
+.bracket::-webkit-scrollbar-thumb {
+  background: #555;
+  border-radius: 10px;
+}
