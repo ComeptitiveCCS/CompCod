@@ -33,15 +33,15 @@ body {
 
 .bracket-section {
   margin: 40px auto;
-  max-width: 1800px;
+  max-width: 2000px;
   overflow-x: auto;
   padding: 0 20px;
 }
 
 .bracket-title {
-  margin-bottom: 20px;
+  margin: 40px 0 20px;
   color: #00eaff;
-  font-size: 24px;
+  font-size: 28px;
   text-align: center;
   text-transform: uppercase;
   border-bottom: 2px solid #00eaff;
@@ -51,16 +51,19 @@ body {
 .bracket {
   display: flex;
   justify-content: center;
-  gap: 80px;
+  gap: 100px;
   flex-wrap: nowrap;
   overflow-x: auto;
+  position: relative;
+  padding-bottom: 60px;
 }
 
 .round {
   display: flex;
   flex-direction: column;
-  gap: 40px;
-  min-width: 220px;
+  gap: 80px;
+  min-width: 240px;
+  position: relative;
 }
 
 .round-title {
@@ -68,19 +71,21 @@ body {
   font-weight: bold;
   margin-bottom: 10px;
   color: #aaa;
-  font-size: 16px;
+  font-size: 18px;
 }
 
 .matchup {
   background: linear-gradient(145deg, #1e1e1e, #2a2a2a);
   border-left: 5px solid #444;
-  padding: 12px;
+  padding: 14px;
   border-radius: 12px;
   box-shadow: 0 0 8px #000;
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 12px;
   transition: all 0.3s ease;
+  position: relative;
+  z-index: 1;
 }
 
 .matchup:hover {
@@ -91,9 +96,9 @@ body {
 
 .team {
   background: #151515;
-  padding: 8px 12px;
+  padding: 10px 14px;
   border-radius: 6px;
-  font-size: 14px;
+  font-size: 15px;
   display: flex;
   align-items: center;
   color: #f0f0f0;
@@ -101,10 +106,41 @@ body {
 }
 
 .team-logo {
-  width: 18px;
-  height: 18px;
+  width: 20px;
+  height: 20px;
   margin-right: 10px;
   border-radius: 3px;
+  object-fit: cover;
+  background-color: #fff;
+}
+
+/* Bracket lines */
+.matchup::before {
+  content: "";
+  position: absolute;
+  width: 50px;
+  height: 2px;
+  background: #00eaff;
+  top: 50%;
+  left: -50px;
+  z-index: 0;
+}
+
+.round:not(:first-child) .matchup::before {
+  display: block;
+}
+
+.bracket-container {
+  display: flex;
+  flex-direction: column;
+  gap: 100px;
+  align-items: center;
+  justify-content: center;
+}
+
+.winners-bracket, .losers-bracket {
+  width: 100%;
+  overflow-x: auto;
 }
 
 .bracket::-webkit-scrollbar {
@@ -121,7 +157,7 @@ body {
   .header p { font-size: 14px; }
   .bracket-title { font-size: 18px; }
   .round-title { font-size: 14px; }
-  .team { font-size: 12px; }
+  .team { font-size: 13px; }
   .bracket {
     gap: 40px;
   }
