@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Double Elimination Bracket - Flipped Losers</title>
+<title>Double Elimination Bracket - Mirrored Losers</title>
 <style>
   body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -90,17 +90,19 @@
     background: #222; 
   }
 
-  /* --- LOSERS BRACKET (RIGHT SIDE, Flipped) --- */
-  /* Losers Round 1: far right column */
-  #l-r1-m1 { grid-column: 7; grid-row: 2; }
-  #l-r1-m2 { grid-column: 7; grid-row: 6; }
+  /* --- LOSERS BRACKET (RIGHT SIDE, mirrored layout) --- */
+  /* Losers Round 1: far right column (7) */
+  #l-r1-m1 { grid-column: 7; grid-row: 1; }
+  #l-r1-m2 { grid-column: 7; grid-row: 3; }
+  #l-r1-m3 { grid-column: 7; grid-row: 5; }
+  #l-r1-m4 { grid-column: 7; grid-row: 7; }
 
-  /* Losers Round 2: one column left */
-  #l-r2-m1 { grid-column: 6; grid-row: 3 / span 2; }
-  #l-r2-m2 { grid-column: 6; grid-row: 7 / span 2; }
+  /* Losers Round 2: one column left (6) */
+  #l-r2-m1 { grid-column: 6; grid-row: 2; }
+  #l-r2-m2 { grid-column: 6; grid-row: 6; }
 
-  /* Losers Finals: two columns left */
-  #l-finals { grid-column: 5; grid-row: 5; }
+  /* Losers Finals: closer to center (5) */
+  #l-finals { grid-column: 5; grid-row: 4; }
 
   /* Connectors - simplified horizontal and vertical lines */
 
@@ -133,8 +135,8 @@
     right: -30px;
   }
 
-  /* Horizontal lines for losers bracket going left (flipped) */
-  #l-r1-m1::before, #l-r1-m2::before,
+  /* Horizontal lines for losers bracket going left (mirrored) */
+  #l-r1-m1::before, #l-r1-m2::before, #l-r1-m3::before, #l-r1-m4::before,
   #l-r2-m1::before, #l-r2-m2::before,
   #l-r2-m1::after, #l-r2-m2::after,
   #l-finals::before, #l-finals::after {
@@ -146,7 +148,7 @@
     background: #666;
     z-index: 1;
   }
-  #l-r1-m1::before, #l-r1-m2::before {
+  #l-r1-m1::before, #l-r1-m2::before, #l-r1-m3::before, #l-r1-m4::before {
     left: -30px;
   }
   #l-r2-m1::before, #l-r2-m2::before {
@@ -190,7 +192,7 @@
   }
 
   /* Vertical lines for losers bracket */
-  #l-r1-m1::before, #l-r1-m2::before {
+  #l-r1-m1::before, #l-r1-m2::before, #l-r1-m3::before, #l-r1-m4::before {
     content: '';
     position: absolute;
     width: 2px;
@@ -343,15 +345,25 @@
       <div class="team">-</div>
       <div class="team">-</div>
     </div>
+    <div class="match" id="l-r1-m3">
+      <h4>Loser of Winners Round 2 Match 1<br>vs Loser of Winners Round 2 Match 2</h4>
+      <div class="team">-</div>
+      <div class="team">-</div>
+    </div>
+    <div class="match" id="l-r1-m4">
+      <h4>Loser of Winners Finals<br>vs Winner of Losers Round 2 Finals</h4>
+      <div class="team">-</div>
+      <div class="team">-</div>
+    </div>
 
     <!-- Losers Round 2 (leftwards) -->
     <div class="match" id="l-r2-m1">
-      <h4>Winner of Losers Round 1 Matches</h4>
+      <h4>Winner of Losers Round 1 Matches 1 & 2</h4>
       <div class="team">-</div>
       <div class="team">-</div>
     </div>
     <div class="match" id="l-r2-m2">
-      <h4>Winner of Losers Round 1 Matches</h4>
+      <h4>Winner of Losers Round 1 Matches 3 & 4</h4>
       <div class="team">-</div>
       <div class="team">-</div>
     </div>
@@ -365,4 +377,3 @@
   </div>
 </body>
 </html>
-
