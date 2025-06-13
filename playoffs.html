@@ -7,52 +7,124 @@
 </head>
 <body>
 
-  <h1>Playoffs Bracket - Double Elimination</h1>
+<h1>Playoffs Bracket - Double Elimination</h1>
 
-  <div class="bracket">
+<div class="bracket-wrapper">
 
-    <!-- Winners Round 1 -->
-    <div class="round">
-      <h2>Round 1</h2>
-      <div class="matchup">
-        <div class="team"><img src="nycshiestylogo.png" class="team-logo"> #1 NYC Shiesty</div>
-        <div class="team"><img src="elitelogo.png" class="team-logo"> #8 Elite</div>
+  <!-- WINNERS BRACKET -->
+  <div class="bracket-section">
+    <h2>Winners Bracket</h2>
+    <div class="bracket">
+
+      <!-- Round 1 -->
+      <div class="round">
+        <div class="matchup connector-wrap">
+          <div class="team"><img src="nycshiestylogo.png" class="team-logo"> #1 NYC Shiesty</div>
+          <div class="team"><img src="elitelogo.png" class="team-logo"> #8 Elite</div>
+          <div class="connector"></div>
+        </div>
+        <div class="matchup connector-wrap">
+          <div class="team"><img src="evaporatelogo.png" class="team-logo"> #4 Evaporate</div>
+          <div class="team"><img src="psglogo.png" class="team-logo"> #5 Prestige</div>
+          <div class="connector"></div>
+        </div>
+        <div class="matchup connector-wrap">
+          <div class="team"><img src="syianracelogo.png" class="team-logo"> #3 Saiyan Race</div>
+          <div class="team"><img src="owglogo.png" class="team-logo"> #6 OWG</div>
+          <div class="connector"></div>
+        </div>
+        <div class="matchup connector-wrap">
+          <div class="team"><img src="100X35logo.png" class="team-logo"> #2 100X35</div>
+          <div class="team"><img src="codathleteslogo.png" class="team-logo"> #7 Cod Athletes</div>
+          <div class="connector"></div>
+        </div>
       </div>
-      <div class="matchup">
-        <div class="team"><img src="evaporatelogo.png" class="team-logo"> #4 Evaporate</div>
-        <div class="team"><img src="psglogo.png" class="team-logo"> #5 Prestige Worldwide</div>
+
+      <!-- Semifinals -->
+      <div class="round">
+        <div class="matchup connector-wrap">
+          <div class="team">Winner Match 1</div>
+          <div class="team">Winner Match 2</div>
+          <div class="connector"></div>
+        </div>
+        <div class="matchup connector-wrap">
+          <div class="team">Winner Match 3</div>
+          <div class="team">Winner Match 4</div>
+          <div class="connector"></div>
+        </div>
       </div>
-      <div class="matchup">
-        <div class="team"><img src="syianracelogo.png" class="team-logo"> #3 Saiyan Race</div>
-        <div class="team"><img src="owglogo.png" class="team-logo"> #6 OWG</div>
+
+      <!-- Finals -->
+      <div class="round">
+        <div class="matchup connector-wrap">
+          <div class="team">Winner Semifinal 1</div>
+          <div class="team">Winner Semifinal 2</div>
+          <div class="connector"></div>
+        </div>
       </div>
-      <div class="matchup">
-        <div class="team"><img src="100X35logo.png" class="team-logo"> #2 100X35</div>
-        <div class="team"><img src="codathleteslogo.png" class="team-logo"> #7 Cod Athletes</div>
-      </div>
-    </div>
 
-    <!-- Winners Semis -->
-    <div class="round">
-      <h2>Semifinals</h2>
-      <div class="matchup"><div class="team">Winner of Match 1</div><div class="team">Winner of Match 2</div></div>
-      <div class="matchup"><div class="team">Winner of Match 3</div><div class="team">Winner of Match 4</div></div>
     </div>
-
-    <!-- Winners Final -->
-    <div class="round">
-      <h2>Final</h2>
-      <div class="matchup"><div class="team">Winner of Semifinal 1</div><div class="team">Winner of Semifinal 2</div></div>
-    </div>
-
-    <!-- Grand Final -->
-    <div class="round">
-      <h2>Grand Final</h2>
-      <div class="matchup"><div class="team">Winner of Final</div><div class="team">Losers Bracket Winner</div></div>
-    </div>
-
   </div>
+
+  <!-- LOSERS BRACKET -->
+  <div class="bracket-section">
+    <h2>Losers Bracket</h2>
+    <div class="bracket">
+
+      <!-- Round 1 -->
+      <div class="round">
+        <div class="matchup connector-wrap">
+          <div class="team">Loser Match 1</div>
+          <div class="team">Loser Match 2</div>
+          <div class="connector"></div>
+        </div>
+        <div class="matchup connector-wrap">
+          <div class="team">Loser Match 3</div>
+          <div class="team">Loser Match 4</div>
+          <div class="connector"></div>
+        </div>
+      </div>
+
+      <!-- Round 2 -->
+      <div class="round">
+        <div class="matchup connector-wrap">
+          <div class="team">Loser Semifinal 1</div>
+          <div class="team">Winner LB R1 Match 1</div>
+          <div class="connector"></div>
+        </div>
+        <div class="matchup connector-wrap">
+          <div class="team">Loser Semifinal 2</div>
+          <div class="team">Winner LB R1 Match 2</div>
+          <div class="connector"></div>
+        </div>
+      </div>
+
+      <!-- Losers Final -->
+      <div class="round">
+        <div class="matchup connector-wrap">
+          <div class="team">Winner LB R2 Match 1</div>
+          <div class="team">Winner LB R2 Match 2</div>
+          <div class="connector"></div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- GRAND FINAL -->
+  <div class="bracket-section">
+    <h2>Grand Final</h2>
+    <div class="bracket">
+      <div class="round">
+        <div class="matchup">
+          <div class="team">Winner of WB Final</div>
+          <div class="team">Winner of LB Final</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
 
 </body>
 </html>
-
