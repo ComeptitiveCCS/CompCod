@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Double Elimination Bracket - March Madness Style</title>
+<title>Fixed Losers Bracket Layout</title>
 <style>
   body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -24,7 +24,6 @@
     margin-bottom: 30px;
   }
 
-  /* Bracket container: 7 columns for W1, W2, WF, GF, L1, L2, LF */
   .bracket {
     display: grid;
     grid-template-columns: repeat(7, 260px);
@@ -33,7 +32,6 @@
     position: relative;
   }
 
-  /* Match box styling */
   .match {
     background: #1e1e1e;
     border: 2px solid #444;
@@ -70,7 +68,7 @@
     border: 1px solid #555;
   }
 
-  /* Grid placement - Winners Bracket */
+  /* Winners bracket (left side) */
   #w-r1-m1 { grid-column: 1; grid-row: 1; }
   #w-r1-m2 { grid-column: 1; grid-row: 3; }
   #w-r1-m3 { grid-column: 1; grid-row: 5; }
@@ -81,116 +79,101 @@
 
   #w-finals { grid-column: 3; grid-row: 4; }
 
-  /* Grand Finals center column */
   #grand-finals { grid-column: 4; grid-row: 4; border: 3px solid #ffd700; box-shadow: 0 0 15px #ffd700; background: #222; }
 
-  /* Losers Bracket */
+  /* --- LOSERS BRACKET FIXED LAYOUT --- */
+  /* Losers Round 1 placed just below Winners Round 1 matches */
   #l-r1-m1 { grid-column: 5; grid-row: 2; }
   #l-r1-m2 { grid-column: 5; grid-row: 6; }
 
-  #l-r2-m1 { grid-column: 6; grid-row: 3; }
-  #l-r2-m2 { grid-column: 6; grid-row: 7; }
+  /* Losers Round 2 positioned lower and centered between previous losers matches */
+  #l-r2-m1 { grid-column: 6; grid-row: 3 / span 2; }
+  #l-r2-m2 { grid-column: 6; grid-row: 7 / span 2; }
 
+  /* Losers Finals placed centered lower */
   #l-finals { grid-column: 7; grid-row: 5; }
 
-  /* Connecting lines container */
-  .bracket > div::before,
-  .bracket > div::after {
+  /* Connectors styling */
+
+  /* Horizontal lines */
+  #w-r1-m1::after, #w-r1-m2::after, #w-r1-m3::after, #w-r1-m4::after,
+  #l-r1-m1::after, #l-r1-m2::after {
     content: '';
     position: absolute;
+    top: 50%;
+    right: -30px;
+    width: 30px;
+    height: 2px;
     background: #666;
     z-index: 1;
   }
 
-  /* Horizontal connector lines between rounds */
-  /* Winners Round 1 to Round 2 */
-  #w-r1-m1::after, #w-r1-m2::after, #w-r1-m3::after, #w-r1-m4::after {
-    top: 50%;
-    right: -30px;
-    width: 30px;
-    height: 2px;
-  }
-  #w-r2-m1::before, #w-r2-m2::before {
-    top: 50%;
-    left: -30px;
-    width: 30px;
-    height: 2px;
-  }
-
-  /* Winners Round 2 to Winners Finals */
-  #w-r2-m1::after, #w-r2-m2::after {
-    top: 50%;
-    right: -30px;
-    width: 30px;
-    height: 2px;
-  }
-  #w-finals::before {
-    top: 50%;
-    left: -30px;
-    width: 30px;
-    height: 2px;
-  }
-
-  /* Winners Finals to Grand Finals */
-  #w-finals::after {
-    top: 50%;
-    right: -30px;
-    width: 30px;
-    height: 2px;
-  }
-  #grand-finals::before {
-    top: 50%;
-    left: -30px;
-    width: 30px;
-    height: 2px;
-  }
-
-  /* Losers Round 1 to Round 2 */
-  #l-r1-m1::after, #l-r1-m2::after {
-    top: 50%;
-    right: -30px;
-    width: 30px;
-    height: 2px;
-  }
+  #w-r2-m1::before, #w-r2-m2::before,
   #l-r2-m1::before, #l-r2-m2::before {
+    content: '';
+    position: absolute;
     top: 50%;
     left: -30px;
     width: 30px;
     height: 2px;
+    background: #666;
+    z-index: 1;
   }
 
-  /* Losers Round 2 to Losers Finals */
+  #w-r2-m1::after, #w-r2-m2::after,
   #l-r2-m1::after, #l-r2-m2::after {
+    content: '';
+    position: absolute;
     top: 50%;
     right: -30px;
     width: 30px;
     height: 2px;
+    background: #666;
+    z-index: 1;
   }
-  #l-finals::before {
+
+  #w-finals::before, #l-finals::before {
+    content: '';
+    position: absolute;
     top: 50%;
     left: -30px;
     width: 30px;
     height: 2px;
+    background: #666;
+    z-index: 1;
   }
 
-  /* Losers Finals to Grand Finals */
-  #l-finals::after {
+  #w-finals::after, #l-finals::after {
+    content: '';
+    position: absolute;
     top: 50%;
     right: -30px;
     width: 30px;
     height: 2px;
+    background: #666;
+    z-index: 1;
   }
-  #grand-finals::after {
+
+  #grand-finals::before, #grand-finals::after {
+    content: '';
+    position: absolute;
     top: 50%;
-    left: 100%;
-    width: 60px;
+    width: 30px;
     height: 2px;
     background: #ffd700;
+    z-index: 1;
+  }
+  #grand-finals::before {
+    left: -30px;
+  }
+  #grand-finals::after {
+    left: 100%;
+    width: 50px;
   }
 
-  /* Vertical connector lines between matches (left side) */
-  /* For Winners Round 1 to Round 2 */
-  #w-r1-m1::before {
+  /* Vertical lines */
+  #w-r1-m1::before, #w-r1-m2::before, #w-r1-m3::before, #w-r1-m4::before,
+  #l-r1-m1::before, #l-r1-m2::before {
     content: '';
     position: absolute;
     width: 2px;
@@ -201,60 +184,28 @@
     transform: translateY(-100%);
     z-index: 1;
   }
-  #w-r1-m2::before {
-    content: '';
-    position: absolute;
-    width: 2px;
-    height: 40px;
-    background: #666;
-    top: 50%;
-    right: -30px;
+
+  #w-r1-m2::before, #w-r1-m4::before,
+  #l-r1-m2::before {
     transform: translateY(0%);
-    z-index: 1;
   }
 
-  #w-r1-m3::before {
-    content: '';
-    position: absolute;
-    width: 2px;
-    height: 40px;
-    background: #666;
-    top: 50%;
-    right: -30px;
-    transform: translateY(-100%);
-    z-index: 1;
-  }
-  #w-r1-m4::before {
-    content: '';
-    position: absolute;
-    width: 2px;
-    height: 40px;
-    background: #666;
-    top: 50%;
-    right: -30px;
-    transform: translateY(0%);
-    z-index: 1;
-  }
-
-  /* Vertical lines for Winners Round 2 to Winners Finals */
-  #w-r2-m1::before, #w-r2-m2::before {
+  #w-r2-m1::before, #w-r2-m2::before,
+  #l-r2-m1::before, #l-r2-m2::before {
     height: 80px;
     top: 50%;
     left: -30px;
     transform: translateY(-50%);
   }
 
-  /* Vertical line from Winners Finals to Grand Finals */
-  #w-finals::after {
+  #w-finals::after, #l-finals::after {
     height: 80px;
     top: 50%;
     right: -30px;
     transform: translateY(-50%);
   }
 
-  /* Vertical lines on losers bracket similarly can be added */
-
-  /* Scroll on small screens */
+  /* Scroll on smaller screens */
   @media (max-width: 1900px) {
     .bracket {
       grid-template-columns: repeat(7, 200px);
@@ -267,7 +218,6 @@
       margin-right: 8px;
     }
   }
-
 </style>
 </head>
 <body>
