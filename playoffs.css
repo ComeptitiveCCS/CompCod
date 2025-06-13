@@ -1,35 +1,51 @@
+/* playoffs.css */
+
 body {
-  background-color: #0e0e0e;
-  color: white;
-  font-family: Arial, sans-serif;
   margin: 0;
-  padding: 30px 10px;
+  padding: 0;
+  background: #0b0c10;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #ffffff;
 }
 
-h1 {
+.header {
   text-align: center;
-  color: #00eaff;
-  margin-bottom: 50px;
+  padding: 40px 20px 20px;
+  background: linear-gradient(to right, #111, #1b1b1b);
+  box-shadow: 0 4px 20px rgba(255, 215, 0, 0.1);
 }
 
-h2 {
-  color: #ffdf00;
-  text-align: center;
+.header h1 {
+  font-size: 32px;
+  color: #ffcc00;
   margin-bottom: 10px;
+  text-shadow: 1px 1px 5px rgba(255, 204, 0, 0.3);
 }
 
-.bracket-wrapper {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 50px;
+.header p {
+  font-size: 18px;
+  color: #ccc;
 }
+
+.gold { color: gold; font-weight: bold; }
+.silver { color: silver; font-weight: bold; }
+.bronze { color: #cd7f32; font-weight: bold; }
 
 .bracket-section {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  width: 100%;
+  margin: 40px auto;
+  max-width: 1800px;
+  overflow-x: auto;
+  padding: 0 20px;
+}
+
+.bracket-title {
+  margin-bottom: 20px;
+  color: #00eaff;
+  font-size: 24px;
+  text-align: center;
+  text-transform: uppercase;
+  border-bottom: 2px solid #00eaff;
+  padding-bottom: 10px;
 }
 
 .bracket {
@@ -43,56 +59,73 @@ h2 {
 .round {
   display: flex;
   flex-direction: column;
-  gap: 60px;
+  gap: 40px;
   min-width: 220px;
-  position: relative;
+}
+
+.round-title {
+  text-align: center;
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: #aaa;
+  font-size: 16px;
 }
 
 .matchup {
-  background: #1e1e1e;
-  border-left: 4px solid #444;
-  padding: 10px;
-  border-radius: 10px;
-  box-shadow: 0 0 10px #000;
+  background: linear-gradient(145deg, #1e1e1e, #2a2a2a);
+  border-left: 5px solid #444;
+  padding: 12px;
+  border-radius: 12px;
+  box-shadow: 0 0 8px #000;
   display: flex;
   flex-direction: column;
-  gap: 8px;
-  position: relative;
+  gap: 10px;
+  transition: all 0.3s ease;
+}
+
+.matchup:hover {
+  border-left-color: #00eaff;
+  transform: translateY(-2px);
+  box-shadow: 0 0 12px #00eaff55;
 }
 
 .team {
-  background: #2c2c2c;
-  padding: 6px 10px;
+  background: #151515;
+  padding: 8px 12px;
   border-radius: 6px;
   font-size: 14px;
   display: flex;
   align-items: center;
+  color: #f0f0f0;
+  box-shadow: inset 0 0 5px #000;
 }
 
 .team-logo {
   width: 18px;
   height: 18px;
-  margin-right: 8px;
-}
-
-/* Connector lines */
-.connector-wrap {
-  position: relative;
-}
-.connector {
-  position: absolute;
-  width: 40px;
-  height: 2px;
-  background: #888;
-  top: 50%;
-  left: 100%;
-  transform: translateY(-50%);
+  margin-right: 10px;
+  border-radius: 3px;
 }
 
 .bracket::-webkit-scrollbar {
   height: 6px;
 }
+
 .bracket::-webkit-scrollbar-thumb {
   background: #555;
   border-radius: 10px;
+}
+
+@media screen and (max-width: 768px) {
+  .header h1 { font-size: 24px; }
+  .header p { font-size: 14px; }
+  .bracket-title { font-size: 18px; }
+  .round-title { font-size: 14px; }
+  .team { font-size: 12px; }
+  .bracket {
+    gap: 40px;
+  }
+  .round {
+    min-width: 180px;
+  }
 }
