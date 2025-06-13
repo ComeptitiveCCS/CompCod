@@ -1,340 +1,226 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Competitive CoD Bracket</title>
-  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600&display=swap" rel="stylesheet" />
-  <style>
-    body {
-      margin: 0;
-      padding: 2rem;
-      background: #000;
-      font-family: 'Orbitron', sans-serif;
-      color: #fff;
-    }
-
-    h1 {
-      text-align: center;
-      font-size: 2.5rem;
-      color: #5da9ff;
-      margin-bottom: 2rem;
-      text-transform: uppercase;
-      letter-spacing: 2px;
-      text-shadow: 0 0 10px #5da9ff;
-    }
-
-    .bracket {
-      display: grid;
-      grid-template-columns: 1fr 80px 200px 80px 1fr;
-      grid-template-rows: repeat(15, 60px);
-      max-width: 1200px;
-      margin: 0 auto;
-      gap: 1rem 0;
-      position: relative;
-    }
-
-    /* Section labels */
-    .winners-label, .losers-label {
-      font-weight: 700;
-      font-size: 1.3rem;
-      text-transform: uppercase;
-      padding-bottom: 10px;
-      user-select: none;
-    }
-
-    .winners-label {
-      color: #5da9ff;
-      grid-column: 1 / 2;
-      grid-row: 1;
-      justify-self: start;
-    }
-
-    .losers-label {
-      color: #f26565;
-      grid-column: 5 / 6;
-      grid-row: 1;
-      justify-self: end;
-    }
-
-    /* Match box base */
-    .match {
-      background: #1d1d1d;
-      border-radius: 10px;
-      box-shadow: 0 0 8px #5da9ff66;
-      border: 2px solid #5da9ff;
-      padding: 0.5rem 1rem;
-      font-size: 0.95rem;
-      text-align: center;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      gap: 6px;
-    }
-
-    .losers {
-      border-color: #f26565;
-      box-shadow: 0 0 10px #f2656555;
-      background: #2a1d1d;
-    }
-
-    /* Team logo */
-    .team-logo {
-      height: 32px;
-      width: auto;
-      border-radius: 4px;
-      filter: drop-shadow(0 0 3px #000);
-    }
-
-    /* Seeds */
-    .seed-number {
-      font-weight: 700;
-      font-size: 1.1rem;
-    }
-
-    /* Winners bracket positions */
-    .round1-m1 { grid-column: 1; grid-row: 2; }
-    .round1-m2 { grid-column: 1; grid-row: 4; }
-    .round1-m3 { grid-column: 1; grid-row: 6; }
-    .round1-m4 { grid-column: 1; grid-row: 8; }
-
-    .round2-m1 { grid-column: 1; grid-row: 3; }
-    .round2-m2 { grid-column: 1; grid-row: 7; }
-
-    .round3-m1 { grid-column: 1; grid-row: 5; }
-
-    /* Losers bracket positions */
-    .losers-round1-m1 { grid-column: 5; grid-row: 2; }
-    .losers-round1-m2 { grid-column: 5; grid-row: 4; }
-    .losers-round1-m3 { grid-column: 5; grid-row: 6; }
-    .losers-round1-m4 { grid-column: 5; grid-row: 8; }
-
-    .losers-round2-m1 { grid-column: 5; grid-row: 3; }
-    .losers-round2-m2 { grid-column: 5; grid-row: 7; }
-
-    .losers-round3-m1 { grid-column: 5; grid-row: 5; }
-
-    .losers-round4-m1 { grid-column: 5; grid-row: 9; }
-
-    /* Grand Finals center */
-    .grand-finals {
-      grid-column: 3;
-      grid-row: 5 / span 3;
-      background: linear-gradient(45deg, #5da9ff, #f26565);
-      border-radius: 12px;
-      border: 3px solid #fff;
-      box-shadow: 0 0 20px #5da9ff, 0 0 20px #f26565;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      font-weight: 700;
-      font-size: 1.3rem;
-      user-select: none;
-      text-align: center;
-      padding: 1rem;
-    }
-
-    /* Vertical dividing lines */
-    .divider-left {
-      grid-column: 2;
-      grid-row: 2 / 10;
-      border-left: 3px solid #5da9ff;
-      opacity: 0.5;
-      margin: 0 20px;
-    }
-
-    .divider-right {
-      grid-column: 4;
-      grid-row: 2 / 10;
-      border-left: 3px solid #f26565;
-      opacity: 0.5;
-      margin: 0 20px;
-    }
-
-    /* Responsive */
-    @media (max-width: 900px) {
-      .bracket {
-        grid-template-columns: 1fr !important;
-        grid-template-rows: none !important;
-      }
-      .match, .grand-finals {
-        margin: 1rem auto !important;
-        max-width: 300px;
-      }
-      .divider-left, .divider-right {
-        display: none;
-      }
-      .winners-label, .losers-label {
-        grid-column: 1 !important;
-        grid-row: auto !important;
-        text-align: center;
-      }
-    }
-  </style>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>8-Team Double Elimination Bracket</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    margin: 40px;
+    background: #f9f9f9;
+  }
+  .bracket {
+    display: flex;
+    gap: 50px;
+  }
+  .bracket-column {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+  }
+  .round-title {
+    text-align: center;
+    font-weight: bold;
+    margin-bottom: 10px;
+    font-size: 18px;
+    text-transform: uppercase;
+    color: #333;
+  }
+  .match {
+    background: white;
+    border: 2px solid #333;
+    border-radius: 6px;
+    padding: 8px 12px;
+    min-width: 220px;
+    text-align: left;
+    box-shadow: 1px 1px 4px rgba(0,0,0,0.1);
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  .match img.team-logo {
+    width: 30px;
+    height: 30px;
+    object-fit: contain;
+    border-radius: 4px;
+  }
+  .match span.team-name {
+    font-weight: 600;
+  }
+  .line {
+    position: absolute;
+    border: 2px solid #333;
+  }
+  .wb-line-right {
+    width: 40px;
+    height: 2px;
+    top: 50%;
+    right: -40px;
+    transform: translateY(-50%);
+  }
+  .lb-line-left {
+    width: 40px;
+    height: 2px;
+    top: 50%;
+    left: -40px;
+    transform: translateY(-50%);
+  }
+  .grand-final {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 80px;
+  }
+  .gf-match {
+    border-color: #d35400;
+    background: #fef6e4;
+    min-width: 260px;
+    text-align: center;
+    flex-direction: column;
+  }
+</style>
 </head>
 <body>
-  <h1>Competitive CoD Series Bracket</h1>
-  <div class="bracket">
 
-    <!-- Section Labels -->
-    <div class="winners-label">Winners Bracket</div>
-    <div class="losers-label">Losers Bracket</div>
+<div class="bracket">
 
-    <!-- Dividers -->
-    <div class="divider-left"></div>
-    <div class="divider-right"></div>
+  <!-- Winners Round 1 -->
+  <div class="bracket-column">
+    <div class="round-title">Winners Round 1</div>
 
-    <!-- Winners Round 1 Matches -->
-    <div class="match round1-m1">
-      <div class="seed-number">1</div>
-      <img src="team1logo.png" alt="Team 1 Logo" class="team-logo" />
-      <div>Team 1</div>
-      <div>vs</div>
-      <div class="seed-number">8</div>
-      <img src="team8logo.png" alt="Team 8 Logo" class="team-logo" />
-      <div>Team 8</div>
+    <div class="match" style="position: relative;">
+      <div><strong>Match WB1</strong></div>
+      <div><img src="nycshiestylogo.png" alt="NYC Shiesty" class="team-logo"><span class="team-name">NYC Shiesty (1)</span></div>
+      <div><img src="elitelogo.png" alt="Elite" class="team-logo"><span class="team-name">Elite (8)</span></div>
+      <div class="line wb-line-right"></div>
     </div>
 
-    <div class="match round1-m2">
-      <div class="seed-number">4</div>
-      <img src="team4logo.png" alt="Team 4 Logo" class="team-logo" />
-      <div>Team 4</div>
-      <div>vs</div>
-      <div class="seed-number">5</div>
-      <img src="team5logo.png" alt="Team 5 Logo" class="team-logo" />
-      <div>Team 5</div>
+    <div class="match" style="position: relative;">
+      <div><strong>Match WB2</strong></div>
+      <div><img src="evaporatelogo.png" alt="Evaporate" class="team-logo"><span class="team-name">Evaporate (4)</span></div>
+      <div><img src="psglogo.png" alt="Prestige Worldwide" class="team-logo"><span class="team-name">Prestige Worldwide (5)</span></div>
+      <div class="line wb-line-right"></div>
     </div>
 
-    <div class="match round1-m3">
-      <div class="seed-number">3</div>
-      <img src="team3logo.png" alt="Team 3 Logo" class="team-logo" />
-      <div>Team 3</div>
-      <div>vs</div>
-      <div class="seed-number">6</div>
-      <img src="team6logo.png" alt="Team 6 Logo" class="team-logo" />
-      <div>Team 6</div>
+    <div class="match" style="position: relative;">
+      <div><strong>Match WB3</strong></div>
+      <div><img src="syianracelogo.png" alt="Saiyan Race" class="team-logo"><span class="team-name">Saiyan Race (3)</span></div>
+      <div><img src="owglogo.png" alt="OWG" class="team-logo"><span class="team-name">OWG (6)</span></div>
+      <div class="line wb-line-right"></div>
     </div>
 
-    <div class="match round1-m4">
-      <div class="seed-number">2</div>
-      <img src="team2logo.png" alt="Team 2 Logo" class="team-logo" />
-      <div>Team 2</div>
-      <div>vs</div>
-      <div class="seed-number">7</div>
-      <img src="team7logo.png" alt="Team 7 Logo" class="team-logo" />
-      <div>Team 7</div>
+    <div class="match" style="position: relative;">
+      <div><strong>Match WB4</strong></div>
+      <div><img src="100X35logo.png" alt="100X35" class="team-logo"><span class="team-name">100X35 (2)</span></div>
+      <div><img src="codathleteslogo.png" alt="Cod Athletes" class="team-logo"><span class="team-name">Cod Athletes (7)</span></div>
+      <div class="line wb-line-right"></div>
     </div>
-
-    <!-- Winners Round 2 Matches -->
-    <div class="match round2-m1">
-      <div class="seed-number">W1</div>
-      <div>Winner Match 1</div>
-      <div>vs</div>
-      <div class="seed-number">W2</div>
-      <div>Winner Match 2</div>
-    </div>
-
-    <div class="match round2-m2">
-      <div class="seed-number">W3</div>
-      <div>Winner Match 3</div>
-      <div>vs</div>
-      <div class="seed-number">W4</div>
-      <div>Winner Match 4</div>
-    </div>
-
-    <!-- Winners Round 3 Match -->
-    <div class="match round3-m1">
-      <div class="seed-number">W5</div>
-      <div>Winner Round 2 Match 1</div>
-      <div>vs</div>
-      <div class="seed-number">W6</div>
-      <div>Winner Round 2 Match 2</div>
-    </div>
-
-    <!-- Losers Round 1 Matches -->
-    <div class="match losers losers-round1-m1">
-      <div class="seed-number">L1</div>
-      <div>Loser Match 1</div>
-      <div>vs</div>
-      <div class="seed-number">L2</div>
-      <div>Loser Match 2</div>
-    </div>
-
-    <div class="match losers losers-round1-m2">
-      <div class="seed-number">L3</div>
-      <div>Loser Match 3</div>
-      <div>vs</div>
-      <div class="seed-number">L4</div>
-      <div>Loser Match 4</div>
-    </div>
-
-    <div class="match losers losers-round1-m3">
-      <div class="seed-number">L5</div>
-      <div>Loser Round 2 Match 1</div>
-      <div>vs</div>
-      <div class="seed-number">L6</div>
-      <div>Loser Round 2 Match 2</div>
-    </div>
-
-    <div class="match losers losers-round1-m4">
-      <div class="seed-number">L7</div>
-      <div>Loser Round 2 Match 3</div>
-      <div>vs</div>
-      <div class="seed-number">L8</div>
-      <div>Loser Round 2 Match 4</div>
-    </div>
-
-    <!-- Losers Round 2 Matches -->
-    <div class="match losers losers-round2-m1">
-      <div class="seed-number">L9</div>
-      <div>Loser Round 3 Match 1</div>
-      <div>vs</div>
-      <div class="seed-number">L10</div>
-      <div>Loser Round 3 Match 2</div>
-    </div>
-
-    <div class="match losers losers-round2-m2">
-      <div class="seed-number">L11</div>
-      <div>Loser Round 3 Match 3</div>
-      <div>vs</div>
-      <div class="seed-number">L12</div>
-      <div>Loser Round 3 Match 4</div>
-    </div>
-
-    <!-- Losers Round 3 Match -->
-    <div class="match losers losers-round3-m1">
-      <div class="seed-number">L13</div>
-      <div>Loser Round 4 Match 1</div>
-      <div>vs</div>
-      <div class="seed-number">L14</div>
-      <div>Loser Round 4 Match 2</div>
-    </div>
-
-    <!-- Losers Round 4 Match -->
-    <div class="match losers losers-round4-m1">
-      <div class="seed-number">L15</div>
-      <div>Loser Round 5 Match 1</div>
-      <div>vs</div>
-      <div class="seed-number">L16</div>
-      <div>Loser Round 5 Match 2</div>
-    </div>
-
-    <!-- Grand Finals -->
-    <div class="grand-finals">
-      Grand Finals<br />
-      Winner Winners Bracket<br />
-      vs<br />
-      Winner Losers Bracket
-    </div>
-
   </div>
-</body>
-</html>
 
+  <!-- Winners Round 2 -->
+  <div class="bracket-column">
+    <div class="round-title">Winners Round 2</div>
+
+    <div class="match" style="position: relative;">
+      <div><strong>Match WB5</strong></div>
+      <div>Winner WB1 vs Winner WB2</div>
+      <div class="line wb-line-right"></div>
+    </div>
+
+    <div class="match" style="position: relative;">
+      <div><strong>Match WB6</strong></div>
+      <div>Winner WB3 vs Winner WB4</div>
+      <div class="line wb-line-right"></div>
+    </div>
+  </div>
+
+  <!-- Winners Final -->
+  <div class="bracket-column">
+    <div class="round-title">Winners Final</div>
+
+    <div class="match" style="position: relative;">
+      <div><strong>Match WB7</strong></div>
+      <div>Winner WB5 vs Winner WB6</div>
+      <div class="line wb-line-right"></div>
+    </div>
+  </div>
+
+  <!-- Grand Final -->
+  <div class="grand-final">
+    <div class="round-title" style="text-align:center;">Grand Final</div>
+    <div class="match gf-match" style="position: relative; display: flex; flex-direction: column; align-items: center;">
+      <div><strong>Grand Final</strong></div>
+      <div>Winner WB7 vs Winner LB Final</div>
+    </div>
+  </div>
+
+  <!-- Losers Final -->
+  <div class="bracket-column">
+    <div class="round-title">Losers Final</div>
+    <div class="match" style="position: relative;">
+      <div><strong>Match LB9</strong></div>
+      <div>Winner LB7 vs Winner LB8</div>
+      <div class="line lb-line-left"></div>
+    </div>
+  </div>
+
+  <!-- Losers Round 3 -->
+  <div class="bracket-column">
+    <div class="round-title">Losers Round 3</div>
+
+    <div class="match" style="position: relative;">
+      <div><strong>Match LB7</strong></div>
+      <div>Winner LB5 vs Loser WB5</div>
+      <div class="line lb-line-left"></div>
+    </div>
+
+    <div class="match" style="position: relative;">
+      <div><strong>Match LB8</strong></div>
+      <div>Winner LB6 vs Loser WB6</div>
+      <div class="line lb-line-left"></div>
+    </div>
+  </div>
+
+  <!-- Losers Round 2 -->
+  <div class="bracket-column">
+    <div class="round-title">Losers Round 2</div>
+
+    <div class="match" style="position: relative;">
+      <div><strong>Match LB5</strong></div>
+      <div>Winner LB1 vs Loser WB2</div>
+      <div class="line lb-line-left"></div>
+    </div>
+
+    <div class="match" style="position: relative;">
+      <div><strong>Match LB6</strong></div>
+      <div>Winner LB2 vs Loser WB4</div>
+      <div class="line lb-line-left"></div>
+    </div>
+  </div>
+
+  <!-- Losers Round 1 -->
+  <div class="bracket-column">
+    <div class="round-title">Losers Round 1</div>
+
+    <div class="match" style="position: relative;">
+      <div><strong>Match LB1</strong></div>
+      <div>Loser WB1 vs Loser WB2</div>
+      <div class="line lb-line-left"></div>
+    </div>
+
+    <div class="match" style="position: relative;">
+      <div><strong>Match LB2</strong></div>
+      <div>Loser WB3 vs Loser WB4</div>
+      <div class="line lb-line-left"></div>
+    </div>
+  </div>
 
 </div>
 
 </body>
 </html>
+
