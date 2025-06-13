@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+\<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
@@ -67,7 +67,7 @@
 
     .bracket {
       display: grid;
-      grid-template-columns: repeat(5, 220px);
+      grid-template-columns: repeat(4, 250px);
       grid-auto-rows: 100px;
       gap: 1rem;
       justify-content: center;
@@ -123,61 +123,71 @@
   <h1>Playoffs Bracket</h1>
 
   <div class="bracket">
-    <!-- ROUND 1 (Winners) -->
+    <!-- ROUND 1 - Winners -->
     <div class="match" style="grid-column: 1; grid-row: 1;">
-      <img src="nycshiestylogo.png" alt="NYC"> NYC Shiesty (1)<br>
-      <img src="elitelogo.png" alt="Elite"> Elite (8)
+      <strong>Match 1</strong><br>
+      NYC Shiesty (1) vs Elite (8)
     </div>
     <div class="match" style="grid-column: 1; grid-row: 3;">
-      <img src="100X35logo.png" alt="100X"> 100X35 (2)<br>
-      <img src="codathleteslogo.png" alt="Athletes"> Cod Athletes (7)
+      <strong>Match 2</strong><br>
+      100X35 (2) vs Cod Athletes (7)
     </div>
     <div class="match" style="grid-column: 1; grid-row: 5;">
-      <img src="syianracelogo.png" alt="Saiyan"> Saiyan Race (3)<br>
-      <img src="owglogo.png" alt="OWG"> OWG (6)
+      <strong>Match 3</strong><br>
+      Saiyan Race (3) vs OWG (6)
     </div>
     <div class="match" style="grid-column: 1; grid-row: 7;">
-      <img src="evaporatelogo.png" alt="Evaporate"> Evaporate (4)<br>
-      <img src="psglogo.png" alt="Prestige"> Prestige (5)
+      <strong>Match 4</strong><br>
+      Evaporate (4) vs Prestige (5)
     </div>
 
-    <!-- ROUND 2 (Winners Semis) -->
+    <!-- ROUND 2 - Winners -->
     <div class="match" style="grid-column: 2; grid-row: 2;">
-      Winner M1<br>vs Winner M2
+      <strong>Match 5</strong><br>
+      Winner M1 vs Winner M2
     </div>
     <div class="match" style="grid-column: 2; grid-row: 6;">
-      Winner M3<br>vs Winner M4
+      <strong>Match 6</strong><br>
+      Winner M3 vs Winner M4
     </div>
 
-    <!-- WINNERS FINAL -->
+    <!-- ROUND 3 - Winners Final -->
     <div class="match" style="grid-column: 3; grid-row: 4;">
-      Upper Final<br>Winner R2A vs Winner R2B
+      <strong>Match 7</strong><br>
+      Winner M5 vs Winner M6
     </div>
 
-    <!-- GRAND FINAL -->
-    <div class="match" style="grid-column: 5; grid-row: 4;">
-      Grand Final<br>Upper Winner vs Lower Winner
+    <!-- ROUND 4 - Grand Final -->
+    <div class="match" style="grid-column: 4; grid-row: 4;">
+      <strong>Grand Final</strong><br>
+      Winner M7 vs Lower Bracket Winner
     </div>
 
-    <!-- LOWER BRACKET R1 -->
-    <div class="match" style="grid-column: 2; grid-row: 1;">
-      Loser M1<br>vs Loser M2
+    <!-- LOSERS ROUND 1 (from M1 & M2) -->
+    <div class="match" style="grid-column: 2; grid-row: 4;">
+      <strong>Losers R1</strong><br>
+      Loser M1 vs Loser M2
     </div>
-    <div class="match" style="grid-column: 2; grid-row: 7;">
-      Loser M3<br>vs Loser M4
+    <!-- LOSERS ROUND 1 (from M3 & M4) -->
+    <div class="match" style="grid-column: 2; grid-row: 8;">
+      <strong>Losers R2</strong><br>
+      Loser M3 vs Loser M4
     </div>
 
-    <!-- LOWER BRACKET R2 -->
+    <!-- LOSERS ROUND 2 (vs losers of Winners R2) -->
     <div class="match" style="grid-column: 3; grid-row: 2;">
-      Lower R2<br>Winner LR1 vs Loser R2A
+      <strong>Losers R3</strong><br>
+      Winner LR1 vs Loser M5
     </div>
     <div class="match" style="grid-column: 3; grid-row: 6;">
-      Lower R2<br>Winner LR2 vs Loser R2B
+      <strong>Losers R4</strong><br>
+      Winner LR2 vs Loser M6
     </div>
 
-    <!-- LOWER FINAL -->
-    <div class="match" style="grid-column: 4; grid-row: 4;">
-      Lower Final<br>Winner LR2A vs Winner LR2B
+    <!-- LOSERS FINAL -->
+    <div class="match" style="grid-column: 3; grid-row: 8;">
+      <strong>Losers Final</strong><br>
+      Winner LR3 vs Winner LR4
     </div>
   </div>
 
