@@ -1,379 +1,133 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Double Elimination Bracket - Mirrored Losers</title>
-<style>
-  body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background: #121212;
-    color: #eee;
-    margin: 20px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-  h1 {
-    color: #ffa500;
-    margin-bottom: 5px;
-  }
-  .prize-pool {
-    font-weight: bold;
-    color: #ffd700;
-    margin-bottom: 30px;
-  }
-
-  /* Grid container for bracket */
-  .bracket {
-    display: grid;
-    grid-template-columns: repeat(7, 260px);
-    grid-auto-rows: 100px;
-    gap: 10px 30px;
-    position: relative;
-  }
-
-  /* Match boxes */
-  .match {
-    background: #1e1e1e;
-    border: 2px solid #444;
-    border-radius: 10px;
-    box-shadow: 0 0 12px #000;
-    padding: 10px 15px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    position: relative;
-    z-index: 2;
-  }
-  .match h4 {
-    color: #ffa500;
-    font-weight: 700;
-    margin: 0 0 8px 0;
-    font-size: 0.95rem;
-    text-align: center;
-    line-height: 1.2;
-  }
-  .team {
-    display: flex;
-    align-items: center;
-    font-weight: 600;
-    color: #ddd;
-    margin: 2px 0;
-  }
-  .team img {
-    width: 28px;
-    height: 28px;
-    margin-right: 10px;
-    border-radius: 5px;
-    object-fit: contain;
-    border: 1px solid #555;
-  }
-
-  /* --- WINNERS BRACKET (LEFT SIDE) --- */
-  #w-r1-m1 { grid-column: 1; grid-row: 1; }
-  #w-r1-m2 { grid-column: 1; grid-row: 3; }
-  #w-r1-m3 { grid-column: 1; grid-row: 5; }
-  #w-r1-m4 { grid-column: 1; grid-row: 7; }
-
-  #w-r2-m1 { grid-column: 2; grid-row: 2; }
-  #w-r2-m2 { grid-column: 2; grid-row: 6; }
-
-  #w-finals { grid-column: 3; grid-row: 4; }
-
-  /* Grand Finals in the center */
-  #grand-finals { 
-    grid-column: 4; 
-    grid-row: 4; 
-    border: 3px solid #ffd700; 
-    box-shadow: 0 0 15px #ffd700; 
-    background: #222; 
-  }
-
-  /* --- LOSERS BRACKET (RIGHT SIDE, mirrored layout) --- */
-  /* Losers Round 1: far right column (7) */
-  #l-r1-m1 { grid-column: 7; grid-row: 1; }
-  #l-r1-m2 { grid-column: 7; grid-row: 3; }
-  #l-r1-m3 { grid-column: 7; grid-row: 5; }
-  #l-r1-m4 { grid-column: 7; grid-row: 7; }
-
-  /* Losers Round 2: one column left (6) */
-  #l-r2-m1 { grid-column: 6; grid-row: 2; }
-  #l-r2-m2 { grid-column: 6; grid-row: 6; }
-
-  /* Losers Finals: closer to center (5) */
-  #l-finals { grid-column: 5; grid-row: 4; }
-
-  /* Connectors - simplified horizontal and vertical lines */
-
-  /* Horizontal lines for winners bracket going right */
-  #w-r1-m1::after, #w-r1-m2::after, #w-r1-m3::after, #w-r1-m4::after,
-  #w-r2-m1::before, #w-r2-m2::before,
-  #w-r2-m1::after, #w-r2-m2::after,
-  #w-finals::before, #w-finals::after {
-    content: '';
-    position: absolute;
-    top: 50%;
-    width: 30px;
-    height: 2px;
-    background: #666;
-    z-index: 1;
-  }
-  #w-r1-m1::after, #w-r1-m2::after, #w-r1-m3::after, #w-r1-m4::after {
-    right: -30px;
-  }
-  #w-r2-m1::before, #w-r2-m2::before {
-    left: -30px;
-  }
-  #w-r2-m1::after, #w-r2-m2::after {
-    right: -30px;
-  }
-  #w-finals::before {
-    left: -30px;
-  }
-  #w-finals::after {
-    right: -30px;
-  }
-
-  /* Horizontal lines for losers bracket going left (mirrored) */
-  #l-r1-m1::before, #l-r1-m2::before, #l-r1-m3::before, #l-r1-m4::before,
-  #l-r2-m1::before, #l-r2-m2::before,
-  #l-r2-m1::after, #l-r2-m2::after,
-  #l-finals::before, #l-finals::after {
-    content: '';
-    position: absolute;
-    top: 50%;
-    width: 30px;
-    height: 2px;
-    background: #666;
-    z-index: 1;
-  }
-  #l-r1-m1::before, #l-r1-m2::before, #l-r1-m3::before, #l-r1-m4::before {
-    left: -30px;
-  }
-  #l-r2-m1::before, #l-r2-m2::before {
-    left: -30px;
-  }
-  #l-r2-m1::after, #l-r2-m2::after {
-    right: -30px;
-  }
-  #l-finals::before {
-    left: -30px;
-  }
-  #l-finals::after {
-    right: -30px;
-  }
-
-  /* Vertical lines for winners bracket */
-  #w-r1-m1::before, #w-r1-m2::before, #w-r1-m3::before, #w-r1-m4::before,
-  #w-r2-m1::before, #w-r2-m2::before,
-  #w-finals::after {
-    content: '';
-    position: absolute;
-    width: 2px;
-    height: 40px;
-    background: #666;
-    top: 50%;
-    z-index: 1;
-  }
-  #w-r1-m1::before, #w-r1-m2::before, #w-r1-m3::before, #w-r1-m4::before {
-    right: -30px;
-    transform: translateY(-100%);
-  }
-  #w-r2-m1::before, #w-r2-m2::before {
-    left: -30px;
-    transform: translateY(-50%);
-    height: 80px;
-  }
-  #w-finals::after {
-    right: -30px;
-    height: 80px;
-    transform: translateY(-50%);
-  }
-
-  /* Vertical lines for losers bracket */
-  #l-r1-m1::before, #l-r1-m2::before, #l-r1-m3::before, #l-r1-m4::before {
-    content: '';
-    position: absolute;
-    width: 2px;
-    height: 40px;
-    background: #666;
-    top: 50%;
-    left: -30px;
-    transform: translateY(-100%);
-    z-index: 1;
-  }
-  #l-r2-m1::before, #l-r2-m2::before {
-    content: '';
-    position: absolute;
-    width: 2px;
-    height: 80px;
-    background: #666;
-    top: 50%;
-    left: -30px;
-    transform: translateY(-50%);
-    z-index: 1;
-  }
-  #l-r2-m1::after, #l-r2-m2::after {
-    content: '';
-    position: absolute;
-    width: 2px;
-    height: 80px;
-    background: #666;
-    top: 50%;
-    right: -30px;
-    transform: translateY(-50%);
-    z-index: 1;
-  }
-  #l-finals::after {
-    content: '';
-    position: absolute;
-    width: 2px;
-    height: 80px;
-    background: #666;
-    top: 50%;
-    right: -30px;
-    transform: translateY(-50%);
-    z-index: 1;
-  }
-  #l-finals::before {
-    content: '';
-    position: absolute;
-    width: 2px;
-    height: 40px;
-    background: #666;
-    top: 50%;
-    left: -30px;
-    transform: translateY(-50%);
-    z-index: 1;
-  }
-
-  /* Grand Finals connectors */
-  #grand-finals::before, #grand-finals::after {
-    content: '';
-    position: absolute;
-    top: 50%;
-    width: 30px;
-    height: 2px;
-    background: #ffd700;
-    z-index: 1;
-  }
-  #grand-finals::before {
-    left: -30px;
-  }
-  #grand-finals::after {
-    left: 100%;
-    width: 50px;
-  }
-
-  /* Responsive tweaks */
-  @media (max-width: 1900px) {
-    .bracket {
-      grid-template-columns: repeat(7, 200px);
-      grid-auto-rows: 90px;
-      gap: 10px 20px;
-    }
-    .team img {
-      width: 22px;
-      height: 22px;
-      margin-right: 8px;
-    }
-  }
-</style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>CCS Playoffs Bracket</title>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600&display=swap" rel="stylesheet" />
 </head>
 <body>
-  <h1>Double Elimination Bracket</h1>
-  <div class="prize-pool">$1500 Prize Pool</div>
+  <nav>
+    <div class="logo">
+      Competitive CoD Series
+      <img src="logo.png" alt="CCS Logo" />
+    </div>
+    <ul>
+      <li><a href="schedule.html">Schedule</a></li>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="teams.html">Teams</a></li>
+      <li><a href="standings.html">Standings</a></li>
+      <li><a href="media.html">Media</a></li>
+      <li><a href="stats.html">Stats</a></li> 
+      <li><a href="bracket.html">Playoffs Bracket</a></li>
+    </ul>
+  </nav>
 
-  <div class="bracket">
-    <!-- Winners Round 1 -->
-    <div class="match" id="w-r1-m1">
-      <h4>NYC Shiesty vs Elite</h4>
-      <div class="team"><img src="nycshiestylogo.png" alt="NYC Shiesty" />1. NYC Shiesty</div>
-      <div class="team"><img src="elitelogo.png" alt="Elite" />8. Elite</div>
-    </div>
-    <div class="match" id="w-r1-m2">
-      <h4>Evaporate vs Prestige Worldwide</h4>
-      <div class="team"><img src="evaporatelogo.png" alt="Evaporate" />4. Evaporate</div>
-      <div class="team"><img src="psglogo.png" alt="Prestige Worldwide" />5. Prestige Worldwide</div>
-    </div>
-    <div class="match" id="w-r1-m3">
-      <h4>Saiyan Race vs OWG</h4>
-      <div class="team"><img src="syianracelogo.png" alt="Saiyan Race" />3. Saiyan Race</div>
-      <div class="team"><img src="owglogo.png" alt="OWG" />6. OWG</div>
-    </div>
-    <div class="match" id="w-r1-m4">
-      <h4>100X35 vs Cod Athletes</h4>
-      <div class="team"><img src="100X35logo.png" alt="100X35" />2. 100X35</div>
-      <div class="team"><img src="codathleteslogo.png" alt="Cod Athletes" />7. Cod Athletes</div>
-    </div>
+  <main>
+    <h1 style="text-align: center; margin-top: 2rem; font-family: 'Orbitron', sans-serif;">2025 CCS Double Elimination Playoff Bracket</h1>
 
-    <!-- Winners Round 2 -->
-    <div class="match" id="w-r2-m1">
-      <h4>Winner of NYC Shiesty vs Elite<br>vs Winner of Evaporate vs Prestige Worldwide</h4>
-      <div class="team">-</div>
-      <div class="team">-</div>
-    </div>
-    <div class="match" id="w-r2-m2">
-      <h4>Winner of Saiyan Race vs OWG<br>vs Winner of 100X35 vs Cod Athletes</h4>
-      <div class="team">-</div>
-      <div class="team">-</div>
-    </div>
+    <div class="bracket-container">
+      <section class="winners-bracket">
+        <h2>Winners Bracket</h2>
 
-    <!-- Winners Finals -->
-    <div class="match" id="w-finals">
-      <h4>Winner of Winners Round 2 Matches</h4>
-      <div class="team">-</div>
-      <div class="team">-</div>
-    </div>
+        <div class="round round-1">
+          <h3>Round 1</h3>
+          <div class="match">
+            <div class="team">NYC Shiesty</div>
+            <div class="vs">vs</div>
+            <div class="team">Elite</div>
+          </div>
+          <div class="match">
+            <div class="team">100X35</div>
+            <div class="vs">vs</div>
+            <div class="team">Cod Athletes</div>
+          </div>
+          <div class="match">
+            <div class="team">Saiyan Race</div>
+            <div class="vs">vs</div>
+            <div class="team">OWG</div>
+          </div>
+          <div class="match">
+            <div class="team">Evaporate</div>
+            <div class="vs">vs</div>
+            <div class="team">Prestige Worldwide</div>
+          </div>
+        </div>
 
-    <!-- Grand Finals -->
-    <div class="match" id="grand-finals">
-      <h4>Grand Finals<br>Winner of Winners Finals vs Winner of Losers Finals</h4>
-      <div class="team">-</div>
-      <div class="team">-</div>
-    </div>
+        <div class="round round-2">
+          <h3>Round 2</h3>
+          <div class="match">
+            <div class="team">Winner of NYC Shiesty vs Elite</div>
+            <div class="vs">vs</div>
+            <div class="team">Winner of 100X35 vs Cod Athletes</div>
+          </div>
+          <div class="match">
+            <div class="team">Winner of Saiyan Race vs OWG</div>
+            <div class="vs">vs</div>
+            <div class="team">Winner of Evaporate vs Prestige Worldwide</div>
+          </div>
+        </div>
 
-    <!-- Losers Round 1 (far right) -->
-    <div class="match" id="l-r1-m1">
-      <h4>Loser of NYC Shiesty vs Elite<br>vs Loser of Evaporate vs Prestige Worldwide</h4>
-      <div class="team">-</div>
-      <div class="team">-</div>
-    </div>
-    <div class="match" id="l-r1-m2">
-      <h4>Loser of Saiyan Race vs OWG<br>vs Loser of 100X35 vs Cod Athletes</h4>
-      <div class="team">-</div>
-      <div class="team">-</div>
-    </div>
-    <div class="match" id="l-r1-m3">
-      <h4>Loser of Winners Round 2 Match 1<br>vs Loser of Winners Round 2 Match 2</h4>
-      <div class="team">-</div>
-      <div class="team">-</div>
-    </div>
-    <div class="match" id="l-r1-m4">
-      <h4>Loser of Winners Finals<br>vs Winner of Losers Round 2 Finals</h4>
-      <div class="team">-</div>
-      <div class="team">-</div>
-    </div>
+        <div class="round round-3">
+          <h3>Round 3</h3>
+          <div class="match">
+            <div class="team">Winner of Round 2 Match 1</div>
+            <div class="vs">vs</div>
+            <div class="team">Winner of Round 2 Match 2</div>
+          </div>
+        </div>
+      </section>
 
-    <!-- Losers Round 2 (leftwards) -->
-    <div class="match" id="l-r2-m1">
-      <h4>Winner of Losers Round 1 Matches 1 & 2</h4>
-      <div class="team">-</div>
-      <div class="team">-</div>
-    </div>
-    <div class="match" id="l-r2-m2">
-      <h4>Winner of Losers Round 1 Matches 3 & 4</h4>
-      <div class="team">-</div>
-      <div class="team">-</div>
-    </div>
+      <section class="losers-bracket">
+        <h2>Losers Bracket</h2>
 
-    <!-- Losers Finals (closer to center) -->
-    <div class="match" id="l-finals">
-      <h4>Winner of Losers Round 2 Matches</h4>
-      <div class="team">-</div>
-      <div class="team">-</div>
+        <div class="round round-1">
+          <h3>Round 1</h3>
+          <div class="match">
+            <div class="team">Loser of 100X35 vs Cod Athletes</div>
+            <div class="vs">vs</div>
+            <div class="team">Loser of NYC Shiesty vs Elite</div>
+          </div>
+          <div class="match">
+            <div class="team">Loser of Evaporate vs Prestige Worldwide</div>
+            <div class="vs">vs</div>
+            <div class="team">Loser of Saiyan Race vs OWG</div>
+          </div>
+        </div>
+
+        <div class="round round-2">
+          <h3>Round 2</h3>
+          <div class="match">
+            <div class="team">Winner of Losers Round 1 Match 1</div>
+            <div class="vs">vs</div>
+            <div class="team">Loser of Round 2 Match 1</div>
+          </div>
+          <div class="match">
+            <div class="team">Winner of Losers Round 1 Match 2</div>
+            <div class="vs">vs</div>
+            <div class="team">Loser of Round 2 Match 2</div>
+          </div>
+        </div>
+
+        <div class="round round-3">
+          <h3>Round 3</h3>
+          <div class="match">
+            <div class="team">Winner of Losers Round 2 Match 1</div>
+            <div class="vs">vs</div>
+            <div class="team">Winner of Losers Round 2 Match 2</div>
+          </div>
+        </div>
+      </section>
+
+      <section class="grand-finals">
+        <h2>Grand Finals</h2>
+        <div class="match">
+          <div class="team">Winner of Winners Round 3</div>
+          <div class="vs">vs</div>
+          <div class="team">Winner of Losers Round 3</div>
+        </div>
+      </section>
     </div>
-  </div>
+  </main>
 </body>
 </html>
