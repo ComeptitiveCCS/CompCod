@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Creative Vertical Bracket</title>
+<style>
+  /* Reset and base */
+  * {
+    box-sizing: border-box;
+  }
+  body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: #f0f2f5;
+    margin: 0;
+    padding: 40px 20px;
+    color: #222;
+    display: flex;
+    justify-content: center;
+    min-height: 100vh;
+  }
+
+  /* Container for the whole bracket */
+  .bracket-container {
+    max-width: 900px;
+    width: 100%;
+  }
+
+  /* Round container */
+  .round {
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.12);
+    padding: 20px 30px;
+    margin-bottom: 40px;
+    border-left: 6px solid #4285f4; /* accent color for rounds */
+  }
+
+  /* Round title */
+  .round-title {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: #1a73e8;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+
+  /* Matches container inside a round */
+  .matches {
+    display: flex;
+    gap: 24px;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  /* Single match card */
+  .match {
+    background: #fafafa;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    width: 220px;
+    padding: 15px 20px;
+    position: relative;
+  }
+
+  /* Each team block inside a match */
+  .team {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 10px 8px;
+    border-radius: 6px;
+    margin-bottom: 10px;
+    background: white;
+    border: 2px solid #ddd;
+    transition: all 0.3s ease;
+    cursor: default;
+  }
+
+  /* Last team in a match has no margin below */
+  .team:last-child {
+    margin-bottom: 0;
+  }
+
+  /* Highlight the winner team */
+  .team.winner {
+    border-color: #34a853;
+    background: #e6f4ea;
+    font-weight: 700;
+    color: #19692c;
+  }
+
+  /* Loser team muted style */
+  .team.loser {
+    opacity: 0.5;
+  }
+
+  /* Team logo */
+  .team-logo {
+    width: 32px;
+    height: 32px;
+    border-radius: 6px;
+    object-fit: contain;
+    border: 1.5px solid #ccc;
+  }
+
+  /* Team name text */
+  .team-name {
+    flex-grow: 1;
+    font-size: 1rem;
+    user-select: none;
+  }
+
+  /* Match connector line vertical */
+  .match::before {
+    content: '';
+    position: absolute;
+    left: -24px;
+    top: 20px;
+    bottom: 20px;
+    width: 3px;
+    background: #bbb;
+    border-radius: 2px;
+    opacity: 0.3;
+  }
+
+  /* Remove connector for first round matches */
+  .round:first-child .match::before {
+    display: none;
+  }
+
+  /* Horizontal connection between matches inside rounds */
+  .matches > .match:not(:last-child)::after {
+    content: '';
+    position: absolute;
+    right: -12px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 24px;
+    height: 3px;
+    background: #bbb;
+    border-radius: 2px;
+    opacity: 0.3;
+  }
+
+  /* Responsive tweaks */
+  @media (max-width: 650px) {
+    .matches {
+      flex-direction: column;
+      align-items: center;
+    }
+    .matches > .match:not(:last-child)::after {
+      display: none;
+    }
+    .match::before {
+      left: auto;
+      right: auto;
+      top: auto;
+      bottom: auto;
+      display: none;
+    }
+  }
+</style>
+</head>
+<body>
+
+<div class="bracket-container">
+
+  <!-- Round 1 -->
+  <section class="round" aria-label="Round 1">
+    <h2 class="round-title">Round 1</h2>
+    <div class="matches">
+
+      <article class="match" aria-label="Match 1">
+        <div class="team winner" tabindex="0">
+          <img src="nycshiestylogo.png" alt="NYC Shiesty logo" class="team-logo" />
+          <span class="team-name">NYC Shiesty (1)</span>
+        </div>
+        <div class="team loser">
+          <img src="elitelogo.png" alt="Elite logo" class="team-logo" />
+          <span class="team-name">Elite (8)</span>
+        </div>
+      </article>
+
+      <article class="match" aria-label="Match 2">
+        <div class="team winner" tabindex="0">
+          <img src="codathleteslogo.png" alt="Cod Athletes logo" class="team-logo" />
+          <span class="team-name">Cod Athletes (7)</span>
+        </div>
+        <div class="team loser">
+          <img src="owglogo.png" alt="OWG logo" class="team-logo" />
+          <span class="team-name">OWG (6)</span>
+        </div>
+      </article>
+
+      <article class="match" aria-label="Match 3">
+        <div class="team winner" tabindex="0">
+          <img src="psglogo.png" alt="Prestige logo" class="team-logo" />
+          <span class="team-name">Prestige Worldwide (5)</span>
+        </div>
+        <div class="team loser">
+          <img src="evaporatelogo.png" alt="Evaporate logo" class="team-logo" />
+          <span class="team-name">Evaporate (4)</span>
+        </div>
+      </article>
+
+      <article class="match" aria-label="Match 4">
+        <div class="team winner" tabindex="0">
+          <img src="syianracelogo.png" alt="Saiyan Race logo" class="team-logo" />
+          <span class="team-name">Saiyan Race (3)</span>
+        </div>
+        <div class="team loser">
+          <img src="100X35logo.png" alt="100X35 logo" class="team-logo" />
+          <span class="team-name">100X35 (2)</span>
+        </div>
+      </article>
+
+    </div>
+  </section>
+
+  <!-- Round 2 -->
+  <section class="round" aria-label="Round 2">
+    <h2 class="round-title">Round 2</h2>
+    <div class="matches">
+
+      <article class="match" aria-label="Match 5">
+        <div class="team winner" tabindex="0">
+          <img src="placeholderlogo.png" alt="Winner Match 1 logo" class="team-logo" />
+          <span class="team-name">Winner Match 1</span>
+        </div>
+        <div class="team">
+          <img src="placeholderlogo.png" alt="Winner Match 2 logo" class="team-logo" />
+          <span class="team-name">Winner Match 2</span>
+        </div>
+      </article>
+
+      <article class="match" aria-label="Match 6">
+        <div class="team">
+          <img src="placeholderlogo.png" alt="Winner Match 3 logo" class="team-logo" />
+          <span class="team-name">Winner Match 3</span>
+        </div>
+        <div class="team">
+          <img src="placeholderlogo.png" alt="Winner Match 4 logo" class="team-logo" />
+          <span class="team-name">Winner Match 4</span>
+        </div>
+      </article>
+
+    </div>
+  </section>
+
+  <!-- Winners Final -->
+  <section class="round" aria-label="Winners Final">
+    <h2 class="round-title">Winners Final</h2>
+    <div class="matches">
+      <article class="match" aria-label="Winners Final Match">
+        <div class="team">
+          <img src="placeholderlogo.png" alt="Winner Round 2 Match 1 logo" class="team-logo" />
+          <span class="team-name">Winner Round 2 Match 1</span>
+        </div>
+        <div class="team">
+          <img src="placeholderlogo.png" alt="Winner Round 2 Match 2 logo" class="team-logo" />
+          <span class="team-name">Winner Round 2 Match 2</span>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <!-- Losers Bracket -->
+  <section class="round" aria-label="Losers Bracket">
+    <h2 class="round-title">Losers Bracket</h2>
+    <div class="matches">
+
+      <article class="match" aria-label="Losers Round 1 Match 1">
+        <div class="team">
+          <img src="placeholderlogo.png" alt="Loser Match 1 logo" class="team-logo" />
+          <span class="team-name">Loser Match 1</span>
+        </div>
+        <div class="team">
+          <img src="placeholderlogo.png" alt="Loser Match 2 logo" class="team-logo" />
+          <span class="team-name">Loser Match 2</span>
+        </div>
+      </article>
+
+      <article class="match" aria-label="Losers Round 1 Match 2">
+        <div class="team">
+          <img src="placeholderlogo.png" alt="Loser Match 3 logo" class="team-logo" />
+          <span class="team-name">Loser Match 3</span>
+        </div>
+        <div class="team">
+          <img src="placeholderlogo.png" alt="Loser Match 4 logo" class="team-logo" />
+          <span class="team-name">Loser Match 4</span>
+        </div>
+      </article>
+
+    </div>
+  </section>
+
+</div>
+
+</body>
+</html>
+
