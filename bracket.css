@@ -1,1 +1,200 @@
+/* Reset some defaults */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background-color: #000000;
+  color: #ffffff;
+  font-family: 'Orbitron', sans-serif;
+}
+
+nav {
+  background: #ffffff;
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+nav .logo {
+  display: flex;
+  align-items: center;
+  font-size: 1.5rem;
+  color: #000000;
+}
+
+nav .logo img {
+  height: 40px;
+  width: auto;
+  margin-left: 10px;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 2rem;
+  margin: 0;
+  padding: 0;
+}
+
+nav ul li a {
+  color: #000000;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+nav ul li a:hover {
+  color: #5da9ff;
+}
+
+main {
+  padding: 2rem;
+  max-width: 1200px;
+  margin: 0 auto 4rem;
+}
+
+h1, h2, h3 {
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-bottom: 1rem;
+  color: #5da9ff;
+  text-shadow:
+    0 0 10px #5da9ff,
+    0 0 20px #5da9ff;
+}
+
+/* Bracket container layout */
+.bracket-container {
+  display: flex;
+  justify-content: space-between;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+/* Winners and Losers Brackets style */
+.winners-bracket,
+.losers-bracket {
+  background-color: #121212;
+  border: 2px solid #5da9ff;
+  border-radius: 10px;
+  padding: 1rem;
+  width: 45%;
+  min-width: 320px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Losers bracket on right side, align text right */
+.losers-bracket {
+  text-align: right;
+}
+
+/* Rounds container */
+.round {
+  margin-bottom: 2rem;
+  width: 100%;
+}
+
+/* Round headings */
+.round h3 {
+  font-size: 1.3rem;
+  margin-bottom: 1rem;
+  color: #aad8ff;
+  text-shadow:
+    0 0 8px #aad8ff;
+}
+
+/* Matches */
+.match {
+  background-color: #000a1a;
+  border: 1px solid #3a8edc;
+  border-radius: 6px;
+  padding: 0.8rem 1rem;
+  margin-bottom: 1rem;
+
+  /* Flex row for winners */
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5rem;
+
+  /* Slight shadow glow */
+  box-shadow: 0 0 8px #3a8edc66;
+  transition: box-shadow 0.3s ease;
+}
+
+/* Hover effect on matches */
+.match:hover {
+  box-shadow: 0 0 15px #5da9ffcc;
+}
+
+/* Team names */
+.team {
+  flex: 1;
+  font-weight: 600;
+  font-size: 1rem;
+  color: #cce6ff;
+  white-space: nowrap;
+}
+
+/* Center the 'vs' text */
+.vs {
+  flex: 0 0 40px;
+  text-align: center;
+  font-weight: 700;
+  font-size: 1rem;
+  color: #5da9ff;
+}
+
+/* Grand Finals section - centered */
+.grand-finals {
+  background-color: #121212;
+  border: 3px solid #ffd700;
+  border-radius: 12px;
+  padding: 1rem;
+  width: 90%;
+  margin: 0 auto;
+  text-align: center;
+  box-shadow:
+    0 0 20px #ffd700aa;
+}
+
+/* Grand finals heading */
+.grand-finals h2 {
+  color: #ffd700;
+  text-shadow:
+    0 0 12px #ffd700;
+  margin-bottom: 1rem;
+}
+
+/* Grand finals match */
+.grand-finals .match {
+  justify-content: center;
+  gap: 2rem;
+  background-color: #222200;
+  border-color: #ffd700;
+  box-shadow: 0 0 15px #ffd700cc;
+}
+
+/* Responsive adjustments */
+@media (max-width: 900px) {
+  .bracket-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .winners-bracket,
+  .losers-bracket {
+    width: 90%;
+    text-align: center;
+  }
+
+  .losers-bracket {
+    text-align: center;
+  }
+}
 
