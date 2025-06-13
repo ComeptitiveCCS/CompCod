@@ -3,8 +3,9 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>CCS Playoffs Bracket</title>
+  <title>Playoffs Bracket - Competitive CoD Series</title>
   <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="bracket.css" />
 </head>
 <body>
   <nav>
@@ -19,114 +20,112 @@
       <li><a href="standings.html">Standings</a></li>
       <li><a href="media.html">Media</a></li>
       <li><a href="stats.html">Stats</a></li> 
-      <li><a href="bracket.html">Playoffs Bracket</a></li>
+      <li><a href="bracket.html" class="active">Playoffs Bracket</a></li>
     </ul>
   </nav>
 
   <main>
-    <h1 style="text-align: center; margin-top: 2rem; font-family: 'Orbitron', sans-serif;">2025 CCS Double Elimination Playoff Bracket</h1>
-
+    <h1>2025 Playoffs Bracket - $1500 Prize Pool</h1>
     <div class="bracket-container">
-      <section class="winners-bracket">
+      <div class="winners-bracket">
         <h2>Winners Bracket</h2>
-
         <div class="round round-1">
-          <h3>Round 1</h3>
           <div class="match">
-            <div class="team">NYC Shiesty</div>
-            <div class="vs">vs</div>
-            <div class="team">Elite</div>
+            <div class="team">
+              <img src="100X35logo.png" alt="Team 100X35" class="team-logo" />
+              <span>100X35</span>
+            </div>
+            <div class="team">
+              <img src="codathleteslogo.png" alt="Cod Athletes" class="team-logo" />
+              <span>Cod Athletes</span>
+            </div>
           </div>
           <div class="match">
-            <div class="team">100X35</div>
-            <div class="vs">vs</div>
-            <div class="team">Cod Athletes</div>
+            <div class="team">
+              <img src="syianracelogo.png" alt="Saiyan Race" class="team-logo" />
+              <span>Saiyan Race</span>
+            </div>
+            <div class="team">
+              <img src="evaporatelogo.png" alt="Team Evaporate" class="team-logo" />
+              <span>Evaporate</span>
+            </div>
           </div>
           <div class="match">
-            <div class="team">Saiyan Race</div>
-            <div class="vs">vs</div>
-            <div class="team">OWG</div>
+            <div class="team">
+              <img src="nycshiestylogo.png" alt="NYC Shiesty" class="team-logo" />
+              <span>NYC Shiesty</span>
+            </div>
+            <div class="team">
+              <img src="owglogo.png" alt="Team OWG" class="team-logo" />
+              <span>OWG</span>
+            </div>
           </div>
           <div class="match">
-            <div class="team">Evaporate</div>
-            <div class="vs">vs</div>
-            <div class="team">Prestige Worldwide</div>
+            <div class="team">
+              <img src="psglogo.png" alt="Prestige Worldwide" class="team-logo" />
+              <span>Prestige Worldwide</span>
+            </div>
+            <div class="team">
+              <img src="elitelogo.png" alt="Team Elite" class="team-logo" />
+              <span>Elite</span>
+            </div>
           </div>
         </div>
 
         <div class="round round-2">
-          <h3>Round 2</h3>
           <div class="match">
-            <div class="team">Winner of NYC Shiesty vs Elite</div>
-            <div class="vs">vs</div>
             <div class="team">Winner of 100X35 vs Cod Athletes</div>
+            <div class="team">Winner of Saiyan Race vs Evaporate</div>
           </div>
           <div class="match">
-            <div class="team">Winner of Saiyan Race vs OWG</div>
-            <div class="vs">vs</div>
-            <div class="team">Winner of Evaporate vs Prestige Worldwide</div>
+            <div class="team">Winner of NYC Shiesty vs OWG</div>
+            <div class="team">Winner of Prestige Worldwide vs Elite</div>
           </div>
         </div>
 
         <div class="round round-3">
-          <h3>Round 3</h3>
           <div class="match">
             <div class="team">Winner of Round 2 Match 1</div>
-            <div class="vs">vs</div>
             <div class="team">Winner of Round 2 Match 2</div>
           </div>
         </div>
-      </section>
+      </div>
 
-      <section class="losers-bracket">
+      <div class="losers-bracket">
         <h2>Losers Bracket</h2>
-
         <div class="round round-1">
-          <h3>Round 1</h3>
           <div class="match">
             <div class="team">Loser of 100X35 vs Cod Athletes</div>
-            <div class="vs">vs</div>
-            <div class="team">Loser of NYC Shiesty vs Elite</div>
+            <div class="team">Loser of Saiyan Race vs Evaporate</div>
           </div>
           <div class="match">
-            <div class="team">Loser of Evaporate vs Prestige Worldwide</div>
-            <div class="vs">vs</div>
-            <div class="team">Loser of Saiyan Race vs OWG</div>
+            <div class="team">Loser of NYC Shiesty vs OWG</div>
+            <div class="team">Loser of Prestige Worldwide vs Elite</div>
           </div>
         </div>
 
         <div class="round round-2">
-          <h3>Round 2</h3>
           <div class="match">
             <div class="team">Winner of Losers Round 1 Match 1</div>
-            <div class="vs">vs</div>
-            <div class="team">Loser of Round 2 Match 1</div>
-          </div>
-          <div class="match">
             <div class="team">Winner of Losers Round 1 Match 2</div>
-            <div class="vs">vs</div>
-            <div class="team">Loser of Round 2 Match 2</div>
           </div>
         </div>
 
         <div class="round round-3">
-          <h3>Round 3</h3>
           <div class="match">
-            <div class="team">Winner of Losers Round 2 Match 1</div>
-            <div class="vs">vs</div>
-            <div class="team">Winner of Losers Round 2 Match 2</div>
+            <div class="team">Winner of Losers Round 2</div>
+            <div class="team">Loser of Winners Round 3</div>
           </div>
         </div>
-      </section>
+      </div>
 
-      <section class="grand-finals">
+      <div class="grand-finals">
         <h2>Grand Finals</h2>
         <div class="match">
           <div class="team">Winner of Winners Round 3</div>
-          <div class="vs">vs</div>
           <div class="team">Winner of Losers Round 3</div>
         </div>
-      </section>
+      </div>
     </div>
   </main>
 </body>
