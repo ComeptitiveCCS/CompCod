@@ -109,225 +109,195 @@
 
 <div class="table-container">
   <h1>Standings</h1>
-  <table id="standingsTable">
-    <thead>
-      <tr>
-        <th onclick="sortTable(0)">Team</th>
-        <th onclick="sortTable(1)">Wins</th>
-        <th onclick="sortTable(2)">Losses</th>
-        <th onclick="sortTable(3)">Map W/L</th>
-        <th onclick="sortTable(4)">Points</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td>
-          <span class="seed-number">1.</span> 
-          <img src="nycshiestylogo.png" alt="NYC Shiesty" class="team-logo"> 
-          NYC Shiesty 
-          <span class="champs-badge" title="Makes Champs">🎟️</span>
-        </td>
-        <td>6</td>
-        <td>0</td>
-        <td>18/5</td>
-        <td>60</td>
-      </tr>
-      <tr>
-        <td>
-          <span class="seed-number">2.</span> 
-          <img src="100X35logo.png" alt="Team 100X35" class="team-logo"> 
-          100X35 
-          <span class="champs-badge" title="Makes Champs">🎟️</span>
-        </td>
-        <td>6</td>
-        <td>2</td>
-        <td>20/10</td>
-        <td>60</td>
-      </tr>
-      
-      <tr>
-        <td>
-          <span class="seed-number">3.</span> 
-          <img src="evaporatelogo.png" alt="Team Evaporate" class="team-logo"> 
-          Evaporate 
-          <span class="champs-badge" title="Makes Champs">🎟️</span>
-        </td>
-        <td>5</td>
-        <td>1</td>
-        <td>17/7</td>
-        <td>50</td>
-      </tr>
-      <tr>
-        <td>
-          <span class="seed-number">4.</span> 
-          <img src="syianracelogo.png" alt="Saiyan Race" class="team-logo"> 
-          Saiyan Race 
-          <span class="champs-badge" title="Makes Champs">🎟️</span>
-        </td>
-        <td>5</td>
-        <td>1</td>
-        <td>16/5</td>
-        <td>50</td>
-      </tr>
-      <tr>
-       <td>
-          <span class="seed-number">5.</span> 
-          <img src="psglogo.png" alt="Team Prestige Worldwide" class="team-logo"> 
-          Prestige Worldwide 
-          <span class="champs-badge" title="Makes Champs">🎟️</span>
-        </td>
-        <td>5</td>
-        <td>3</td>
-        <td>17/9</td>
-        <td>50</td>
-      </tr>
-     
-            <tr>
-        <td>
-          <span class="seed-number">6.</span> 
-          <img src="owglogo.png" alt="Team OWG" class="team-logo"> 
-          OWG 
-          <span class="champs-badge" title="Makes Champs">🎟️</span>
-        </td>
-        <td>5</td>
-        <td>4</td>
-        <td>17/21</td>
-        <td>50</td>
-      </tr>
-      <tr>
-        <td>
-          <span class="seed-number">7.</span> 
-          <img src="codathleteslogo.png" alt="Team U18 Kaos" class="team-logo"> 
-          Cod Athletes 
-          <span class="champs-badge" title="Makes Champs">🎟️</span>
-        </td>
-        <td>4</td>
-        <td>2</td>
-        <td>13/9</td>
-        <td>40</td>
-      </tr>
-
-      <tr>
-        <td>
-          <span class="seed-number">8.</span> 
-          <img src="elitelogo.png" alt="Team Elite" class="team-logo"> 
-          Elite 
-          <span class="champs-badge" title="Makes Champs">🎟️</span>
-        </td>
-        <td>4</td>
-        <td>4</td>
-        <td>14/14</td>
-        <td>40</td>
-      </tr>
-      <tr>
-        <td>
-          <span class="seed-number">9.</span> 
-          <img src="naturalslogo.png" alt="Team Naturals" class="team-logo"> 
-          Naturals
-        </td>
-        <td>2</td>
-        <td>6</td>
-        <td>9/19</td>
-        <td>20</td>
-      </tr>
-      <tr>
-        <td>
-          <span class="seed-number">10.</span> 
-          <img src="jelqlogo.png" alt="Team Jelq" class="team-logo"> 
-          Jelq
-        </td>
-        <td>2</td>
-        <td>6</td>
-        <td>10/20</td>
-        <td>20</td>
-      </tr>
-      <tr>
-        <td>
-          <span class="seed-number">11.</span> 
-          <img src="vglogo.png" alt="VG" class="team-logo"> 
-          VG
-        </td>
-        <td>0</td>
-        <td>3</td>
-        <td>0/9</td>
-        <td>0</td>
-      </tr>
-      <tr>
-        <td>
-          <span class="seed-number">12.</span> 
-          <img src="fearlogo.png" alt="Team FeaR" class="team-logo"> 
-          FeaR
-        </td>
-        <td>0</td>
-        <td>5</td>
-        <td>5/15</td>
-        <td>0</td>
-      </tr>
-    </tbody>
-  </table>
-</div>
-
-<style>
-  .champs-badge {
-    font-size: 1.25em;
-    margin-left: 6px;
-    vertical-align: middle;
-    cursor: default;
-  }
-  .team-logo {
-    width: 24px;
-    height: 24px;
-    vertical-align: middle;
-    margin-right: 6px;
-  }
-  .seed-number {
-    font-weight: bold;
-    margin-right: 4px;
-  }
-</style>
-
-
-
-  </table>
-</div>
-
-
- 
-  
-
-
-  </table>
-</div>
-
-
-  <footer>
-    &copy; 2025 Competitive CoD Series | All Rights Reserved
-  </footer>
-
- <script>
-  function sortTable(columnIndex) {
-    const table = document.getElementById("standingsTable");
-    const rows = Array.from(table.rows).slice(1); // Skip the header row
-
-    rows.sort((rowA, rowB) => {
-      const winsA = parseInt(rowA.cells[1].innerText);
-      const winsB = parseInt(rowB.cells[1].innerText);
-      const mapWinsA = parseInt(rowA.cells[3].innerText.split('/')[0]);  // Get map wins
-      const mapWinsB = parseInt(rowB.cells[3].innerText.split('/')[0]);  // Get map wins
-
-      // First, sort by wins in descending order
-      if (winsA !== winsB) {
-        return winsB - winsA;
-      }
-
-      // If wins are equal, sort by map wins in descending order
-      return mapWinsB - mapWinsA;
-    });
-
-    // Reorder the rows in the table based on the sorted data
-    rows.forEach(row => table.appendChild(row));
-  }
-</script>
+<table id="standingsTable">
+  <thead>
+    <tr>
+      <th onclick="sortTable(0)">Team</th>
+      <th onclick="sortTable(1)">Wins</th>
+      <th onclick="sortTable(2)">Losses</th>
+      <th onclick="sortTable(3)">Map W/L</th>
+      <th onclick="sortTable(4)">Points</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>
+        <span class="seed-number">1.</span> 
+        <img src="100X35logo.png" alt="Evaporate" class="team-logo"> 
+        Evaporate
+      </td>
+      <td>3</td>
+      <td>0</td>
+      <td>9/0</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <td>
+        <span class="seed-number">2.</span> 
+        <img src="100X35logo.png" alt="Prestige Worldwide" class="team-logo"> 
+        Prestige Worldwide
+      </td>
+      <td>3</td>
+      <td>1</td>
+      <td>11/3</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <td>
+        <span class="seed-number">3.</span> 
+        <img src="100X35logo.png" alt="The Herd" class="team-logo"> 
+        The Herd
+      </td>
+      <td>3</td>
+      <td>0</td>
+      <td>9/3</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <td>
+        <span class="seed-number">4.</span> 
+        <img src="100X35logo.png" alt="o7esports" class="team-logo"> 
+        o7esports
+      </td>
+      <td>3</td>
+      <td>0</td>
+      <td>9/3</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <td>
+        <span class="seed-number">5.</span> 
+        <img src="100X35logo.png" alt="B3AS Clan" class="team-logo"> 
+        B3AS Clan
+      </td>
+      <td>2</td>
+      <td>1</td>
+      <td>6/3</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <td>
+        <span class="seed-number">6.</span> 
+        <img src="100X35logo.png" alt="POBO Esports" class="team-logo"> 
+        POBO Esports
+      </td>
+      <td>2</td>
+      <td>1</td>
+      <td>8/5</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <td>
+        <span class="seed-number">7.</span> 
+        <img src="100X35logo.png" alt="100X35Elite" class="team-logo"> 
+        100X35Elite
+      </td>
+      <td>2</td>
+      <td>1</td>
+      <td>7/6</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <td>
+        <span class="seed-number">8.</span> 
+        <img src="100X35logo.png" alt="Off-Meta" class="team-logo"> 
+        Off-Meta
+      </td>
+      <td>2</td>
+      <td>1</td>
+      <td>6/7</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <td>
+        <span class="seed-number">9.</span> 
+        <img src="100X35logo.png" alt="100X35" class="team-logo"> 
+        100X35
+      </td>
+      <td>1</td>
+      <td>0</td>
+      <td>3/1</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <td>
+        <span class="seed-number">10.</span> 
+        <img src="100X35logo.png" alt="Pink Mist" class="team-logo"> 
+        Pink Mist
+      </td>
+      <td>1</td>
+      <td>1</td>
+      <td>3/3</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <td>
+        <span class="seed-number">11.</span> 
+        <img src="100X35logo.png" alt="Headshot Mafia" class="team-logo"> 
+        Headshot Mafia
+      </td>
+      <td>1</td>
+      <td>3</td>
+      <td>6/9</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <td>
+        <span class="seed-number">12.</span> 
+        <img src="100X35logo.png" alt="No New Friends" class="team-logo"> 
+        No New Friends
+      </td>
+      <td>1</td>
+      <td>3</td>
+      <td>4/11</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <td>
+        <span class="seed-number">13.</span> 
+        <img src="100X35logo.png" alt="Zynderblocks" class="team-logo"> 
+        Zynderblocks
+      </td>
+      <td>0</td>
+      <td>3</td>
+      <td>4/9</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <td>
+        <span class="seed-number">14.</span> 
+        <img src="100X35logo.png" alt="100X35 Academy" class="team-logo"> 
+        100X35 Academy
+      </td>
+      <td>0</td>
+      <td>3</td>
+      <td>3/9</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <td>
+        <span class="seed-number">15.</span> 
+        <img src="100X35logo.png" alt="Old Bay Outlaws" class="team-logo"> 
+        Old Bay Outlaws
+      </td>
+      <td>0</td>
+      <td>3</td>
+      <td>2/9</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <td>
+        <span class="seed-number">16.</span> 
+        <img src="100X35logo.png" alt="Cosmic Esports" class="team-logo"> 
+        Cosmic Esports
+      </td>
+      <td>0</td>
+      <td>4</td>
+      <td>0/12</td>
+      <td>0</td>
+    </tr>
+  </tbody>
+</table>
 
 
 
